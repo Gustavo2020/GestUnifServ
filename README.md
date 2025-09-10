@@ -2,65 +2,75 @@
 
 
 
-\*\*Gestor Unificado de Servicios\*\* para servicios administrativos del Grupo Energía Bogotá y sus filiales.
+\*\*Unified Service Manager\*\* for administrative services of Grupo Energía Bogotá and its subsidiaries.
 
 
 
-El Gestor contará de varios módulos del cual vamos a realizar el primero que consiste en: 
+GestUnifServ will consist of several modules. The first module focuses on:
 
 
 
-Evaluación de rutas terrestres en Colombia.  
+\*\*Evaluation of terrestrial routes in Colombia.\*\*
 
 
 
-Este sistema permite a empleados registrar desplazamientos, calcular el riesgo asociado a la ruta, consultar noticias relevantes, y generar reportes automatizados en PDF.
+This system allows employees to register travel routes, calculate the associated risk, consult relevant news, and generate automated PDF reports.
 
 
 
-\## Funcionalidades
-
-\- Registro de rutas vía bot en MS Teams
-
-\- Evaluación automática del riesgo por ciudad
-
-\- Revisión manual por analista
-
-\- Consulta de noticias relevantes en la web
-
-\- Generación de PDF y envío por correo
+\## Features
 
 
 
-\## Tecnologías
+\- Route registration via bot in MS Teams  
 
-\- Python, FastAPI, PostgreSQL
+\- Automatic risk evaluation by city  
 
-\- Azure Bot Framework (MS Teams)
+\- Manual review by analyst  
 
-\- Scrapy, spaCy, ReportLab
+\- Web-based news retrieval  
 
-
-
-\## Estructura del Proyecto
+\- PDF generation and email delivery  
 
 
 
-GestUnifServ/
+\## Technologies
 
-├── src/              # Código fuente principal (API, lógica de negocio, scraping)
 
-├── data/             # Archivos estáticos (CSV, mapas de riesgo, datos de prueba)
 
-├── notebooks/        # Prototipos y análisis exploratorios en Jupyter
+\- Python, FastAPI, PostgreSQL  
 
-├── tests/            # Pruebas unitarias y de integración
+\- Azure Bot Framework (MS Teams)  
 
-├── docs/             # Diagramas, documentación técnica y flujos del bot
+\- Scrapy, spaCy, ReportLab  
 
-├── README.md         # Documentación principal del proyecto
 
-├── .gitignore        # Exclusiones para Git
 
-└── requirements.txt  # Dependencias del entorno Python
+\## Database Integration
+
+
+
+The system uses PostgreSQL to store and manage service data. Initial schema includes:
+
+
+
+\- `routes`: Employee travel routes and metadata  
+
+\- `cities`: Risk scores and contextual information  
+
+\- `evaluations`: Analyst reviews and automated assessments  
+
+\- `news`: Relevant articles linked to route context  
+
+
+
+\### Database Setup (Development)
+
+
+
+```bash
+
+\# Create database and apply schema
+
+psql -U your\_user -d gestunifserv\_db -f db/schema.sql
 
