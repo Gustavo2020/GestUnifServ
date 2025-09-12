@@ -1,0 +1,13 @@
+# ─────────────────────────────────────────────────────────────
+# dev-requirements.txt — Dev & testing dependencies
+# Install with: pip install -r dev-requirements.txt
+# Or: pip install -r requirements.txt -r dev-requirements.txt
+# ─────────────────────────────────────────────────────────────
+
+# Testing
+pytest==8.0.0
+httpx==0.26.0          # for async API test client
+
+# Optional (notebooks, analysis)
+jupyterlab==4.1.2
+pandas==2.2.1

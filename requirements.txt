@@ -1,0 +1,18 @@
+# ─────────────────────────────────────────────────────────────
+# requirements.txt — Runtime dependencies for GestUnifServ
+# Install with: pip install -r requirements.txt
+# ─────────────────────────────────────────────────────────────
+
+# FastAPI framework
+fastapi==0.110.0
+
+# ASGI server to run the API
+uvicorn[standard]==0.27.1
+
+# Data validation & settings management
+pydantic==2.6.1
+python-dotenv==1.0.1   # for reading .env files
+
+# Database (SQLAlchemy ORM + async PostgreSQL driver)
+SQLAlchemy==2.0.27
+asyncpg==0.29.0

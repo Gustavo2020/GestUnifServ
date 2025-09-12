@@ -1,0 +1,29 @@
+# ─────────────────────────────────────────────────────────────
+# Dockerfile.dev — Development image for GestUnifServ
+# Includes testing tools, Jupyter, and pandas
+# ─────────────────────────────────────────────────────────────
+
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1
+
+WORKDIR /app
+
+# Install system dependencies (for building Python libs)
+RUN apt-get update && apt-get install -y build-essential libpq-dev && rm -rf /var/lib/apt/lists/*
+
+# Install both runtime + dev dependencies
+COPY requirements.txt dev-requirements.txt ./
+RUN pip install --no-cache-dir -r requirements.txt -r dev-requirements.txt
+
+# Copy project files
+COPY src/ ./src/
+COPY data/ ./data/
+COPY notebooks/ ./notebooks/
+COPY tests/ ./tests/
+
+EXPOSE 8000 8888
+
+# Default command: run Uvicorn for API
+CMD ["uvicorn", "src.risk_api:app", "--host", "0.0.0.0", "--port", "8000"]

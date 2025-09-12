@@ -1,8 +1,9 @@
 # ─────────────────────────────────────────────────────────────
 # risk_api.py — REST API for Risk Evaluation
-# Validates incoming cities against riesgos.csv and returns
-# structured evaluation results. Each evaluation is saved
-# to a uniquely named JSON file.
+#
+# - Loads risk map from riesgos.csv
+# - Evaluates cities and classifies risk levels
+# - Calls db_handler to persist results in DB + JSON
 # ─────────────────────────────────────────────────────────────
 
 from fastapi import FastAPI, HTTPException
@@ -10,46 +11,52 @@ from pydantic import BaseModel
 from typing import List, Dict
 from datetime import datetime
 import uuid
-import json
 import os
 import csv
 
+from db_handler import save_evaluation_to_db_and_json, init_db
+
 # ─────────────────────────────────────────────────────────────
-# Load official city risk map from riesgos.csv
+# Load city risk map (from CSV)
 # ─────────────────────────────────────────────────────────────
 
 def load_city_risk_map(filepath: str) -> Dict[str, float]:
+    """
+    Loads risk scores for cities from a CSV file.
+    """
     city_risks = {}
-    try:
-        with open(filepath, newline='', encoding='utf-8') as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                city = row["Ciudad"].strip()
-                score = float(row["Riesgo"])
-                city_risks[city] = score
-    except Exception as e:
-        raise RuntimeError(f"Failed to load risk map: {e}")
+    with open(filepath, newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        if "Ciudad" not in reader.fieldnames or "Riesgo" not in reader.fieldnames:
+            raise RuntimeError("CSV must contain 'Ciudad' and 'Riesgo' columns.")
+        for row in reader:
+            city = row["Ciudad"].strip()
+            city_risks[city] = float(row["Riesgo"])
     return city_risks
 
-# Load once at startup
-CITY_RISK_MAP = load_city_risk_map("data/riesgos.csv")
+# Load CSV file path from environment variable, fallback to default
+# -----------------------------------------------------------------
+# Usage:
+# - Run locally without changes → defaults to "data/riesgos.csv"
+# - In production, set environment variable:
+#       export RISK_CSV_PATH=/etc/app/config/riesgos.csv
+#   The API will then automatically use that file.
+# -----------------------------------------------------------------
+RISK_CSV_PATH = os.getenv("RISK_CSV_PATH", "data/riesgos.csv")
+CITY_RISK_MAP = load_city_risk_map(RISK_CSV_PATH)
 
 # ─────────────────────────────────────────────────────────────
-# Input Schema Definitions
+# Input/Output Schemas
 # ─────────────────────────────────────────────────────────────
 
 class CityRisk(BaseModel):
-    name: str               # City name (must match riesgos.csv)
-    risk_score: float       # Optional client-provided score
+    name: str
+    risk_score: float = None  # Optional, ignored for now
 
 class EvaluationRequest(BaseModel):
-    user_id: str            # User identifier (e.g., MS Teams ID)
-    platform: str           # Source platform
-    cities: List[CityRisk]  # List of cities to evaluate
-
-# ─────────────────────────────────────────────────────────────
-# Output Schema Definitions
-# ─────────────────────────────────────────────────────────────
+    user_id: str
+    platform: str
+    cities: List[CityRisk]
 
 class CityResult(BaseModel):
     name: str
@@ -67,7 +74,7 @@ class EvaluationResponse(BaseModel):
     status: str
 
 # ─────────────────────────────────────────────────────────────
-# Risk Classification Logic
+# Risk Classification
 # ─────────────────────────────────────────────────────────────
 
 def classify_risk(score: float) -> str:
@@ -79,17 +86,28 @@ def classify_risk(score: float) -> str:
         return "Low"
 
 # ─────────────────────────────────────────────────────────────
-# FastAPI Application Setup
+# FastAPI App
 # ─────────────────────────────────────────────────────────────
 
-app = FastAPI()
+app = FastAPI(
+    title="Risk Evaluation API",
+    description="API that evaluates route risks and saves them to PostgreSQL + JSON backup.",
+    version="2.0.0"
+)
+
+@app.on_event("startup")
+async def on_startup():
+    """
+    Initialize database tables at startup.
+    """
+    await init_db()
 
 # ─────────────────────────────────────────────────────────────
-# POST /evaluate Endpoint
+# POST /evaluate
 # ─────────────────────────────────────────────────────────────
 
 @app.post("/evaluate", response_model=EvaluationResponse)
-def evaluate_risk(request: EvaluationRequest):
+async def evaluate_risk(request: EvaluationRequest):
     if not request.cities:
         raise HTTPException(status_code=400, detail="City list is empty.")
 
@@ -103,14 +121,12 @@ def evaluate_risk(request: EvaluationRequest):
     for city in request.cities:
         city_name = city.name.strip()
 
-        # Validate city existence in official map
         if city_name not in CITY_RISK_MAP:
             raise HTTPException(
                 status_code=400,
                 detail=f"City '{city_name}' not found in official risk map."
             )
 
-        # Use official score from riesgos.csv
         official_score = CITY_RISK_MAP[city_name]
         level = classify_risk(official_score)
 
@@ -119,7 +135,6 @@ def evaluate_risk(request: EvaluationRequest):
             "risk_score": official_score,
             "risk_level": level
         })
-
         total_risk += official_score
 
     average_risk = total_risk / len(city_results)
@@ -142,13 +157,7 @@ def evaluate_risk(request: EvaluationRequest):
         "status": "PendingValidation"
     }
 
-    # Ensure output directory exists
-    output_dir = "data"
-    os.makedirs(output_dir, exist_ok=True)
-
-    # Save evaluation to uniquely named JSON file
-    output_path = os.path.join(output_dir, f"output_{ruta_id}.json")
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(output, f, indent=4, ensure_ascii=False)
+    # Save both in DB and JSON backup
+    await save_evaluation_to_db_and_json(output)
 
     return output
