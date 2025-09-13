@@ -1,28 +1,57 @@
-services:
-  api:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: gestunifserv_api
-    ports:
-      - "8000:8000"
-    environment:
-      - DATABASE_URL=${DATABASE_URL}
-      - RISK_CSV_PATH=${RISK_CSV_PATH}
-    volumes:
-      - ./data:/app/data
-    depends_on:
-      - db
+# ─────────────────────────────────────────────────────────────
+# docker-compose.yml — Orquestación del servicio de evaluación
+# ─────────────────────────────────────────────────────────────
+# Define dos servicios principales:
+#  1. db  → Contenedor de PostgreSQL 15.14
+#  2. api → Contenedor con FastAPI + Uvicorn ejecutando risk_api.py
+#
+# Incluye:
+# - Volumen persistente para PostgreSQL
+# - Montaje de la carpeta `data/` local en `/app/data` dentro del contenedor
+# - Variable de entorno RISK_CSV_PATH para que risk_api.py encuentre riesgos.csv
+# ─────────────────────────────────────────────────────────────
 
+services:
+  # ───────────────
+  # Base de datos
+  # ───────────────
   db:
-    image: postgres:15
-    container_name: gestunifserv_db
-    restart: always
+    image: postgres:15.14              # Imagen oficial de PostgreSQL
+    container_name: riskdb             # Nombre fijo del contenedor
+    restart: always                    # Reinicia si el contenedor falla
     environment:
-      - POSTGRES_USER=${POSTGRES_USER}
-      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
-      - POSTGRES_DB=${POSTGRES_DB}
+      POSTGRES_USER: postgres          # Usuario por defecto
+      POSTGRES_PASSWORD: postgres      # Contraseña por defecto
+      POSTGRES_DB: riskdb              # Base de datos inicial
     ports:
-      - "${POSTGRES_PORT}:5432"
+      - "5432:5432"                    # Exponer PostgreSQL en localhost:5432
     volumes:
       - postgres_data:/var/lib/postgresql/data
+      # Volumen persistente de datos → no se pierden tras reinicios
+
+  # ───────────────
+  # API de FastAPI
+  # ───────────────
+  api:
+    build:
+      context: .                       # Carpeta raíz del proyecto
+      dockerfile: Dockerfile           # Usa Dockerfile de producción
+    container_name: risk_api           # Nombre del contenedor
+    restart: always                    # Reinicio automático
+    environment:
+      # Conexión a PostgreSQL (host = nombre del servicio db)
+      - DATABASE_URL=postgresql+asyncpg://postgres:postgres@db:5432/riskdb
+      # Ruta explícita al CSV de riesgos dentro del contenedor
+      - RISK_CSV_PATH=/app/data/riesgos.csv
+    ports:
+      - "8000:8000"                    # Exponer FastAPI en localhost:8000
+    depends_on:
+      - db                             # Asegura que db arranque primero
+    volumes:
+      - ./data:/app/data               # Monta ./data en /app/data
+
+# ───────────────
+# Definición de volúmenes persistentes
+# ───────────────
+volumes:
+  postgres_data:                       # Volumen persistente para la DB

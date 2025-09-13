@@ -1,29 +1,55 @@
 # ─────────────────────────────────────────────────────────────
-# Dockerfile.dev — Development image for GestUnifServ
-# Includes testing tools, Jupyter, and pandas
+# Dockerfile.dev — Imagen de desarrollo para GestUnifServ
+# Incluye dependencias de runtime, herramientas de testing,
+# Jupyter y pandas. Preparada para usarse con docker-compose.override.yml.
 # ─────────────────────────────────────────────────────────────
 
 FROM python:3.11-slim
 
+# ───────────────
+# Configuración básica de Python
+# ───────────────
+# - PYTHONDONTWRITEBYTECODE: evita crear archivos .pyc
+# - PYTHONUNBUFFERED: logs inmediatos (sin buffering)
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-# Install system dependencies (for building Python libs)
-RUN apt-get update && apt-get install -y build-essential libpq-dev && rm -rf /var/lib/apt/lists/*
+# ───────────────
+# Instalar dependencias del sistema necesarias
+# ───────────────
+# build-essential: compilar paquetes nativos
+# libpq-dev: driver de PostgreSQL para psycopg/asyncpg
+RUN apt-get update && apt-get install -y \
+    build-essential \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
 
-# Install both runtime + dev dependencies
+# ───────────────
+# Instalar dependencias de Python (producción + desarrollo)
+# ───────────────
 COPY requirements.txt dev-requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt -r dev-requirements.txt
 
-# Copy project files
-COPY src/ ./src/
-COPY data/ ./data/
+# ───────────────
+# Copiar el proyecto
+# ───────────────
+# Para desarrollo, solo copiamos los directorios base.
+# Con docker-compose.override.yml montaremos src/ y data/ en vivo.
 COPY notebooks/ ./notebooks/
 COPY tests/ ./tests/
 
-EXPOSE 8000 8888
+# ───────────────
+# Exponer puertos
+# ───────────────
+# FastAPI (Uvicorn)
+EXPOSE 8000   
+# Jupyter (opcional, para notebooks)
+EXPOSE 8888   
 
-# Default command: run Uvicorn for API
+# ───────────────
+# Comando por defecto
+# ───────────────
+# En override usaremos uvicorn con --reload, así que aquí lo dejamos simple.
 CMD ["uvicorn", "src.risk_api:app", "--host", "0.0.0.0", "--port", "8000"]
