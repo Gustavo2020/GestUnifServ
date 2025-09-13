@@ -30,7 +30,8 @@ asyncpg==0.29.0                 # PostgreSQL async driver (asyncpg)
 
 # ---------- DEV / TESTING / OPTIONAL ----------
 # Testing
-pytest==8.0.0                   # Framework de testing
+pytest==8.2.0                   # Framework de testing
+pytest-asyncio==0.23.6          # Plugin para tests async (@pytest.mark.asyncio)
 httpx==0.26.0                   # Cliente HTTP asíncrono para pruebas de endpoints
 
 # Notebooks / análisis (opcional)

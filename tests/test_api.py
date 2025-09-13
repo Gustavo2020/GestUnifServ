@@ -13,6 +13,11 @@ import httpx
 import pytest
 import asyncio
 import logging
+from sqlalchemy import select
+import sys
+
+# Asegurar que la raíz del repo esté en sys.path para poder importar src/
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
 from src.db_handler import AsyncSessionLocal, Evaluation, CityResult
 
@@ -66,7 +71,9 @@ async def test_full_integration(tmp_path):
         # Revisar ciudades asociadas
         results = (
             await session.execute(
-                f"SELECT name, risk_level FROM city_results WHERE evaluation_id='{ruta_id}'"
+                select(CityResult.name, CityResult.risk_level).where(
+                    CityResult.evaluation_id == ruta_id
+                )
             )
         ).all()
         assert len(results) == 2

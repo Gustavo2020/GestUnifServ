@@ -5,7 +5,8 @@
 # ─────────────────────────────────────────────────────────────
 
 # Testing
-pytest==8.0.0
+pytest==8.2.0
+pytest-asyncio==0.23.6 # async test support
 httpx==0.26.0          # for async API test client
 
 # Optional (notebooks, analysis)

@@ -1,0 +1,7 @@
+# requirements.txt — Dependencias del bot de Microsoft Teams (fase inicial)
+# Compatible con Python 3.11.9
+
+botbuilder-core==4.14.7
+botbuilder-schema==4.14.7
+botbuilder-integration-aiohttp==4.14.7
+aiohttp==3.8.5
