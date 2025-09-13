@@ -1,27 +1,34 @@
+# Estructura del Proyecto GestUnifServ
+
 GestUnifServ/
 ├── src/
-│ ├── risk_api.py # FastAPI app with routes and risk evaluation logic
-│ ├── db_handler.py # Database connection and persistence utilities
-│ └── ... # Other service modules
+│   ├── risk_api.py          # FastAPI app con rutas y lógica de evaluación de riesgo
+│   ├── db_handler.py        # Conexión a base de datos y utilidades de persistencia
+│   ├── evaluate_risk.py     # (opcional) lógica auxiliar de evaluación de riesgo si se separa
+│   └── __init__.py          # Marca la carpeta como paquete Python importable
 │
 ├── data/
-│ ├── ruta.csv # Input route data for evaluations
-│ ├── riesgos.csv # Official risk map (city risk scores)
-│ └── output_*.json # JSON backups of evaluations
+│   ├── ruta.csv             # Datos de entrada de rutas para evaluaciones
+│   ├── riesgos.csv          # Mapa oficial de riesgo (puntajes por ciudad)
+│   └── output_*.json        # Respaldos JSON de evaluaciones generadas por la API
 │
-├── notebooks/ # Jupyter notebooks for exploration/prototyping
+├── notebooks/               # Notebooks Jupyter para exploración y prototipado
 │
-├── tests/ # Unit tests for src modules and API
+├── tests/                   # Pruebas unitarias de los módulos en src y de la API
 │
-├── requirements.txt # Runtime dependencies (production)
-├── dev-requirements.txt # Dev/testing dependencies (pytest, Jupyter, pandas)
+├── requirements.txt         # Dependencias mínimas para ejecución en producción
+├── dev-requirements.txt     # Dependencias adicionales para desarrollo y pruebas (pytest, Jupyter, pandas)
 │
-├── Dockerfile # Production container setup (FastAPI + Uvicorn)
-├── Dockerfile.dev # Development container setup (adds testing & Jupyter)
-├── docker-compose.yml # Orchestration for API + PostgreSQL
-├── .env # Environment variables (DB credentials, configs)
+├── Dockerfile               # Imagen de producción (FastAPI + Uvicorn)
+├── Dockerfile.dev           # Imagen de desarrollo (incluye testing y Jupyter)
+├── docker-compose.yml       # Orquestación de contenedores: API + PostgreSQL
+├── .env                     # Variables de entorno (credenciales DB, configuraciones)
 │
-├── README.md # Project overview and setup instructions
-└── project_structure.md # Repository structure reference
+├── init_db.py               # Script utilitario para inicializar tablas en PostgreSQL
+│                            # Ejecuta src/db_handler.init_db() y crea evaluations y city_results
+│
+├── README.md                # Descripción general del proyecto e instrucciones de uso
+└── project_structure.md     # Este archivo (referencia de estructura actualizada)
+
 
 
