@@ -1,0 +1,36 @@
+# ──────────────────────────────
+# Python cache / compilados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entornos virtuales
+.venv/
+venv*/
+ENV/
+env/
+venv311/
+
+# Archivos temporales y logs
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# Datos generados por la API (JSON backups)
+data/output_*.json
+
+# Archivos locales de prueba
+test_imports.py
+
+# Configuración local de editores/IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# Archivos del sistema
+Thumbs.db
+ehthumbs.db
+desktop.ini
