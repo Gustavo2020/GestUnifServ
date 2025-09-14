@@ -1,0 +1,17 @@
+# requirements-dev.txt — Dependencias de desarrollo para el bot de Microsoft Teams
+# Compatible con Python 3.11.9
+
+# Dependencias base del bot (se incluyen también aquí para tener un entorno completo)
+botbuilder-core==4.14.7
+botbuilder-schema==4.14.7
+botbuilder-integration-aiohttp==4.14.7
+aiohttp==3.8.5
+
+# Utilidades adicionales para desarrollo
+requests==2.31.0          # Para llamadas HTTP a risk_api.py
+python-dotenv==1.0.1      # Cargar variables desde .env
+pytest==8.2.0             # Testing
+pytest-asyncio==0.23.6    # Testing async (útil para aiohttp y bot)
+black==24.4.2             # Formateo de código
+flake8==7.1.0             # Linter
+ipython==8.24.0           # Consola interactiva mejorada

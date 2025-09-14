@@ -1,0 +1,77 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "FastAPI (Uvicorn) — Dev (reload)",
+      "type": "python",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "src.risk_api:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000",
+        "--reload"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}",
+        "DATABASE_URL": "sqlite+aiosqlite:///./riskdb.sqlite3",
+        "RISK_CSV_PATH": "data/riesgos.csv"
+      }
+    },
+    {
+      "name": "Teams Bot (aiohttp)",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/bots/teams_bot/app.py",
+      "cwd": "${workspaceFolder}/bots/teams_bot",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/bots/teams_bot",
+        "MicrosoftAppId": "",
+        "MicrosoftAppPassword": "",
+        "PORT": "3978"
+      }
+    },
+    {
+      "name": "FastAPI (Uvicorn) — Prod-like",
+      "type": "python",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": [
+        "src.risk_api:app",
+        "--host",
+        "127.0.0.1",
+        "--port",
+        "8000"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}",
+        "DATABASE_URL": "sqlite+aiosqlite:///./riskdb.sqlite3",
+        "RISK_CSV_PATH": "data/riesgos.csv"
+      }
+    },
+    {
+      "name": "Pytest — API + Integration",
+      "type": "python",
+      "request": "launch",
+      "module": "pytest",
+      "args": [
+        "-q",
+        "tests/test_api.py",
+        "tests/test_integration.py"
+      ],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}",
+        "DATABASE_URL": "sqlite+aiosqlite:///./riskdb.sqlite3"
+      }
+    }
+  ]
+}

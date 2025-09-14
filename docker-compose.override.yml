@@ -1,0 +1,23 @@
+# ─────────────────────────────────────────────────────────────
+# docker-compose.override.yml — Configuración de desarrollo
+# ─────────────────────────────────────────────────────────────
+# Este archivo extiende el docker-compose.yml:
+# - Usa Dockerfile.dev (con herramientas de testing)
+# - Monta src/ y data/ como volúmenes → cambios en el código se reflejan al instante
+# - Ejecuta uvicorn en modo autoreload
+# ─────────────────────────────────────────────────────────────
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev        # Usa Dockerfile.dev para desarrollo
+    volumes:
+      - ./src:/app/src                  # Monta el código fuente
+      - ./data:/app/data                # Monta la carpeta de datos
+    command: >
+      uvicorn src.risk_api:app
+      --host 0.0.0.0
+      --port 8000
+      --reload
+# Auto-reload en cambios de código

@@ -1,56 +1,73 @@
 # ─────────────────────────────────────────────────────────────
-# db_handler.py — Database and persistence utilities
+# db_handler.py — Persistencia en base de datos y respaldo JSON
 #
-# - Defines SQLAlchemy models for evaluations and city results.
-# - Provides async functions to insert evaluations into PostgreSQL.
-# - Also writes JSON files for audit/backup purposes.
+# Objetivo:
+# - Definir modelos ORM (SQLAlchemy) para evaluations y city_results.
+# - Proveer funciones async para inicializar DB y guardar evaluaciones.
+# - Guardar respaldo de cada evaluación como archivo JSON en data/.
+#
+# Preparado para producción:
+# - Logging estructurado en JSON (via src/log_config.setup_logging()).
+# - Manejo robusto de errores en inicialización y persistencia.
 # ─────────────────────────────────────────────────────────────
 
 import os
 import json
 import uuid
+import logging
 from datetime import datetime
 
-from sqlalchemy import Column, String, Float, ForeignKey, DateTime
+from sqlalchemy import Column, String, Float, ForeignKey, DateTime, Date, text
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import declarative_base, relationship, sessionmaker
 
 # ─────────────────────────────────────────────────────────────
-# Database Setup
+# Módulos internos del proyecto
+# - log_config: configuración global de logging estructurado
 # ─────────────────────────────────────────────────────────────
+from src.log_config import setup_logging
 
-# Read DB URL from environment variable or fallback to local default
-# Example: export DATABASE_URL="postgresql+asyncpg://user:pass@localhost:5432/riskdb"
+# Configuración global de logging
+setup_logging()
+logger = logging.getLogger("db_handler")
+
+# ─────────────────────────────────────────────────────────────
+# Configuración de la conexión a la base de datos
+# - DATABASE_URL se toma de variable de entorno o usa fallback local.
+#   Ejemplo de variable:
+#   export DATABASE_URL="postgresql+asyncpg://user:pass@host:5432/riskdb"
+# ─────────────────────────────────────────────────────────────
 DATABASE_URL = os.getenv(
     "DATABASE_URL",
     "postgresql+asyncpg://postgres:postgres@localhost:5432/riskdb"
 )
 
-# Async engine for PostgreSQL
+# Motor async para PostgreSQL
 engine = create_async_engine(DATABASE_URL, echo=False, future=True)
 
-# Session factory for async DB operations
+# Fábrica de sesiones async
 AsyncSessionLocal = sessionmaker(
     bind=engine,
     expire_on_commit=False,
     class_=AsyncSession
 )
 
-# SQLAlchemy base model
+# Base declarativa de SQLAlchemy
 Base = declarative_base()
 
 # ─────────────────────────────────────────────────────────────
-# Database Models
+# Definición de modelos
 # ─────────────────────────────────────────────────────────────
 
 class Evaluation(Base):
     """
-    Represents a risk evaluation (one request to /evaluate).
+    Representa una evaluación de riesgo (una solicitud /evaluate).
     """
     __tablename__ = "evaluations"
 
-    id = Column(String, primary_key=True, index=True)  # UUID string
+    id = Column(String, primary_key=True, index=True)  # UUID string (ruta_id)
     timestamp = Column(DateTime, default=datetime.utcnow)
+    planned_date = Column(Date, nullable=True)
     user_id = Column(String, nullable=False)
     platform = Column(String, nullable=False)
     overall_level = Column(String, nullable=False)
@@ -58,13 +75,12 @@ class Evaluation(Base):
     average_risk = Column(Float, nullable=False)
     status = Column(String, default="PendingValidation")
 
-    # One-to-many relationship with cities
+    # Relación uno-a-muchos con CityResult
     cities = relationship("CityResult", back_populates="evaluation", cascade="all, delete")
-
 
 class CityResult(Base):
     """
-    Represents the result for a single city in an evaluation.
+    Resultado de riesgo para una ciudad dentro de una evaluación.
     """
     __tablename__ = "city_results"
 
@@ -74,62 +90,109 @@ class CityResult(Base):
     risk_score = Column(Float, nullable=False)
     risk_level = Column(String, nullable=False)
 
-    # Back reference to Evaluation
+    # Back reference a Evaluation
     evaluation = relationship("Evaluation", back_populates="cities")
 
 # ─────────────────────────────────────────────────────────────
-# Utility: Create tables (call once at startup if needed)
+# Utilidad: Inicializar base de datos
+# - Crea las tablas si no existen.
+# - Se invoca en risk_api.py durante el ciclo de vida (lifespan).
 # ─────────────────────────────────────────────────────────────
-
 async def init_db():
     """
-    Creates database tables if they do not exist.
+    Crea las tablas necesarias si no existen en la base.
     """
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
+    try:
+        async with engine.begin() as conn:
+            await conn.run_sync(Base.metadata.create_all)
+            # Ensure new columns exist when upgrading without migrations
+            try:
+                await conn.execute(text("ALTER TABLE evaluations ADD COLUMN IF NOT EXISTS planned_date DATE"))
+            except Exception:
+                logger.warning("Could not ensure planned_date column (may already exist)", exc_info=True)
+        logger.info("Tablas creadas/verificadas correctamente en la base de datos.")
+    except Exception:
+        logger.error("Error inicializando la base de datos.", exc_info=True)
+        raise
 
 # ─────────────────────────────────────────────────────────────
-# Persistence Functions
+# Persistencia: Guardar evaluación en DB + respaldo JSON
+# - Inserta Evaluation y CityResult en PostgreSQL.
+# - Escribe un archivo JSON en data/output_<ruta_id>.json
 # ─────────────────────────────────────────────────────────────
-
 async def save_evaluation_to_db_and_json(evaluation: dict):
     """
-    Saves an evaluation to PostgreSQL and also writes a JSON backup.
+    Guarda una evaluación en PostgreSQL y en un archivo JSON.
 
     Args:
-        evaluation (dict): Evaluation data (same as API response).
+        evaluation (dict): Evaluación generada en risk_api.py
     """
-    async with AsyncSessionLocal() as session:
-        # Create Evaluation object
-        eval_obj = Evaluation(
-            id=evaluation["ruta_id"],
-            timestamp=datetime.fromisoformat(evaluation["timestamp"]),
-            user_id=evaluation["executed_by"]["user_id"],
-            platform=evaluation["executed_by"]["platform"],
-            overall_level=evaluation["overall_level"],
-            total_risk=evaluation["summary"]["total_risk"],
-            average_risk=evaluation["summary"]["average_risk"],
-            status=evaluation["status"]
-        )
-
-        # Create CityResult objects
-        for city in evaluation["cities"]:
-            city_obj = CityResult(
-                evaluation_id=evaluation["ruta_id"],
-                name=city["name"],
-                risk_score=city["risk_score"],
-                risk_level=city["risk_level"]
+    try:
+        async with AsyncSessionLocal() as session:
+            # Crear objeto Evaluation
+            planned_date = None
+            try:
+                d = evaluation.get("date")
+                if d:
+                    planned_date = datetime.fromisoformat(d).date()
+            except Exception:
+                planned_date = None
+            eval_obj = Evaluation(
+                id=evaluation["ruta_id"],
+                timestamp=datetime.fromisoformat(evaluation["timestamp"]),
+                user_id=evaluation["executed_by"]["user_id"],
+                platform=evaluation["executed_by"]["platform"],
+                overall_level=evaluation["overall_level"],
+                total_risk=evaluation["summary"]["total_risk"],
+                average_risk=evaluation["summary"]["average_risk"],
+                status=evaluation["status"],
+                planned_date=planned_date,
             )
-            eval_obj.cities.append(city_obj)
 
-        # Add and commit to DB
-        session.add(eval_obj)
-        await session.commit()
+            # Crear objetos CityResult asociados
+            for city in evaluation["cities"]:
+                city_obj = CityResult(
+                    evaluation_id=evaluation["ruta_id"],
+                    name=city["name"],
+                    risk_score=city["risk_score"],
+                    risk_level=city["risk_level"]
+                )
+                eval_obj.cities.append(city_obj)
 
-    # ─── Write JSON backup for audit ─────────────────────────
-    output_dir = "data"
-    os.makedirs(output_dir, exist_ok=True)
+            # Insertar en DB
+            session.add(eval_obj)
+            await session.commit()
 
-    output_path = os.path.join(output_dir, f"output_{evaluation['ruta_id']}.json")
-    with open(output_path, "w", encoding="utf-8") as f:
-        json.dump(evaluation, f, indent=4, ensure_ascii=False)
+            logger.info(
+                "Evaluación guardada en DB | ruta_id=%s | ciudades=%d | overall=%s",
+                evaluation["ruta_id"],
+                len(evaluation["cities"]),
+                evaluation["overall_level"],
+            )
+
+    except Exception:
+        logger.error(
+            "Error guardando evaluación en DB | ruta_id=%s",
+            evaluation.get("ruta_id"),
+            exc_info=True,
+        )
+        raise
+
+    # Respaldo en JSON
+    try:
+        output_dir = "data"
+        os.makedirs(output_dir, exist_ok=True)
+
+        output_path = os.path.join(output_dir, f"output_{evaluation['ruta_id']}.json")
+        with open(output_path, "w", encoding="utf-8") as f:
+            json.dump(evaluation, f, indent=4, ensure_ascii=False)
+
+        logger.info("Respaldo JSON creado | path=%s", output_path)
+
+    except Exception:
+        logger.error(
+            "Error guardando respaldo JSON | ruta_id=%s",
+            evaluation.get("ruta_id"),
+            exc_info=True,
+        )
+        raise

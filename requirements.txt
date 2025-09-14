@@ -1,18 +1,51 @@
 # ─────────────────────────────────────────────────────────────
-# requirements.txt — Runtime dependencies for GestUnifServ
-# Install with: pip install -r requirements.txt
+# requirements.txt — Dependencias del proyecto GestUnifServ
+#
+# NOTAS IMPORTANTES:
+# 1) Antes de instalar: actualiza pip/setuptools/wheel en tu entorno:
+#     python -m pip install --upgrade pip setuptools wheel
+#    Esto reduce la probabilidad de errores al compilar dependencias nativas.
+#
+# 2) asyncpg y pydantic-core pueden tener componentes nativos.
+#    Hemos fijado versiones con mayor probabilidades de tener wheels
+#    precompilados para evitar compilación local en Windows/Linux.
+#
+# 3) Si prefieres separar dependencias de desarrollo (pytest, jupyter, etc.),
+#    usa un archivo dev-requirements.txt. Aquí incluimos todo por conveniencia.
 # ─────────────────────────────────────────────────────────────
 
-# FastAPI framework
-fastapi==0.110.0
+# ---------- RUNTIME / CORE ----------
+fastapi==0.110.0                # Framework web ASGI (endpoints, validación, docs)
+uvicorn[standard]==0.27.1       # ASGI server (ejecuta la app FastAPI)
 
-# ASGI server to run the API
-uvicorn[standard]==0.27.1
+# Validación / Settings
+pydantic==2.6.1                 # Modelos y validación de datos (Pydantic v2)
+python-dotenv==1.0.1            # Carga variables de entorno desde .env
 
-# Data validation & settings management
-pydantic==2.6.1
-python-dotenv==1.0.1   # for reading .env files
+# ORM / DB
+SQLAlchemy==2.0.27              # ORM (soporta asyncio en v2)
+# asyncpg es el driver asíncrono para PostgreSQL. Se fija a una versión
+# con alta probabilidad de tener wheel precompilado para evitar compilación.
+asyncpg==0.29.0                 # PostgreSQL async driver (asyncpg)
 
-# Database (SQLAlchemy ORM + async PostgreSQL driver)
-SQLAlchemy==2.0.27
-asyncpg==0.29.0
+# ---------- DEV / TESTING / OPTIONAL ----------
+# Testing
+pytest==8.2.0                   # Framework de testing
+pytest-asyncio==0.23.6          # Plugin para tests async (@pytest.mark.asyncio)
+httpx==0.26.0                   # Cliente HTTP asíncrono para pruebas de endpoints
+
+# Notebooks / análisis (opcional)
+jupyterlab==4.1.2               # Entorno de notebooks (opcional para análisis)
+pandas==2.2.1                   # Manipulación de datos (útil en notebooks)
+
+# ─────────────────────────────────────────────────────────────
+# Cómo instalar (en tu entorno virtual activado):
+# 1) Actualizar pip/setuptools/wheel (muy recomendado):
+#     python -m pip install --upgrade pip setuptools wheel
+#
+# 2) Instalar todas las dependencias:
+#     pip install -r requirements.txt
+#
+# Si hay problemas con asyncpg/pydantic en Windows y quieres evitar instalar
+# compiladores locales, instala las ruedas precompiladas o usa WSL/Linux.
+# ─────────────────────────────────────────────────────────────
