@@ -17,7 +17,7 @@ import uuid
 import logging
 from datetime import datetime
 
-from sqlalchemy import Column, String, Float, ForeignKey, DateTime
+from sqlalchemy import Column, String, Float, ForeignKey, DateTime, Date, text
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import declarative_base, relationship, sessionmaker
 
@@ -67,6 +67,7 @@ class Evaluation(Base):
 
     id = Column(String, primary_key=True, index=True)  # UUID string (ruta_id)
     timestamp = Column(DateTime, default=datetime.utcnow)
+    planned_date = Column(Date, nullable=True)
     user_id = Column(String, nullable=False)
     platform = Column(String, nullable=False)
     overall_level = Column(String, nullable=False)
@@ -104,6 +105,11 @@ async def init_db():
     try:
         async with engine.begin() as conn:
             await conn.run_sync(Base.metadata.create_all)
+            # Ensure new columns exist when upgrading without migrations
+            try:
+                await conn.execute(text("ALTER TABLE evaluations ADD COLUMN IF NOT EXISTS planned_date DATE"))
+            except Exception:
+                logger.warning("Could not ensure planned_date column (may already exist)", exc_info=True)
         logger.info("Tablas creadas/verificadas correctamente en la base de datos.")
     except Exception:
         logger.error("Error inicializando la base de datos.", exc_info=True)
@@ -124,6 +130,13 @@ async def save_evaluation_to_db_and_json(evaluation: dict):
     try:
         async with AsyncSessionLocal() as session:
             # Crear objeto Evaluation
+            planned_date = None
+            try:
+                d = evaluation.get("date")
+                if d:
+                    planned_date = datetime.fromisoformat(d).date()
+            except Exception:
+                planned_date = None
             eval_obj = Evaluation(
                 id=evaluation["ruta_id"],
                 timestamp=datetime.fromisoformat(evaluation["timestamp"]),
@@ -132,7 +145,8 @@ async def save_evaluation_to_db_and_json(evaluation: dict):
                 overall_level=evaluation["overall_level"],
                 total_risk=evaluation["summary"]["total_risk"],
                 average_risk=evaluation["summary"]["average_risk"],
-                status=evaluation["status"]
+                status=evaluation["status"],
+                planned_date=planned_date,
             )
 
             # Crear objetos CityResult asociados

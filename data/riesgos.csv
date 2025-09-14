@@ -1,4 +1,1785 @@
-Ciudad,Riesgo
-Bogotá,0.5
-Medellín,0.3
-Cali,0.8
+Departamento,Municipio,Riesgo,País,Jurisdiccion_fuerza_militar,Jurisdiccion_policia
+Amazonas,Leticia,0.204,Colombia,Ejc_Arc,Ponal
+Amazonas,Puerto Nariño,0.861,Colombia,Ejc_Arc,Ponal
+Antioquia,Abejorral,0.083,Colombia,Ejc_Arc,Ponal
+Antioquia,Abriaquí,0.349,Colombia,Ejc_Arc,Ponal
+Antioquia,Alejandría,0.056,Colombia,Ejc_Arc,Ponal
+Antioquia,Amagá,0.748,Colombia,Ejc_Arc,Ponal
+Antioquia,Amalfi,0.616,Colombia,Ejc_Arc,Ponal
+Antioquia,Andes,0.873,Colombia,Ejc_Arc,Ponal
+Antioquia,Angelópolis,0.892,Colombia,Ejc_Arc,Ponal
+Antioquia,Angostura,0.344,Colombia,Ejc_Arc,Ponal
+Antioquia,Anorí,0.735,Colombia,Ejc_Arc,Ponal
+Antioquia,Anzá,0.409,Colombia,Ejc_Arc,Ponal
+Antioquia,Apartadó,0.917,Colombia,Ejc_Arc,Ponal
+Antioquia,Arboletes,0.289,Colombia,Ejc_Arc,Ponal
+Antioquia,Argelia,0.245,Colombia,Ejc_Arc,Ponal
+Antioquia,Armenia,0.466,Colombia,Ejc_Arc,Ponal
+Antioquia,Barbosa,0.803,Colombia,Ejc_Arc,Ponal
+Antioquia,Bello,0.203,Colombia,Ejc_Arc,Ponal
+Antioquia,Belmira,0.664,Colombia,Ejc_Arc,Ponal
+Antioquia,Betania,0.62,Colombia,Ejc_Arc,Ponal
+Antioquia,Betulia,0.715,Colombia,Ejc_Arc,Ponal
+Antioquia,Briceño,0.84,Colombia,Ejc_Arc,Ponal
+Antioquia,Buriticá,0.571,Colombia,Ejc_Arc,Ponal
+Antioquia,Caicedo,0.569,Colombia,Ejc_Arc,Ponal
+Antioquia,Caldas,0.573,Colombia,Ejc_Arc,Ponal
+Antioquia,Campamento,0.386,Colombia,Ejc_Arc,Ponal
+Antioquia,Caracolí,0.444,Colombia,Ejc_Arc,Ponal
+Antioquia,Caramanta,0.967,Colombia,Ejc_Arc,Ponal
+Antioquia,Carepa,0.429,Colombia,Ejc_Arc,Ponal
+Antioquia,Carolina del Príncipe,0.383,Colombia,Ejc_Arc,Ponal
+Antioquia,Caucasia,0.987,Colombia,Ejc_Arc,Ponal
+Antioquia,Cañasgordas,0.483,Colombia,Ejc_Arc,Ponal
+Antioquia,Chigorodó,0.71,Colombia,Ejc_Arc,Ponal
+Antioquia,Cisneros,0.801,Colombia,Ejc_Arc,Ponal
+Antioquia,Ciudad Bolívar,0.47,Colombia,Ejc_Arc,Ponal
+Antioquia,Cocorná,0.818,Colombia,Ejc_Arc,Ponal
+Antioquia,Concepción,0.153,Colombia,Ejc_Arc,Ponal
+Antioquia,Concordia,0.009,Colombia,Ejc_Arc,Ponal
+Antioquia,Copacabana,0.154,Colombia,Ejc_Arc,Ponal
+Antioquia,Cáceres,0.909,Colombia,Ejc_Arc,Ponal
+Antioquia,Dabeiba,0.416,Colombia,Ejc_Arc,Ponal
+Antioquia,Donmatías,0.961,Colombia,Ejc_Arc,Ponal
+Antioquia,Ebéjico,0.105,Colombia,Ejc_Arc,Ponal
+Antioquia,El Bagre,0.505,Colombia,Ejc_Arc,Ponal
+Antioquia,El Carmen de Viboral,0.855,Colombia,Ejc_Arc,Ponal
+Antioquia,El Peñol,0.45,Colombia,Ejc_Arc,Ponal
+Antioquia,El Retiro,0.957,Colombia,Ejc_Arc,Ponal
+Antioquia,El Santuario,0.939,Colombia,Ejc_Arc,Ponal
+Antioquia,Entrerríos,0.027,Colombia,Ejc_Arc,Ponal
+Antioquia,Envigado,0.158,Colombia,Ejc_Arc,Ponal
+Antioquia,Fredonia,0.061,Colombia,Ejc_Arc,Ponal
+Antioquia,Frontino,0.841,Colombia,Ejc_Arc,Ponal
+Antioquia,Giraldo,0.977,Colombia,Ejc_Arc,Ponal
+Antioquia,Girardota,0.495,Colombia,Ejc_Arc,Ponal
+Antioquia,Granada,0.873,Colombia,Ejc_Arc,Ponal
+Antioquia,Guadalupe,0.81,Colombia,Ejc_Arc,Ponal
+Antioquia,Guarne,0.413,Colombia,Ejc_Arc,Ponal
+Antioquia,Guatapé,0.958,Colombia,Ejc_Arc,Ponal
+Antioquia,Gómez Plata,0.778,Colombia,Ejc_Arc,Ponal
+Antioquia,Heliconia,0.46,Colombia,Ejc_Arc,Ponal
+Antioquia,Hispania,0.612,Colombia,Ejc_Arc,Ponal
+Antioquia,Itagüí,0.964,Colombia,Ejc_Arc,Ponal
+Antioquia,Ituango,0.542,Colombia,Ejc_Arc,Ponal
+Antioquia,Jardín,0.857,Colombia,Ejc_Arc,Ponal
+Antioquia,Jericó,0.133,Colombia,Ejc_Arc,Ponal
+Antioquia,La Ceja,0.699,Colombia,Ejc_Arc,Ponal
+Antioquia,La Estrella,0.465,Colombia,Ejc_Arc,Ponal
+Antioquia,La Pintada,0.359,Colombia,Ejc_Arc,Ponal
+Antioquia,La Unión,0.754,Colombia,Ejc_Arc,Ponal
+Antioquia,Liborina,0.086,Colombia,Ejc_Arc,Ponal
+Antioquia,Maceo,0.282,Colombia,Ejc_Arc,Ponal
+Antioquia,Marinilla,0.5,Colombia,Ejc_Arc,Ponal
+Antioquia,Medellín,0.348,Colombia,Ejc_Arc,Ponal
+Antioquia,Montebello,0.636,Colombia,Ejc_Arc,Ponal
+Antioquia,Murindó,0.53,Colombia,Ejc_Arc,Ponal
+Antioquia,Mutatá,0.805,Colombia,Ejc_Arc,Ponal
+Antioquia,Nariño,0.716,Colombia,Ejc_Arc,Ponal
+Antioquia,Nechí,0.023,Colombia,Ejc_Arc,Ponal
+Antioquia,Necoclí,0.02,Colombia,Ejc_Arc,Ponal
+Antioquia,Olaya,0.682,Colombia,Ejc_Arc,Ponal
+Antioquia,Peque,0.683,Colombia,Ejc_Arc,Ponal
+Antioquia,Pueblorrico,0.67,Colombia,Ejc_Arc,Ponal
+Antioquia,Puerto Berrío,0.206,Colombia,Ejc_Arc,Ponal
+Antioquia,Puerto Nare,0.265,Colombia,Ejc_Arc,Ponal
+Antioquia,Puerto Triunfo,0.003,Colombia,Ejc_Arc,Ponal
+Antioquia,Remedios,0.324,Colombia,Ejc_Arc,Ponal
+Antioquia,Rionegro,0.798,Colombia,Ejc_Arc,Ponal
+Antioquia,Sabanalarga,0.392,Colombia,Ejc_Arc,Ponal
+Antioquia,Sabaneta,0.986,Colombia,Ejc_Arc,Ponal
+Antioquia,Salgar,0.951,Colombia,Ejc_Arc,Ponal
+Antioquia,San Andrés de Cuerquia,0.614,Colombia,Ejc_Arc,Ponal
+Antioquia,San Carlos,0.519,Colombia,Ejc_Arc,Ponal
+Antioquia,San Francisco,0.838,Colombia,Ejc_Arc,Ponal
+Antioquia,San Jerónimo,0.724,Colombia,Ejc_Arc,Ponal
+Antioquia,San José de la Montaña,0.216,Colombia,Ejc_Arc,Ponal
+Antioquia,San Juan de Urabá,0.386,Colombia,Ejc_Arc,Ponal
+Antioquia,San Luis,0.35,Colombia,Ejc_Arc,Ponal
+Antioquia,San Pedro de Urabá,0.775,Colombia,Ejc_Arc,Ponal
+Antioquia,San Pedro de los Milagros,0.248,Colombia,Ejc_Arc,Ponal
+Antioquia,San Rafael,0.73,Colombia,Ejc_Arc,Ponal
+Antioquia,San Roque,0.337,Colombia,Ejc_Arc,Ponal
+Antioquia,San Vicente,0.381,Colombia,Ejc_Arc,Ponal
+Antioquia,Santa Bárbara,0.74,Colombia,Ejc_Arc,Ponal
+Antioquia,Santa Fe de Antioquia,0.075,Colombia,Ejc_Arc,Ponal
+Antioquia,Santa Rosa de Osos,0.15,Colombia,Ejc_Arc,Ponal
+Antioquia,Santo Domingo,0.47,Colombia,Ejc_Arc,Ponal
+Antioquia,Segovia,0.069,Colombia,Ejc_Arc,Ponal
+Antioquia,Sonsón,0.985,Colombia,Ejc_Arc,Ponal
+Antioquia,Sopetrán,0.263,Colombia,Ejc_Arc,Ponal
+Antioquia,Tarazá,0.428,Colombia,Ejc_Arc,Ponal
+Antioquia,Tarso,0.799,Colombia,Ejc_Arc,Ponal
+Antioquia,Titiribí,0.127,Colombia,Ejc_Arc,Ponal
+Antioquia,Toledo,0.235,Colombia,Ejc_Arc,Ponal
+Antioquia,Turbo,0.604,Colombia,Ejc_Arc,Ponal
+Antioquia,Támesis,0.524,Colombia,Ejc_Arc,Ponal
+Antioquia,Uramita,0.65,Colombia,Ejc_Arc,Ponal
+Antioquia,Urrao,0.072,Colombia,Ejc_Arc,Ponal
+Antioquia,Valdivia,0.817,Colombia,Ejc_Arc,Ponal
+Antioquia,Valparaíso,0.675,Colombia,Ejc_Arc,Ponal
+Antioquia,Vegachí,0.973,Colombia,Ejc_Arc,Ponal
+Antioquia,Venecia,0.783,Colombia,Ejc_Arc,Ponal
+Antioquia,Vigía del Fuerte,0.284,Colombia,Ejc_Arc,Ponal
+Antioquia,Yalí,0.872,Colombia,Ejc_Arc,Ponal
+Antioquia,Yarumal,0.624,Colombia,Ejc_Arc,Ponal
+Antioquia,Yolombó,0.21,Colombia,Ejc_Arc,Ponal
+Antioquia,Yondó,0.471,Colombia,Ejc_Arc,Ponal
+Antioquia,Zaragoza,0.45,Colombia,Ejc_Arc,Ponal
+Arauca,Arauca,0.644,Colombia,Ejc_Arc,Ponal
+Arauca,Arauquita,0.182,Colombia,Ejc_Arc,Ponal
+Arauca,Cravo Norte,0.975,Colombia,Ejc_Arc,Ponal
+Arauca,Fortul,0.027,Colombia,Ejc_Arc,Ponal
+Arauca,Puerto Rondón,0.494,Colombia,Ejc_Arc,Ponal
+Arauca,Saravena,0.043,Colombia,Ejc_Arc,Ponal
+Arauca,Tame,0.342,Colombia,Ejc_Arc,Ponal
+Atlántico,Baranoa,0.46,Colombia,Ejc_Arc,Ponal
+Atlántico,Barranquilla,0.478,Colombia,Ejc_Arc,Ponal
+Atlántico,Campo de la Cruz,0.797,Colombia,Ejc_Arc,Ponal
+Atlántico,Candelaria,0.378,Colombia,Ejc_Arc,Ponal
+Atlántico,Galapa,0.139,Colombia,Ejc_Arc,Ponal
+Atlántico,Juan de Acosta,0.719,Colombia,Ejc_Arc,Ponal
+Atlántico,Luruaco,0.402,Colombia,Ejc_Arc,Ponal
+Atlántico,Malambo,0.052,Colombia,Ejc_Arc,Ponal
+Atlántico,Manatí,0.569,Colombia,Ejc_Arc,Ponal
+Atlántico,Palmar de Varela,0.085,Colombia,Ejc_Arc,Ponal
+Atlántico,Piojó,0.776,Colombia,Ejc_Arc,Ponal
+Atlántico,Polonuevo,0.366,Colombia,Ejc_Arc,Ponal
+Atlántico,Ponedera,0.328,Colombia,Ejc_Arc,Ponal
+Atlántico,Puerto Colombia,0.774,Colombia,Ejc_Arc,Ponal
+Atlántico,Repelón,0.182,Colombia,Ejc_Arc,Ponal
+Atlántico,Sabanagrande,0.397,Colombia,Ejc_Arc,Ponal
+Atlántico,Sabanalarga,0.917,Colombia,Ejc_Arc,Ponal
+Atlántico,Santa Lucía,0.569,Colombia,Ejc_Arc,Ponal
+Atlántico,Santo Tomás,0.452,Colombia,Ejc_Arc,Ponal
+Atlántico,Soledad,0.712,Colombia,Ejc_Arc,Ponal
+Atlántico,Suán,0.313,Colombia,Ejc_Arc,Ponal
+Atlántico,Tubará,0.029,Colombia,Ejc_Arc,Ponal
+Atlántico,Usiacurí,0.675,Colombia,Ejc_Arc,Ponal
+Bolívar,Achí,0.893,Colombia,Ejc_Arc,Ponal
+Bolívar,Altos del Rosario,0.735,Colombia,Ejc_Arc,Ponal
+Bolívar,Arenal,0.702,Colombia,Ejc_Arc,Ponal
+Bolívar,Arjona,0.811,Colombia,Ejc_Arc,Ponal
+Bolívar,Arroyohondo,0.602,Colombia,Ejc_Arc,Ponal
+Bolívar,Barranco de Loba,0.272,Colombia,Ejc_Arc,Ponal
+Bolívar,Brazuelo de Papayal,0.065,Colombia,Ejc_Arc,Ponal
+Bolívar,Calamar,0.413,Colombia,Ejc_Arc,Ponal
+Bolívar,Cantagallo,0.892,Colombia,Ejc_Arc,Ponal
+Bolívar,Cartagena de Indias,0.535,Colombia,Ejc_Arc,Ponal
+Bolívar,Cicuco,0.754,Colombia,Ejc_Arc,Ponal
+Bolívar,Clemencia,0.085,Colombia,Ejc_Arc,Ponal
+Bolívar,Córdoba,0.916,Colombia,Ejc_Arc,Ponal
+Bolívar,El Carmen de Bolívar,0.814,Colombia,Ejc_Arc,Ponal
+Bolívar,El Guamo,0.73,Colombia,Ejc_Arc,Ponal
+Bolívar,El Peñón,0.852,Colombia,Ejc_Arc,Ponal
+Bolívar,Hatillo de Loba,0.068,Colombia,Ejc_Arc,Ponal
+Bolívar,Magangué,0.741,Colombia,Ejc_Arc,Ponal
+Bolívar,Mahates,0.475,Colombia,Ejc_Arc,Ponal
+Bolívar,Margarita,0.262,Colombia,Ejc_Arc,Ponal
+Bolívar,María la Baja,0.029,Colombia,Ejc_Arc,Ponal
+Bolívar,Mompós,0.877,Colombia,Ejc_Arc,Ponal
+Bolívar,Montecristo,0.43,Colombia,Ejc_Arc,Ponal
+Bolívar,Morales,0.853,Colombia,Ejc_Arc,Ponal
+Bolívar,Norosí,0.371,Colombia,Ejc_Arc,Ponal
+Bolívar,Pinillos,0.259,Colombia,Ejc_Arc,Ponal
+Bolívar,Regidor,0.466,Colombia,Ejc_Arc,Ponal
+Bolívar,Río Viejo,0.104,Colombia,Ejc_Arc,Ponal
+Bolívar,San Cristóbal,0.161,Colombia,Ejc_Arc,Ponal
+Bolívar,San Estanislao,0.362,Colombia,Ejc_Arc,Ponal
+Bolívar,San Fernando,0.896,Colombia,Ejc_Arc,Ponal
+Bolívar,San Jacinto,0.376,Colombia,Ejc_Arc,Ponal
+Bolívar,San Jacinto del Cauca,0.489,Colombia,Ejc_Arc,Ponal
+Bolívar,San Juan Nepomuceno,0.451,Colombia,Ejc_Arc,Ponal
+Bolívar,San Martín de Loba,0.997,Colombia,Ejc_Arc,Ponal
+Bolívar,San Pablo,0.506,Colombia,Ejc_Arc,Ponal
+Bolívar,Santa Catalina,0.183,Colombia,Ejc_Arc,Ponal
+Bolívar,Santa Rosa,0.966,Colombia,Ejc_Arc,Ponal
+Bolívar,Santa Rosa del Sur,0.639,Colombia,Ejc_Arc,Ponal
+Bolívar,Simití,0.857,Colombia,Ejc_Arc,Ponal
+Bolívar,Soplaviento,0.56,Colombia,Ejc_Arc,Ponal
+Bolívar,Talaigua Nuevo,0.217,Colombia,Ejc_Arc,Ponal
+Bolívar,Tiquisio,0.905,Colombia,Ejc_Arc,Ponal
+Bolívar,Turbaco,0.946,Colombia,Ejc_Arc,Ponal
+Bolívar,Turbaná,0.227,Colombia,Ejc_Arc,Ponal
+Bolívar,Villanueva,0.196,Colombia,Ejc_Arc,Ponal
+Bolívar,Zambrano,0.432,Colombia,Ejc_Arc,Ponal
+Boyacá,Almeida,0.402,Colombia,Ejc_Arc,Ponal
+Boyacá,Aquitania,0.388,Colombia,Ejc_Arc,Ponal
+Boyacá,Arcabuco,0.274,Colombia,Ejc_Arc,Ponal
+Boyacá,Belén,0.182,Colombia,Ejc_Arc,Ponal
+Boyacá,Berbeo,0.701,Colombia,Ejc_Arc,Ponal
+Boyacá,Betéitiva,0.482,Colombia,Ejc_Arc,Ponal
+Boyacá,Boavita,0.703,Colombia,Ejc_Arc,Ponal
+Boyacá,Boyacá,0.692,Colombia,Ejc_Arc,Ponal
+Boyacá,Briceño,0.43,Colombia,Ejc_Arc,Ponal
+Boyacá,Buenavista,0.692,Colombia,Ejc_Arc,Ponal
+Boyacá,Busbanzá,0.289,Colombia,Ejc_Arc,Ponal
+Boyacá,Caldas,0.816,Colombia,Ejc_Arc,Ponal
+Boyacá,Campohermoso,0.364,Colombia,Ejc_Arc,Ponal
+Boyacá,Cerinza,0.142,Colombia,Ejc_Arc,Ponal
+Boyacá,Chinavita,0.326,Colombia,Ejc_Arc,Ponal
+Boyacá,Chiquinquirá,0.087,Colombia,Ejc_Arc,Ponal
+Boyacá,Chiscas,0.587,Colombia,Ejc_Arc,Ponal
+Boyacá,Chita,0.649,Colombia,Ejc_Arc,Ponal
+Boyacá,Chitaraque,0.791,Colombia,Ejc_Arc,Ponal
+Boyacá,Chivatá,0.386,Colombia,Ejc_Arc,Ponal
+Boyacá,Chivor,0.684,Colombia,Ejc_Arc,Ponal
+Boyacá,Chíquiza,0.95,Colombia,Ejc_Arc,Ponal
+Boyacá,Ciénega,0.586,Colombia,Ejc_Arc,Ponal
+Boyacá,Coper,0.195,Colombia,Ejc_Arc,Ponal
+Boyacá,Corrales,0.615,Colombia,Ejc_Arc,Ponal
+Boyacá,Covarachía,0.212,Colombia,Ejc_Arc,Ponal
+Boyacá,Cubará,0.557,Colombia,Ejc_Arc,Ponal
+Boyacá,Cucaita,0.105,Colombia,Ejc_Arc,Ponal
+Boyacá,Cuítiva,0.546,Colombia,Ejc_Arc,Ponal
+Boyacá,Cómbita,0.443,Colombia,Ejc_Arc,Ponal
+Boyacá,Duitama,0.581,Colombia,Ejc_Arc,Ponal
+Boyacá,El Cocuy,0.981,Colombia,Ejc_Arc,Ponal
+Boyacá,El Espino,0.1,Colombia,Ejc_Arc,Ponal
+Boyacá,Firavitoba,0.101,Colombia,Ejc_Arc,Ponal
+Boyacá,Floresta,0.244,Colombia,Ejc_Arc,Ponal
+Boyacá,Gachantivá,0.746,Colombia,Ejc_Arc,Ponal
+Boyacá,Garagoa,0.958,Colombia,Ejc_Arc,Ponal
+Boyacá,Guacamayas,0.5,Colombia,Ejc_Arc,Ponal
+Boyacá,Guateque,0.031,Colombia,Ejc_Arc,Ponal
+Boyacá,Guayatá,0.439,Colombia,Ejc_Arc,Ponal
+Boyacá,Gámeza,0.342,Colombia,Ejc_Arc,Ponal
+Boyacá,Güicán,0.812,Colombia,Ejc_Arc,Ponal
+Boyacá,Iza,0.107,Colombia,Ejc_Arc,Ponal
+Boyacá,Jenesano,0.083,Colombia,Ejc_Arc,Ponal
+Boyacá,Jericó,0.776,Colombia,Ejc_Arc,Ponal
+Boyacá,La Capilla,0.471,Colombia,Ejc_Arc,Ponal
+Boyacá,La Uvita,0.11,Colombia,Ejc_Arc,Ponal
+Boyacá,La Victoria,0.016,Colombia,Ejc_Arc,Ponal
+Boyacá,Labranzagrande,0.158,Colombia,Ejc_Arc,Ponal
+Boyacá,Macanal,0.261,Colombia,Ejc_Arc,Ponal
+Boyacá,Maripí,0.061,Colombia,Ejc_Arc,Ponal
+Boyacá,Miraflores,0.103,Colombia,Ejc_Arc,Ponal
+Boyacá,Mongua,0.574,Colombia,Ejc_Arc,Ponal
+Boyacá,Monguí,0.737,Colombia,Ejc_Arc,Ponal
+Boyacá,Moniquirá,0.649,Colombia,Ejc_Arc,Ponal
+Boyacá,Motavita,0.679,Colombia,Ejc_Arc,Ponal
+Boyacá,Muzo,0.185,Colombia,Ejc_Arc,Ponal
+Boyacá,Nobsa,0.889,Colombia,Ejc_Arc,Ponal
+Boyacá,Nuevo Colón,0.877,Colombia,Ejc_Arc,Ponal
+Boyacá,Oicatá,0.581,Colombia,Ejc_Arc,Ponal
+Boyacá,Otanche,0.578,Colombia,Ejc_Arc,Ponal
+Boyacá,Pachavita,0.816,Colombia,Ejc_Arc,Ponal
+Boyacá,Paipa,0.04,Colombia,Ejc_Arc,Ponal
+Boyacá,Pajarito,0.329,Colombia,Ejc_Arc,Ponal
+Boyacá,Panqueba,0.817,Colombia,Ejc_Arc,Ponal
+Boyacá,Pauna,0.225,Colombia,Ejc_Arc,Ponal
+Boyacá,Paya,0.63,Colombia,Ejc_Arc,Ponal
+Boyacá,Paz del Río,0.894,Colombia,Ejc_Arc,Ponal
+Boyacá,Pesca,0.896,Colombia,Ejc_Arc,Ponal
+Boyacá,Pisba,0.34,Colombia,Ejc_Arc,Ponal
+Boyacá,Puerto Boyacá,0.808,Colombia,Ejc_Arc,Ponal
+Boyacá,Páez,0.156,Colombia,Ejc_Arc,Ponal
+Boyacá,Quípama,0.175,Colombia,Ejc_Arc,Ponal
+Boyacá,Ramiriquí,0.959,Colombia,Ejc_Arc,Ponal
+Boyacá,Rondón,0.393,Colombia,Ejc_Arc,Ponal
+Boyacá,Ráquira,0.792,Colombia,Ejc_Arc,Ponal
+Boyacá,Saboyá,0.968,Colombia,Ejc_Arc,Ponal
+Boyacá,Samacá,0.326,Colombia,Ejc_Arc,Ponal
+Boyacá,San Eduardo,0.571,Colombia,Ejc_Arc,Ponal
+Boyacá,San José de Pare,0.15,Colombia,Ejc_Arc,Ponal
+Boyacá,San Luis de Gaceno,0.246,Colombia,Ejc_Arc,Ponal
+Boyacá,San Mateo,0.407,Colombia,Ejc_Arc,Ponal
+Boyacá,San Miguel de Sema,0.853,Colombia,Ejc_Arc,Ponal
+Boyacá,San Pablo de Borbur,0.124,Colombia,Ejc_Arc,Ponal
+Boyacá,Santa María,0.025,Colombia,Ejc_Arc,Ponal
+Boyacá,Santa Rosa de Viterbo,0.791,Colombia,Ejc_Arc,Ponal
+Boyacá,Santa Sofía,0.094,Colombia,Ejc_Arc,Ponal
+Boyacá,Santana,0.678,Colombia,Ejc_Arc,Ponal
+Boyacá,Sativanorte,0.514,Colombia,Ejc_Arc,Ponal
+Boyacá,Sativasur,0.352,Colombia,Ejc_Arc,Ponal
+Boyacá,Siachoque,0.454,Colombia,Ejc_Arc,Ponal
+Boyacá,Soatá,0.96,Colombia,Ejc_Arc,Ponal
+Boyacá,Socha,0.59,Colombia,Ejc_Arc,Ponal
+Boyacá,Socotá,0.026,Colombia,Ejc_Arc,Ponal
+Boyacá,Sogamoso,0.556,Colombia,Ejc_Arc,Ponal
+Boyacá,Somondoco,0.07,Colombia,Ejc_Arc,Ponal
+Boyacá,Sora,0.549,Colombia,Ejc_Arc,Ponal
+Boyacá,Soracá,0.697,Colombia,Ejc_Arc,Ponal
+Boyacá,Sotaquirá,0.649,Colombia,Ejc_Arc,Ponal
+Boyacá,Susacón,0.512,Colombia,Ejc_Arc,Ponal
+Boyacá,Sutamarchán,0.48,Colombia,Ejc_Arc,Ponal
+Boyacá,Sutatenza,0.832,Colombia,Ejc_Arc,Ponal
+Boyacá,Sáchica,0.871,Colombia,Ejc_Arc,Ponal
+Boyacá,Tasco,0.829,Colombia,Ejc_Arc,Ponal
+Boyacá,Tenza,0.068,Colombia,Ejc_Arc,Ponal
+Boyacá,Tibaná,0.21,Colombia,Ejc_Arc,Ponal
+Boyacá,Tibasosa,0.804,Colombia,Ejc_Arc,Ponal
+Boyacá,Tinjacá,0.873,Colombia,Ejc_Arc,Ponal
+Boyacá,Tipacoque,0.164,Colombia,Ejc_Arc,Ponal
+Boyacá,Toca,0.863,Colombia,Ejc_Arc,Ponal
+Boyacá,Togüí,0.096,Colombia,Ejc_Arc,Ponal
+Boyacá,Tota,0.262,Colombia,Ejc_Arc,Ponal
+Boyacá,Tunja,0.432,Colombia,Ejc_Arc,Ponal
+Boyacá,Tununguá,0.546,Colombia,Ejc_Arc,Ponal
+Boyacá,Turmequé,0.632,Colombia,Ejc_Arc,Ponal
+Boyacá,Tuta,0.719,Colombia,Ejc_Arc,Ponal
+Boyacá,Tutazá,0.34,Colombia,Ejc_Arc,Ponal
+Boyacá,Tópaga,0.531,Colombia,Ejc_Arc,Ponal
+Boyacá,Ventaquemada,0.499,Colombia,Ejc_Arc,Ponal
+Boyacá,Villa de Leyva,0.295,Colombia,Ejc_Arc,Ponal
+Boyacá,Viracachá,0.263,Colombia,Ejc_Arc,Ponal
+Boyacá,Zetaquira,0.6,Colombia,Ejc_Arc,Ponal
+Boyacá,Úmbita,0.574,Colombia,Ejc_Arc,Ponal
+Caldas,Aguadas,0.434,Colombia,Ejc_Arc,Ponal
+Caldas,Anserma,0.775,Colombia,Ejc_Arc,Ponal
+Caldas,Aranzazu,0.517,Colombia,Ejc_Arc,Ponal
+Caldas,Belalcázar,0.195,Colombia,Ejc_Arc,Ponal
+Caldas,Chinchiná,0.301,Colombia,Ejc_Arc,Ponal
+Caldas,Filadelfia,0.688,Colombia,Ejc_Arc,Ponal
+Caldas,La Dorada,0.233,Colombia,Ejc_Arc,Ponal
+Caldas,La Merced,0.206,Colombia,Ejc_Arc,Ponal
+Caldas,Manizales,0.409,Colombia,Ejc_Arc,Ponal
+Caldas,Manzanares,0.3,Colombia,Ejc_Arc,Ponal
+Caldas,Marmato,0.705,Colombia,Ejc_Arc,Ponal
+Caldas,Marquetalia,0.419,Colombia,Ejc_Arc,Ponal
+Caldas,Marulanda,0.551,Colombia,Ejc_Arc,Ponal
+Caldas,Neira,0.425,Colombia,Ejc_Arc,Ponal
+Caldas,Norcasia,0.656,Colombia,Ejc_Arc,Ponal
+Caldas,Palestina,0.067,Colombia,Ejc_Arc,Ponal
+Caldas,Pensilvania,0.608,Colombia,Ejc_Arc,Ponal
+Caldas,Pácora,0.4,Colombia,Ejc_Arc,Ponal
+Caldas,Riosucio,0.597,Colombia,Ejc_Arc,Ponal
+Caldas,Risaralda,0.651,Colombia,Ejc_Arc,Ponal
+Caldas,Salamina,0.946,Colombia,Ejc_Arc,Ponal
+Caldas,Samaná,0.222,Colombia,Ejc_Arc,Ponal
+Caldas,San José,0.916,Colombia,Ejc_Arc,Ponal
+Caldas,Supía,0.938,Colombia,Ejc_Arc,Ponal
+Caldas,Victoria,0.585,Colombia,Ejc_Arc,Ponal
+Caldas,Villamaría,0.858,Colombia,Ejc_Arc,Ponal
+Caldas,Viterbo,0.72,Colombia,Ejc_Arc,Ponal
+Caquetá,Albania,0.786,Colombia,Ejc_Arc,Ponal
+Caquetá,Belén de los Andaquíes,0.171,Colombia,Ejc_Arc,Ponal
+Caquetá,Cartagena del Chairá,0.493,Colombia,Ejc_Arc,Ponal
+Caquetá,Curillo,0.804,Colombia,Ejc_Arc,Ponal
+Caquetá,El Doncello,0.839,Colombia,Ejc_Arc,Ponal
+Caquetá,El Paujil,0.992,Colombia,Ejc_Arc,Ponal
+Caquetá,Florencia,0.862,Colombia,Ejc_Arc,Ponal
+Caquetá,La Montañita,0.859,Colombia,Ejc_Arc,Ponal
+Caquetá,Milán,0.382,Colombia,Ejc_Arc,Ponal
+Caquetá,Morelia,0.203,Colombia,Ejc_Arc,Ponal
+Caquetá,Puerto Rico,0.128,Colombia,Ejc_Arc,Ponal
+Caquetá,San José del Fragua,0.33,Colombia,Ejc_Arc,Ponal
+Caquetá,San Vicente del Caguán,0.076,Colombia,Ejc_Arc,Ponal
+Caquetá,Solano,0.699,Colombia,Ejc_Arc,Ponal
+Caquetá,Solita,0.638,Colombia,Ejc_Arc,Ponal
+Caquetá,Valparaíso,0.002,Colombia,Ejc_Arc,Ponal
+Casanare,Aguazul,0.718,Colombia,Ejc_Arc,Ponal
+Casanare,Chámeza,0.819,Colombia,Ejc_Arc,Ponal
+Casanare,Hato Corozal,0.036,Colombia,Ejc_Arc,Ponal
+Casanare,La Salina,0.936,Colombia,Ejc_Arc,Ponal
+Casanare,Maní,0.364,Colombia,Ejc_Arc,Ponal
+Casanare,Monterrey,0.223,Colombia,Ejc_Arc,Ponal
+Casanare,Nunchía,0.24,Colombia,Ejc_Arc,Ponal
+Casanare,Orocué,0.725,Colombia,Ejc_Arc,Ponal
+Casanare,Paz de Ariporo,0.639,Colombia,Ejc_Arc,Ponal
+Casanare,Pore,0.124,Colombia,Ejc_Arc,Ponal
+Casanare,Recetor,0.843,Colombia,Ejc_Arc,Ponal
+Casanare,Sabanalarga,0.284,Colombia,Ejc_Arc,Ponal
+Casanare,San Luis de Palenque,0.333,Colombia,Ejc_Arc,Ponal
+Casanare,Sácama,0.606,Colombia,Ejc_Arc,Ponal
+Casanare,Tauramena,0.379,Colombia,Ejc_Arc,Ponal
+Casanare,Trinidad,0.213,Colombia,Ejc_Arc,Ponal
+Casanare,Támara,0.387,Colombia,Ejc_Arc,Ponal
+Casanare,Villanueva,0.052,Colombia,Ejc_Arc,Ponal
+Casanare,Yopal,0.582,Colombia,Ejc_Arc,Ponal
+Cauca,Almaguer,0.636,Colombia,Ejc_Arc,Ponal
+Cauca,Argelia,0.603,Colombia,Ejc_Arc,Ponal
+Cauca,Balboa,0.264,Colombia,Ejc_Arc,Ponal
+Cauca,Bolívar,0.082,Colombia,Ejc_Arc,Ponal
+Cauca,Buenos Aires,0.09,Colombia,Ejc_Arc,Ponal
+Cauca,Cajibío,0.91,Colombia,Ejc_Arc,Ponal
+Cauca,Caldono,0.781,Colombia,Ejc_Arc,Ponal
+Cauca,Caloto,0.896,Colombia,Ejc_Arc,Ponal
+Cauca,Corinto,0.78,Colombia,Ejc_Arc,Ponal
+Cauca,El Tambo,0.826,Colombia,Ejc_Arc,Ponal
+Cauca,Florencia,0.14,Colombia,Ejc_Arc,Ponal
+Cauca,Guachené,0.255,Colombia,Ejc_Arc,Ponal
+Cauca,Guapí,0.686,Colombia,Ejc_Arc,Ponal
+Cauca,Inzá,0.344,Colombia,Ejc_Arc,Ponal
+Cauca,Jambaló,0.82,Colombia,Ejc_Arc,Ponal
+Cauca,La Sierra,0.284,Colombia,Ejc_Arc,Ponal
+Cauca,La Vega,0.157,Colombia,Ejc_Arc,Ponal
+Cauca,López de Micay,0.622,Colombia,Ejc_Arc,Ponal
+Cauca,Mercaderes,0.537,Colombia,Ejc_Arc,Ponal
+Cauca,Miranda,0.862,Colombia,Ejc_Arc,Ponal
+Cauca,Morales,0.567,Colombia,Ejc_Arc,Ponal
+Cauca,Padilla,0.986,Colombia,Ejc_Arc,Ponal
+Cauca,Patía,0.478,Colombia,Ejc_Arc,Ponal
+Cauca,Piamonte,0.784,Colombia,Ejc_Arc,Ponal
+Cauca,Piendamó,0.975,Colombia,Ejc_Arc,Ponal
+Cauca,Popayán,0.194,Colombia,Ejc_Arc,Ponal
+Cauca,Puerto Tejada,0.702,Colombia,Ejc_Arc,Ponal
+Cauca,Puracé,0.482,Colombia,Ejc_Arc,Ponal
+Cauca,Páez,0.126,Colombia,Ejc_Arc,Ponal
+Cauca,Rosas,0.556,Colombia,Ejc_Arc,Ponal
+Cauca,San Sebastián,0.034,Colombia,Ejc_Arc,Ponal
+Cauca,Santa Rosa,0.937,Colombia,Ejc_Arc,Ponal
+Cauca,Santander de Quilichao,0.378,Colombia,Ejc_Arc,Ponal
+Cauca,Silvia,0.636,Colombia,Ejc_Arc,Ponal
+Cauca,Sotará,0.179,Colombia,Ejc_Arc,Ponal
+Cauca,Sucre,0.574,Colombia,Ejc_Arc,Ponal
+Cauca,Suárez,0.428,Colombia,Ejc_Arc,Ponal
+Cauca,Timbiquí,0.378,Colombia,Ejc_Arc,Ponal
+Cauca,Timbío,0.898,Colombia,Ejc_Arc,Ponal
+Cauca,Toribío,0.909,Colombia,Ejc_Arc,Ponal
+Cauca,Totoró,0.688,Colombia,Ejc_Arc,Ponal
+Cauca,Villa Rica,0.033,Colombia,Ejc_Arc,Ponal
+Cesar,Aguachica,0.883,Colombia,Ejc_Arc,Ponal
+Cesar,Agustín Codazzi,0.78,Colombia,Ejc_Arc,Ponal
+Cesar,Astrea,0.634,Colombia,Ejc_Arc,Ponal
+Cesar,Becerril,0.141,Colombia,Ejc_Arc,Ponal
+Cesar,Bosconia,0.415,Colombia,Ejc_Arc,Ponal
+Cesar,Chimichagua,0.007,Colombia,Ejc_Arc,Ponal
+Cesar,Chiriguaná,0.139,Colombia,Ejc_Arc,Ponal
+Cesar,Curumaní,0.768,Colombia,Ejc_Arc,Ponal
+Cesar,El Copey,0.634,Colombia,Ejc_Arc,Ponal
+Cesar,El Paso,0.31,Colombia,Ejc_Arc,Ponal
+Cesar,Gamarra,0.089,Colombia,Ejc_Arc,Ponal
+Cesar,González,0.344,Colombia,Ejc_Arc,Ponal
+Cesar,La Gloria (Cesar),0.297,Colombia,Ejc_Arc,Ponal
+Cesar,La Jagua de Ibirico,0.883,Colombia,Ejc_Arc,Ponal
+Cesar,La Paz,0.509,Colombia,Ejc_Arc,Ponal
+Cesar,Manaure Balcón del Cesar,0.457,Colombia,Ejc_Arc,Ponal
+Cesar,Pailitas,0.501,Colombia,Ejc_Arc,Ponal
+Cesar,Pelaya,0.429,Colombia,Ejc_Arc,Ponal
+Cesar,Pueblo Bello,0.239,Colombia,Ejc_Arc,Ponal
+Cesar,Río de Oro,0.25,Colombia,Ejc_Arc,Ponal
+Cesar,San Alberto,0.76,Colombia,Ejc_Arc,Ponal
+Cesar,San Diego,0.038,Colombia,Ejc_Arc,Ponal
+Cesar,San Martín,0.281,Colombia,Ejc_Arc,Ponal
+Cesar,Tamalameque,0.824,Colombia,Ejc_Arc,Ponal
+Cesar,Valledupar,0.659,Colombia,Ejc_Arc,Ponal
+Chocó,Acandí,0.197,Colombia,Ejc_Arc,Ponal
+Chocó,Alto Baudó,0.962,Colombia,Ejc_Arc,Ponal
+Chocó,Bagadó,0.189,Colombia,Ejc_Arc,Ponal
+Chocó,Bahía Solano,0.466,Colombia,Ejc_Arc,Ponal
+Chocó,Bajo Baudó,0.085,Colombia,Ejc_Arc,Ponal
+Chocó,Bojayá,0.989,Colombia,Ejc_Arc,Ponal
+Chocó,Cantón de San Pablo,0.063,Colombia,Ejc_Arc,Ponal
+Chocó,Condoto,0.117,Colombia,Ejc_Arc,Ponal
+Chocó,Cértegui,0.323,Colombia,Ejc_Arc,Ponal
+Chocó,El Atrato,0.667,Colombia,Ejc_Arc,Ponal
+Chocó,El Carmen de Atrato,0.538,Colombia,Ejc_Arc,Ponal
+Chocó,El Carmen del Darién,0.442,Colombia,Ejc_Arc,Ponal
+Chocó,Istmina,0.945,Colombia,Ejc_Arc,Ponal
+Chocó,Juradó,0.106,Colombia,Ejc_Arc,Ponal
+Chocó,Litoral de San Juan,0.687,Colombia,Ejc_Arc,Ponal
+Chocó,Lloró,0.369,Colombia,Ejc_Arc,Ponal
+Chocó,Medio Atrato,0.528,Colombia,Ejc_Arc,Ponal
+Chocó,Medio Baudó,0.259,Colombia,Ejc_Arc,Ponal
+Chocó,Medio San Juan,0.667,Colombia,Ejc_Arc,Ponal
+Chocó,Nuquí,0.764,Colombia,Ejc_Arc,Ponal
+Chocó,Nóvita,0.769,Colombia,Ejc_Arc,Ponal
+Chocó,Quibdó,0.357,Colombia,Ejc_Arc,Ponal
+Chocó,Riosucio,0.93,Colombia,Ejc_Arc,Ponal
+Chocó,Río Iró,0.774,Colombia,Ejc_Arc,Ponal
+Chocó,Río Quito,0.54,Colombia,Ejc_Arc,Ponal
+Chocó,San José del Palmar,0.244,Colombia,Ejc_Arc,Ponal
+Chocó,Sipí,0.555,Colombia,Ejc_Arc,Ponal
+Chocó,Tadó,0.063,Colombia,Ejc_Arc,Ponal
+Chocó,Unguía,0.776,Colombia,Ejc_Arc,Ponal
+Chocó,Unión Panamericana,0.609,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Agua de Dios,0.396,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Albán,0.139,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Anapoima,0.935,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Anolaima,0.571,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Apulo,0.009,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Arbeláez,0.944,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Beltrán,0.574,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Bituima,0.35,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Bogotá,0.914,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Bojacá,0.172,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Cabrera,0.243,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Cachipay,0.501,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Cajicá,0.28,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Caparrapí,0.599,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Carmen de Carupa,0.143,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Chaguaní,0.67,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Chipaque,0.232,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Choachí,0.658,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Chocontá,0.668,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Chía,0.578,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Cogua,0.115,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Cota,0.151,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Cucunubá,0.172,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Cáqueza,0.108,Colombia,Ejc_Arc,Ponal
+Cundinamarca,El Colegio,0.2,Colombia,Ejc_Arc,Ponal
+Cundinamarca,El Peñón,0.662,Colombia,Ejc_Arc,Ponal
+Cundinamarca,El Rosal,0.508,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Facatativá,0.491,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Fosca,0.689,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Funza,0.224,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Fusagasugá,0.337,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Fómeque,0.076,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Fúquene,0.18,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Gachalá,0.613,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Gachancipá,0.508,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Gachetá,0.765,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Gama,0.578,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Girardot,0.694,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Granada,0.987,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Guachetá,0.63,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Guaduas,0.416,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Guasca,0.599,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Guataquí,0.576,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Guatavita,0.165,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Guayabal de Síquima,0.823,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Guayabetal,0.418,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Gutiérrez,0.454,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Jerusalén,0.594,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Junín,0.325,Colombia,Ejc_Arc,Ponal
+Cundinamarca,La Calera,0.42,Colombia,Ejc_Arc,Ponal
+Cundinamarca,La Mesa,0.287,Colombia,Ejc_Arc,Ponal
+Cundinamarca,La Palma,0.791,Colombia,Ejc_Arc,Ponal
+Cundinamarca,La Peña,0.024,Colombia,Ejc_Arc,Ponal
+Cundinamarca,La Vega,0.211,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Lenguazaque,0.717,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Machetá,0.066,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Madrid,0.39,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Manta,0.552,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Medina,0.117,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Mosquera,0.704,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Nariño,0.291,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Nemocón,0.706,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Nilo,0.404,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Nimaima,0.677,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Nocaima,0.582,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Pacho,0.459,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Paime,0.714,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Pandi,0.626,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Paratebueno,0.031,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Pasca,0.45,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Puerto Salgar,0.061,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Pulí,0.072,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Quebradanegra,0.595,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Quetame,0.02,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Quipile,0.614,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Ricaurte,0.396,Colombia,Ejc_Arc,Ponal
+Cundinamarca,San Antonio del Tequendama,0.627,Colombia,Ejc_Arc,Ponal
+Cundinamarca,San Bernardo,0.588,Colombia,Ejc_Arc,Ponal
+Cundinamarca,San Cayetano,0.863,Colombia,Ejc_Arc,Ponal
+Cundinamarca,San Francisco,0.13,Colombia,Ejc_Arc,Ponal
+Cundinamarca,San Juan de Rioseco,0.973,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Sasaima,0.567,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Sesquilé,0.521,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Sibaté,0.48,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Silvania,0.0,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Simijaca,0.703,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Soacha,0.653,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Sopó,0.2,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Subachoque,0.26,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Suesca,0.611,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Supatá,0.044,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Susa,0.902,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Sutatausa,0.71,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Tabio,0.546,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Tausa,0.741,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Tena,0.86,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Tenjo,0.326,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Tibacuy,0.545,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Tibirita,0.384,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Tocaima,0.892,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Tocancipá,0.574,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Topaipí,0.676,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Ubalá,0.673,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Ubaque,0.467,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Ubaté,0.975,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Une,0.117,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Venecia,0.437,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Vergara,0.755,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Vianí,0.842,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Villagómez,0.105,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Villapinzón,0.607,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Villeta,0.591,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Viotá,0.325,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Yacopí,0.14,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Zipacón,0.524,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Zipaquirá,0.918,Colombia,Ejc_Arc,Ponal
+Cundinamarca,Útica,0.603,Colombia,Ejc_Arc,Ponal
+Córdoba,Ayapel,0.253,Colombia,Ejc_Arc,Ponal
+Córdoba,Buenavista,0.351,Colombia,Ejc_Arc,Ponal
+Córdoba,Canalete,0.113,Colombia,Ejc_Arc,Ponal
+Córdoba,Cereté,0.151,Colombia,Ejc_Arc,Ponal
+Córdoba,Chimá,0.572,Colombia,Ejc_Arc,Ponal
+Córdoba,Chinú,0.286,Colombia,Ejc_Arc,Ponal
+Córdoba,Ciénaga de Oro,0.613,Colombia,Ejc_Arc,Ponal
+Córdoba,Cotorra,0.019,Colombia,Ejc_Arc,Ponal
+Córdoba,La Apartada,0.04,Colombia,Ejc_Arc,Ponal
+Córdoba,Lorica,0.179,Colombia,Ejc_Arc,Ponal
+Córdoba,Los Córdobas,0.141,Colombia,Ejc_Arc,Ponal
+Córdoba,Momil,0.165,Colombia,Ejc_Arc,Ponal
+Córdoba,Montelíbano,0.719,Colombia,Ejc_Arc,Ponal
+Córdoba,Montería,0.648,Colombia,Ejc_Arc,Ponal
+Córdoba,Moñitos,0.841,Colombia,Ejc_Arc,Ponal
+Córdoba,Planeta Rica,0.508,Colombia,Ejc_Arc,Ponal
+Córdoba,Pueblo Nuevo,0.05,Colombia,Ejc_Arc,Ponal
+Córdoba,Puerto Escondido,0.935,Colombia,Ejc_Arc,Ponal
+Córdoba,Puerto Libertador,0.104,Colombia,Ejc_Arc,Ponal
+Córdoba,Purísima,0.204,Colombia,Ejc_Arc,Ponal
+Córdoba,Sahagún,0.776,Colombia,Ejc_Arc,Ponal
+Córdoba,San Andrés de Sotavento,0.096,Colombia,Ejc_Arc,Ponal
+Córdoba,San Antero,0.726,Colombia,Ejc_Arc,Ponal
+Córdoba,San Bernardo del Viento,0.79,Colombia,Ejc_Arc,Ponal
+Córdoba,San Carlos,0.517,Colombia,Ejc_Arc,Ponal
+Córdoba,San José de Uré,0.619,Colombia,Ejc_Arc,Ponal
+Córdoba,San Pelayo,0.185,Colombia,Ejc_Arc,Ponal
+Córdoba,Tierralta,0.644,Colombia,Ejc_Arc,Ponal
+Córdoba,Tuchín,0.217,Colombia,Ejc_Arc,Ponal
+Córdoba,Valencia,0.749,Colombia,Ejc_Arc,Ponal
+Guainía,Inírida,0.291,Colombia,Ejc_Arc,Ponal
+Guaviare,Calamar,0.813,Colombia,Ejc_Arc,Ponal
+Guaviare,El Retorno,0.202,Colombia,Ejc_Arc,Ponal
+Guaviare,Miraflores,0.887,Colombia,Ejc_Arc,Ponal
+Guaviare,San José del Guaviare,0.101,Colombia,Ejc_Arc,Ponal
+Huila,Acevedo,0.607,Colombia,Ejc_Arc,Ponal
+Huila,Agrado,0.578,Colombia,Ejc_Arc,Ponal
+Huila,Aipe,0.726,Colombia,Ejc_Arc,Ponal
+Huila,Algeciras,0.188,Colombia,Ejc_Arc,Ponal
+Huila,Altamira,0.329,Colombia,Ejc_Arc,Ponal
+Huila,Baraya,0.052,Colombia,Ejc_Arc,Ponal
+Huila,Campoalegre,0.951,Colombia,Ejc_Arc,Ponal
+Huila,Colombia,0.159,Colombia,Ejc_Arc,Ponal
+Huila,El Pital,0.156,Colombia,Ejc_Arc,Ponal
+Huila,Elías,0.971,Colombia,Ejc_Arc,Ponal
+Huila,Garzón,0.682,Colombia,Ejc_Arc,Ponal
+Huila,Gigante,0.946,Colombia,Ejc_Arc,Ponal
+Huila,Guadalupe,0.971,Colombia,Ejc_Arc,Ponal
+Huila,Hobo,0.542,Colombia,Ejc_Arc,Ponal
+Huila,Isnos,0.558,Colombia,Ejc_Arc,Ponal
+Huila,La Argentina,0.839,Colombia,Ejc_Arc,Ponal
+Huila,La Plata,0.238,Colombia,Ejc_Arc,Ponal
+Huila,Neiva,0.503,Colombia,Ejc_Arc,Ponal
+Huila,Nátaga,0.308,Colombia,Ejc_Arc,Ponal
+Huila,Oporapa,0.265,Colombia,Ejc_Arc,Ponal
+Huila,Paicol,0.507,Colombia,Ejc_Arc,Ponal
+Huila,Palermo,0.699,Colombia,Ejc_Arc,Ponal
+Huila,Palestina,0.16,Colombia,Ejc_Arc,Ponal
+Huila,Pitalito,0.347,Colombia,Ejc_Arc,Ponal
+Huila,Rivera,0.134,Colombia,Ejc_Arc,Ponal
+Huila,Saladoblanco,0.209,Colombia,Ejc_Arc,Ponal
+Huila,San Agustín,0.713,Colombia,Ejc_Arc,Ponal
+Huila,Santa María,0.851,Colombia,Ejc_Arc,Ponal
+Huila,Suaza,0.008,Colombia,Ejc_Arc,Ponal
+Huila,Tarqui,0.575,Colombia,Ejc_Arc,Ponal
+Huila,Tello,0.383,Colombia,Ejc_Arc,Ponal
+Huila,Teruel,0.32,Colombia,Ejc_Arc,Ponal
+Huila,Tesalia,0.306,Colombia,Ejc_Arc,Ponal
+Huila,Timaná,0.679,Colombia,Ejc_Arc,Ponal
+Huila,Villavieja,0.415,Colombia,Ejc_Arc,Ponal
+Huila,Yaguará,0.501,Colombia,Ejc_Arc,Ponal
+Huila,Íquira,0.329,Colombia,Ejc_Arc,Ponal
+La Guajira,Albania,0.246,Colombia,Ejc_Arc,Ponal
+La Guajira,Barrancas,0.573,Colombia,Ejc_Arc,Ponal
+La Guajira,Dibulla,0.279,Colombia,Ejc_Arc,Ponal
+La Guajira,Distracción,0.238,Colombia,Ejc_Arc,Ponal
+La Guajira,El Molino,0.312,Colombia,Ejc_Arc,Ponal
+La Guajira,Fonseca,0.935,Colombia,Ejc_Arc,Ponal
+La Guajira,Hatonuevo,0.512,Colombia,Ejc_Arc,Ponal
+La Guajira,La Jagua del Pilar,0.95,Colombia,Ejc_Arc,Ponal
+La Guajira,Maicao,0.336,Colombia,Ejc_Arc,Ponal
+La Guajira,Manaure,0.826,Colombia,Ejc_Arc,Ponal
+La Guajira,Riohacha,0.677,Colombia,Ejc_Arc,Ponal
+La Guajira,San Juan del Cesar,0.277,Colombia,Ejc_Arc,Ponal
+La Guajira,Uribia,0.465,Colombia,Ejc_Arc,Ponal
+La Guajira,Urumita,0.525,Colombia,Ejc_Arc,Ponal
+La Guajira,Villanueva,0.556,Colombia,Ejc_Arc,Ponal
+Magdalena,Algarrobo,0.558,Colombia,Ejc_Arc,Ponal
+Magdalena,Aracataca,0.611,Colombia,Ejc_Arc,Ponal
+Magdalena,Ariguaní,0.454,Colombia,Ejc_Arc,Ponal
+Magdalena,Cerro de San Antonio,0.652,Colombia,Ejc_Arc,Ponal
+Magdalena,Chibolo,0.369,Colombia,Ejc_Arc,Ponal
+Magdalena,Chibolo,0.751,Colombia,Ejc_Arc,Ponal
+Magdalena,Ciénaga,0.196,Colombia,Ejc_Arc,Ponal
+Magdalena,Concordia,0.247,Colombia,Ejc_Arc,Ponal
+Magdalena,El Banco,0.399,Colombia,Ejc_Arc,Ponal
+Magdalena,El Piñón,0.607,Colombia,Ejc_Arc,Ponal
+Magdalena,El Retén,0.336,Colombia,Ejc_Arc,Ponal
+Magdalena,Fundación,0.218,Colombia,Ejc_Arc,Ponal
+Magdalena,Guamal,0.77,Colombia,Ejc_Arc,Ponal
+Magdalena,Nueva Granada,0.43,Colombia,Ejc_Arc,Ponal
+Magdalena,Pedraza,0.514,Colombia,Ejc_Arc,Ponal
+Magdalena,Pijiño del Carmen,0.767,Colombia,Ejc_Arc,Ponal
+Magdalena,Pivijay,0.097,Colombia,Ejc_Arc,Ponal
+Magdalena,Plato,0.799,Colombia,Ejc_Arc,Ponal
+Magdalena,Pueblo Viejo,0.806,Colombia,Ejc_Arc,Ponal
+Magdalena,Remolino,0.432,Colombia,Ejc_Arc,Ponal
+Magdalena,Sabanas de San Ángel,0.351,Colombia,Ejc_Arc,Ponal
+Magdalena,Salamina,0.927,Colombia,Ejc_Arc,Ponal
+Magdalena,San Sebastián de Buenavista,0.75,Colombia,Ejc_Arc,Ponal
+Magdalena,San Zenón,0.87,Colombia,Ejc_Arc,Ponal
+Magdalena,Santa Ana,0.096,Colombia,Ejc_Arc,Ponal
+Magdalena,Santa Bárbara de Pinto,0.919,Colombia,Ejc_Arc,Ponal
+Magdalena,Santa Marta,0.238,Colombia,Ejc_Arc,Ponal
+Magdalena,Sitionuevo,0.68,Colombia,Ejc_Arc,Ponal
+Magdalena,Tenerife,0.894,Colombia,Ejc_Arc,Ponal
+Magdalena,Zapayán,0.001,Colombia,Ejc_Arc,Ponal
+Magdalena,Zona Bananera,0.887,Colombia,Ejc_Arc,Ponal
+Meta,Acacías,0.972,Colombia,Ejc_Arc,Ponal
+Meta,Barranca de Upía,0.668,Colombia,Ejc_Arc,Ponal
+Meta,Cabuyaro,0.115,Colombia,Ejc_Arc,Ponal
+Meta,Castilla la Nueva,0.521,Colombia,Ejc_Arc,Ponal
+Meta,Cubarral,0.507,Colombia,Ejc_Arc,Ponal
+Meta,Cumaral,0.882,Colombia,Ejc_Arc,Ponal
+Meta,El Calvario,0.293,Colombia,Ejc_Arc,Ponal
+Meta,El Castillo,0.222,Colombia,Ejc_Arc,Ponal
+Meta,El Dorado,0.325,Colombia,Ejc_Arc,Ponal
+Meta,Fuente de Oro,0.705,Colombia,Ejc_Arc,Ponal
+Meta,Granada,0.146,Colombia,Ejc_Arc,Ponal
+Meta,Guamal,0.43,Colombia,Ejc_Arc,Ponal
+Meta,La Macarena,0.092,Colombia,Ejc_Arc,Ponal
+Meta,La Uribe,0.167,Colombia,Ejc_Arc,Ponal
+Meta,Lejanías,0.566,Colombia,Ejc_Arc,Ponal
+Meta,Mapiripán,0.906,Colombia,Ejc_Arc,Ponal
+Meta,Mesetas,0.912,Colombia,Ejc_Arc,Ponal
+Meta,Puerto Concordia,0.18,Colombia,Ejc_Arc,Ponal
+Meta,Puerto Gaitán,0.675,Colombia,Ejc_Arc,Ponal
+Meta,Puerto Lleras,0.258,Colombia,Ejc_Arc,Ponal
+Meta,Puerto López,0.782,Colombia,Ejc_Arc,Ponal
+Meta,Puerto Rico,0.412,Colombia,Ejc_Arc,Ponal
+Meta,Restrepo,0.172,Colombia,Ejc_Arc,Ponal
+Meta,San Carlos de Guaroa,0.977,Colombia,Ejc_Arc,Ponal
+Meta,San Juan de Arama,0.667,Colombia,Ejc_Arc,Ponal
+Meta,San Juanito,0.745,Colombia,Ejc_Arc,Ponal
+Meta,San Martín,0.132,Colombia,Ejc_Arc,Ponal
+Meta,Villavicencio,0.845,Colombia,Ejc_Arc,Ponal
+Meta,Vista Hermosa,0.655,Colombia,Ejc_Arc,Ponal
+Nariño,Aldana,0.806,Colombia,Ejc_Arc,Ponal
+Nariño,Ancuyá,0.736,Colombia,Ejc_Arc,Ponal
+Nariño,Arboleda,0.912,Colombia,Ejc_Arc,Ponal
+Nariño,Barbacoas,0.95,Colombia,Ejc_Arc,Ponal
+Nariño,Belén,0.267,Colombia,Ejc_Arc,Ponal
+Nariño,Buesaco,0.866,Colombia,Ejc_Arc,Ponal
+Nariño,Chachagüí,0.993,Colombia,Ejc_Arc,Ponal
+Nariño,Colón,0.479,Colombia,Ejc_Arc,Ponal
+Nariño,Consacá,0.281,Colombia,Ejc_Arc,Ponal
+Nariño,Contadero,0.857,Colombia,Ejc_Arc,Ponal
+Nariño,Cuaspud,0.229,Colombia,Ejc_Arc,Ponal
+Nariño,Cumbal,0.603,Colombia,Ejc_Arc,Ponal
+Nariño,Cumbitara,0.826,Colombia,Ejc_Arc,Ponal
+Nariño,Córdoba,0.211,Colombia,Ejc_Arc,Ponal
+Nariño,El Charco,0.45,Colombia,Ejc_Arc,Ponal
+Nariño,El Peñol,0.092,Colombia,Ejc_Arc,Ponal
+Nariño,El Rosario,0.608,Colombia,Ejc_Arc,Ponal
+Nariño,El Tablón,0.7,Colombia,Ejc_Arc,Ponal
+Nariño,El Tambo,0.759,Colombia,Ejc_Arc,Ponal
+Nariño,Francisco Pizarro,0.967,Colombia,Ejc_Arc,Ponal
+Nariño,Funes,0.051,Colombia,Ejc_Arc,Ponal
+Nariño,Guachucal,0.704,Colombia,Ejc_Arc,Ponal
+Nariño,Guaitarilla,0.182,Colombia,Ejc_Arc,Ponal
+Nariño,Gualmatán,0.247,Colombia,Ejc_Arc,Ponal
+Nariño,Iles,0.905,Colombia,Ejc_Arc,Ponal
+Nariño,Imués,0.738,Colombia,Ejc_Arc,Ponal
+Nariño,Ipiales,0.484,Colombia,Ejc_Arc,Ponal
+Nariño,La Cruz,0.168,Colombia,Ejc_Arc,Ponal
+Nariño,La Florida,0.586,Colombia,Ejc_Arc,Ponal
+Nariño,La Llanada,0.588,Colombia,Ejc_Arc,Ponal
+Nariño,La Tola,0.17,Colombia,Ejc_Arc,Ponal
+Nariño,La Unión,0.493,Colombia,Ejc_Arc,Ponal
+Nariño,Leiva,0.586,Colombia,Ejc_Arc,Ponal
+Nariño,Linares,0.022,Colombia,Ejc_Arc,Ponal
+Nariño,Los Andes,0.271,Colombia,Ejc_Arc,Ponal
+Nariño,Magüí Payán,0.543,Colombia,Ejc_Arc,Ponal
+Nariño,Mallama,0.696,Colombia,Ejc_Arc,Ponal
+Nariño,Mosquera,0.39,Colombia,Ejc_Arc,Ponal
+Nariño,Nariño,0.171,Colombia,Ejc_Arc,Ponal
+Nariño,Olaya Herrera,0.609,Colombia,Ejc_Arc,Ponal
+Nariño,Ospina,0.04,Colombia,Ejc_Arc,Ponal
+Nariño,Pasto,0.737,Colombia,Ejc_Arc,Ponal
+Nariño,Policarpa,0.232,Colombia,Ejc_Arc,Ponal
+Nariño,Potosí,0.43,Colombia,Ejc_Arc,Ponal
+Nariño,Providencia,0.344,Colombia,Ejc_Arc,Ponal
+Nariño,Puerres,0.792,Colombia,Ejc_Arc,Ponal
+Nariño,Pupiales,0.5,Colombia,Ejc_Arc,Ponal
+Nariño,Ricaurte,0.542,Colombia,Ejc_Arc,Ponal
+Nariño,Roberto Payán,0.751,Colombia,Ejc_Arc,Ponal
+Nariño,Samaniego,0.903,Colombia,Ejc_Arc,Ponal
+Nariño,San Bernardo,0.047,Colombia,Ejc_Arc,Ponal
+Nariño,San José de Albán,0.261,Colombia,Ejc_Arc,Ponal
+Nariño,San Lorenzo,0.39,Colombia,Ejc_Arc,Ponal
+Nariño,San Pablo,0.055,Colombia,Ejc_Arc,Ponal
+Nariño,San Pedro de Cartago,0.586,Colombia,Ejc_Arc,Ponal
+Nariño,Sandoná,0.926,Colombia,Ejc_Arc,Ponal
+Nariño,Santa Bárbara,0.118,Colombia,Ejc_Arc,Ponal
+Nariño,Santacruz,0.72,Colombia,Ejc_Arc,Ponal
+Nariño,Sapuyes,0.525,Colombia,Ejc_Arc,Ponal
+Nariño,Taminango,0.073,Colombia,Ejc_Arc,Ponal
+Nariño,Tangua,0.705,Colombia,Ejc_Arc,Ponal
+Nariño,Tumaco,0.229,Colombia,Ejc_Arc,Ponal
+Nariño,Túquerres,0.205,Colombia,Ejc_Arc,Ponal
+Nariño,Yacuanquer,0.015,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Arboledas,0.164,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Bochalema,0.761,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Bucarasica,0.163,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Chinácota,0.122,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Chitagá,0.564,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Convención,0.563,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Cucutilla,0.614,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Cáchira,0.691,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Cácota,0.091,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Cúcuta,0.487,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Duranía,0.2,Colombia,Ejc_Arc,Ponal
+Norte de Santander,El Carmen,0.164,Colombia,Ejc_Arc,Ponal
+Norte de Santander,El Tarra,0.047,Colombia,Ejc_Arc,Ponal
+Norte de Santander,El Zulia,0.22,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Gramalote,0.057,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Hacarí,0.82,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Herrán,0.19,Colombia,Ejc_Arc,Ponal
+Norte de Santander,La Esperanza,0.499,Colombia,Ejc_Arc,Ponal
+Norte de Santander,La Playa de Belén,0.445,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Labateca,0.586,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Los Patios,0.867,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Lourdes,0.169,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Mutiscua,0.108,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Ocaña,0.142,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Pamplona,0.86,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Pamplonita,0.676,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Puerto Santander,0.265,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Ragonvalia,0.04,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Salazar de Las Palmas,0.891,Colombia,Ejc_Arc,Ponal
+Norte de Santander,San Calixto,0.835,Colombia,Ejc_Arc,Ponal
+Norte de Santander,San Cayetano,0.531,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Santiago,0.523,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Santo Domingo de Silos,0.729,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Sardinata,0.874,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Teorama,0.79,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Tibú,0.532,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Toledo,0.229,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Villa Caro,0.615,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Villa del Rosario,0.355,Colombia,Ejc_Arc,Ponal
+Norte de Santander,Ábrego,0.119,Colombia,Ejc_Arc,Ponal
+Putumayo,Colón,0.427,Colombia,Ejc_Arc,Ponal
+Putumayo,Mocoa,0.774,Colombia,Ejc_Arc,Ponal
+Putumayo,Orito,0.534,Colombia,Ejc_Arc,Ponal
+Putumayo,Puerto Asís,0.196,Colombia,Ejc_Arc,Ponal
+Putumayo,Puerto Caicedo,0.305,Colombia,Ejc_Arc,Ponal
+Putumayo,Puerto Guzmán,0.649,Colombia,Ejc_Arc,Ponal
+Putumayo,Puerto Leguízamo,0.057,Colombia,Ejc_Arc,Ponal
+Putumayo,San Francisco,0.378,Colombia,Ejc_Arc,Ponal
+Putumayo,San Miguel,0.431,Colombia,Ejc_Arc,Ponal
+Putumayo,Santiago,0.319,Colombia,Ejc_Arc,Ponal
+Putumayo,Sibundoy,0.159,Colombia,Ejc_Arc,Ponal
+Putumayo,Valle del Guamuez,0.692,Colombia,Ejc_Arc,Ponal
+Putumayo,Villagarzón,0.225,Colombia,Ejc_Arc,Ponal
+Quindío,Armenia,0.974,Colombia,Ejc_Arc,Ponal
+Quindío,Buenavista,0.686,Colombia,Ejc_Arc,Ponal
+Quindío,Calarcá,0.95,Colombia,Ejc_Arc,Ponal
+Quindío,Circasia,0.293,Colombia,Ejc_Arc,Ponal
+Quindío,Córdoba,0.47,Colombia,Ejc_Arc,Ponal
+Quindío,Filandia,0.561,Colombia,Ejc_Arc,Ponal
+Quindío,Génova,0.017,Colombia,Ejc_Arc,Ponal
+Quindío,La Tebaida,0.574,Colombia,Ejc_Arc,Ponal
+Quindío,Montenegro,0.848,Colombia,Ejc_Arc,Ponal
+Quindío,Pijao,0.685,Colombia,Ejc_Arc,Ponal
+Quindío,Quimbaya,0.013,Colombia,Ejc_Arc,Ponal
+Quindío,Salento,0.472,Colombia,Ejc_Arc,Ponal
+Risaralda,Apía,0.6,Colombia,Ejc_Arc,Ponal
+Risaralda,Balboa,0.303,Colombia,Ejc_Arc,Ponal
+Risaralda,Belén de Umbría,0.652,Colombia,Ejc_Arc,Ponal
+Risaralda,Dosquebradas,0.873,Colombia,Ejc_Arc,Ponal
+Risaralda,Guática,0.341,Colombia,Ejc_Arc,Ponal
+Risaralda,La Celia,0.918,Colombia,Ejc_Arc,Ponal
+Risaralda,La Virginia,0.81,Colombia,Ejc_Arc,Ponal
+Risaralda,Marsella,0.047,Colombia,Ejc_Arc,Ponal
+Risaralda,Mistrató,0.525,Colombia,Ejc_Arc,Ponal
+Risaralda,Pereira,0.276,Colombia,Ejc_Arc,Ponal
+Risaralda,Pueblo Rico,0.431,Colombia,Ejc_Arc,Ponal
+Risaralda,Quinchía,0.084,Colombia,Ejc_Arc,Ponal
+Risaralda,Santa Rosa de Cabal,0.96,Colombia,Ejc_Arc,Ponal
+Risaralda,Santuario,0.201,Colombia,Ejc_Arc,Ponal
+San Andrés y Providencia,Providencia y Santa Catalina Islas,0.501,Colombia,Ejc_Arc,Ponal
+San Andrés y Providencia,San Andrés,0.143,Colombia,Ejc_Arc,Ponal
+Santander,Aguada,0.142,Colombia,Ejc_Arc,Ponal
+Santander,Albania,0.354,Colombia,Ejc_Arc,Ponal
+Santander,Aratoca,0.887,Colombia,Ejc_Arc,Ponal
+Santander,Barbosa,0.391,Colombia,Ejc_Arc,Ponal
+Santander,Barichara,0.326,Colombia,Ejc_Arc,Ponal
+Santander,Barrancabermeja,0.6,Colombia,Ejc_Arc,Ponal
+Santander,Betulia,0.974,Colombia,Ejc_Arc,Ponal
+Santander,Bolívar,0.782,Colombia,Ejc_Arc,Ponal
+Santander,Bucaramanga,0.564,Colombia,Ejc_Arc,Ponal
+Santander,Cabrera,0.417,Colombia,Ejc_Arc,Ponal
+Santander,California,0.977,Colombia,Ejc_Arc,Ponal
+Santander,Capitanejo,0.084,Colombia,Ejc_Arc,Ponal
+Santander,Carcasí,0.876,Colombia,Ejc_Arc,Ponal
+Santander,Cepitá,0.75,Colombia,Ejc_Arc,Ponal
+Santander,Cerrito,0.455,Colombia,Ejc_Arc,Ponal
+Santander,Charalá,0.728,Colombia,Ejc_Arc,Ponal
+Santander,Charta,0.585,Colombia,Ejc_Arc,Ponal
+Santander,Chima,0.503,Colombia,Ejc_Arc,Ponal
+Santander,Chipatá,0.482,Colombia,Ejc_Arc,Ponal
+Santander,Cimitarra,0.331,Colombia,Ejc_Arc,Ponal
+Santander,Concepción,0.751,Colombia,Ejc_Arc,Ponal
+Santander,Confines,0.1,Colombia,Ejc_Arc,Ponal
+Santander,Contratación,0.638,Colombia,Ejc_Arc,Ponal
+Santander,Coromoro,0.867,Colombia,Ejc_Arc,Ponal
+Santander,Curití,0.622,Colombia,Ejc_Arc,Ponal
+Santander,El Carmen de Chucurí,0.971,Colombia,Ejc_Arc,Ponal
+Santander,El Guacamayo,0.5,Colombia,Ejc_Arc,Ponal
+Santander,El Peñón,0.782,Colombia,Ejc_Arc,Ponal
+Santander,El Playón,0.074,Colombia,Ejc_Arc,Ponal
+Santander,El Socorro,0.588,Colombia,Ejc_Arc,Ponal
+Santander,Encino,0.773,Colombia,Ejc_Arc,Ponal
+Santander,Enciso,0.87,Colombia,Ejc_Arc,Ponal
+Santander,Floridablanca,0.497,Colombia,Ejc_Arc,Ponal
+Santander,Florián,0.687,Colombia,Ejc_Arc,Ponal
+Santander,Galán,0.794,Colombia,Ejc_Arc,Ponal
+Santander,Girón,0.057,Colombia,Ejc_Arc,Ponal
+Santander,Guaca,0.253,Colombia,Ejc_Arc,Ponal
+Santander,Guadalupe,0.005,Colombia,Ejc_Arc,Ponal
+Santander,Guapotá,0.053,Colombia,Ejc_Arc,Ponal
+Santander,Guavatá,0.365,Colombia,Ejc_Arc,Ponal
+Santander,Gámbita,0.795,Colombia,Ejc_Arc,Ponal
+Santander,Güepsa,0.609,Colombia,Ejc_Arc,Ponal
+Santander,Hato,0.025,Colombia,Ejc_Arc,Ponal
+Santander,Jesús María,0.396,Colombia,Ejc_Arc,Ponal
+Santander,Jordán,0.59,Colombia,Ejc_Arc,Ponal
+Santander,La Belleza,0.357,Colombia,Ejc_Arc,Ponal
+Santander,La Paz,0.816,Colombia,Ejc_Arc,Ponal
+Santander,Landázuri,0.837,Colombia,Ejc_Arc,Ponal
+Santander,Lebrija,0.681,Colombia,Ejc_Arc,Ponal
+Santander,Los Santos,0.033,Colombia,Ejc_Arc,Ponal
+Santander,Macaravita,0.428,Colombia,Ejc_Arc,Ponal
+Santander,Matanza,0.872,Colombia,Ejc_Arc,Ponal
+Santander,Mogotes,0.988,Colombia,Ejc_Arc,Ponal
+Santander,Molagavita,0.348,Colombia,Ejc_Arc,Ponal
+Santander,Málaga,0.5,Colombia,Ejc_Arc,Ponal
+Santander,Ocamonte,0.097,Colombia,Ejc_Arc,Ponal
+Santander,Oiba,0.696,Colombia,Ejc_Arc,Ponal
+Santander,Onzaga,0.944,Colombia,Ejc_Arc,Ponal
+Santander,Palmar,0.661,Colombia,Ejc_Arc,Ponal
+Santander,Palmas del Socorro,0.746,Colombia,Ejc_Arc,Ponal
+Santander,Piedecuesta,0.451,Colombia,Ejc_Arc,Ponal
+Santander,Pinchote,0.05,Colombia,Ejc_Arc,Ponal
+Santander,Puente Nacional,0.189,Colombia,Ejc_Arc,Ponal
+Santander,Puerto Parra,0.234,Colombia,Ejc_Arc,Ponal
+Santander,Puerto Wilches,0.52,Colombia,Ejc_Arc,Ponal
+Santander,Páramo,0.049,Colombia,Ejc_Arc,Ponal
+Santander,Rionegro,0.074,Colombia,Ejc_Arc,Ponal
+Santander,Sabana de Torres,0.576,Colombia,Ejc_Arc,Ponal
+Santander,San Andrés,0.795,Colombia,Ejc_Arc,Ponal
+Santander,San Benito,0.13,Colombia,Ejc_Arc,Ponal
+Santander,San Gil,0.95,Colombia,Ejc_Arc,Ponal
+Santander,San Joaquín,0.372,Colombia,Ejc_Arc,Ponal
+Santander,San José de Miranda,0.15,Colombia,Ejc_Arc,Ponal
+Santander,San Miguel,0.395,Colombia,Ejc_Arc,Ponal
+Santander,San Vicente de Chucurí,0.176,Colombia,Ejc_Arc,Ponal
+Santander,Santa Bárbara,0.72,Colombia,Ejc_Arc,Ponal
+Santander,Santa Helena del Opón,0.639,Colombia,Ejc_Arc,Ponal
+Santander,Simacota,0.009,Colombia,Ejc_Arc,Ponal
+Santander,Suaita,0.022,Colombia,Ejc_Arc,Ponal
+Santander,Sucre,0.181,Colombia,Ejc_Arc,Ponal
+Santander,Suratá,0.305,Colombia,Ejc_Arc,Ponal
+Santander,Tona,0.965,Colombia,Ejc_Arc,Ponal
+Santander,Valle de San José,0.369,Colombia,Ejc_Arc,Ponal
+Santander,Vetas,0.132,Colombia,Ejc_Arc,Ponal
+Santander,Villanueva,0.383,Colombia,Ejc_Arc,Ponal
+Santander,Vélez,0.714,Colombia,Ejc_Arc,Ponal
+Santander,Zapatoca,0.353,Colombia,Ejc_Arc,Ponal
+Sucre,Buenavista,0.02,Colombia,Ejc_Arc,Ponal
+Sucre,Caimito,0.997,Colombia,Ejc_Arc,Ponal
+Sucre,Chalán,0.738,Colombia,Ejc_Arc,Ponal
+Sucre,Colosó,0.013,Colombia,Ejc_Arc,Ponal
+Sucre,Corozal,0.275,Colombia,Ejc_Arc,Ponal
+Sucre,Coveñas,0.051,Colombia,Ejc_Arc,Ponal
+Sucre,El Roble,0.236,Colombia,Ejc_Arc,Ponal
+Sucre,Galeras,0.442,Colombia,Ejc_Arc,Ponal
+Sucre,Guaranda,0.532,Colombia,Ejc_Arc,Ponal
+Sucre,La Unión,0.493,Colombia,Ejc_Arc,Ponal
+Sucre,Los Palmitos,0.986,Colombia,Ejc_Arc,Ponal
+Sucre,Majagual,0.959,Colombia,Ejc_Arc,Ponal
+Sucre,Morroa,0.003,Colombia,Ejc_Arc,Ponal
+Sucre,Ovejas,0.791,Colombia,Ejc_Arc,Ponal
+Sucre,Sampués,0.28,Colombia,Ejc_Arc,Ponal
+Sucre,San Antonio de Palmito,0.474,Colombia,Ejc_Arc,Ponal
+Sucre,San Benito Abad,0.622,Colombia,Ejc_Arc,Ponal
+Sucre,San Juan de Betulia,0.215,Colombia,Ejc_Arc,Ponal
+Sucre,San Marcos,0.569,Colombia,Ejc_Arc,Ponal
+Sucre,San Onofre,0.794,Colombia,Ejc_Arc,Ponal
+Sucre,San Pedro,0.44,Colombia,Ejc_Arc,Ponal
+Sucre,Sincelejo,0.586,Colombia,Ejc_Arc,Ponal
+Sucre,Sincé,0.394,Colombia,Ejc_Arc,Ponal
+Sucre,Sucre,0.662,Colombia,Ejc_Arc,Ponal
+Sucre,Tolú,0.625,Colombia,Ejc_Arc,Ponal
+Sucre,Tolú Viejo,0.799,Colombia,Ejc_Arc,Ponal
+Tolima,Alpujarra,0.278,Colombia,Ejc_Arc,Ponal
+Tolima,Alvarado,0.776,Colombia,Ejc_Arc,Ponal
+Tolima,Ambalema,0.901,Colombia,Ejc_Arc,Ponal
+Tolima,Anzoátegui,0.918,Colombia,Ejc_Arc,Ponal
+Tolima,Armero,0.808,Colombia,Ejc_Arc,Ponal
+Tolima,Ataco,0.185,Colombia,Ejc_Arc,Ponal
+Tolima,Cajamarca,0.555,Colombia,Ejc_Arc,Ponal
+Tolima,Carmen de Apicalá,0.134,Colombia,Ejc_Arc,Ponal
+Tolima,Casabianca,0.916,Colombia,Ejc_Arc,Ponal
+Tolima,Chaparral,0.079,Colombia,Ejc_Arc,Ponal
+Tolima,Coello,0.845,Colombia,Ejc_Arc,Ponal
+Tolima,Coyaima,0.241,Colombia,Ejc_Arc,Ponal
+Tolima,Cunday,0.869,Colombia,Ejc_Arc,Ponal
+Tolima,Dolores,0.016,Colombia,Ejc_Arc,Ponal
+Tolima,El Espinal,0.424,Colombia,Ejc_Arc,Ponal
+Tolima,Falán,0.276,Colombia,Ejc_Arc,Ponal
+Tolima,Flandes,0.303,Colombia,Ejc_Arc,Ponal
+Tolima,Fresno,0.186,Colombia,Ejc_Arc,Ponal
+Tolima,Guamo,0.165,Colombia,Ejc_Arc,Ponal
+Tolima,Herveo,0.079,Colombia,Ejc_Arc,Ponal
+Tolima,Honda,0.246,Colombia,Ejc_Arc,Ponal
+Tolima,Ibagué,0.21,Colombia,Ejc_Arc,Ponal
+Tolima,Icononzo,0.329,Colombia,Ejc_Arc,Ponal
+Tolima,Lérida,0.661,Colombia,Ejc_Arc,Ponal
+Tolima,Líbano,0.437,Colombia,Ejc_Arc,Ponal
+Tolima,Mariquita,0.995,Colombia,Ejc_Arc,Ponal
+Tolima,Melgar,0.718,Colombia,Ejc_Arc,Ponal
+Tolima,Murillo,0.488,Colombia,Ejc_Arc,Ponal
+Tolima,Natagaima,0.866,Colombia,Ejc_Arc,Ponal
+Tolima,Ortega,0.375,Colombia,Ejc_Arc,Ponal
+Tolima,Palocabildo,0.001,Colombia,Ejc_Arc,Ponal
+Tolima,Piedras,0.853,Colombia,Ejc_Arc,Ponal
+Tolima,Planadas,0.121,Colombia,Ejc_Arc,Ponal
+Tolima,Prado,0.756,Colombia,Ejc_Arc,Ponal
+Tolima,Purificación,0.423,Colombia,Ejc_Arc,Ponal
+Tolima,Rioblanco,0.058,Colombia,Ejc_Arc,Ponal
+Tolima,Roncesvalles,0.372,Colombia,Ejc_Arc,Ponal
+Tolima,Rovira,0.011,Colombia,Ejc_Arc,Ponal
+Tolima,Saldaña,0.149,Colombia,Ejc_Arc,Ponal
+Tolima,San Antonio,0.733,Colombia,Ejc_Arc,Ponal
+Tolima,San Luis,0.017,Colombia,Ejc_Arc,Ponal
+Tolima,Santa Isabel,0.601,Colombia,Ejc_Arc,Ponal
+Tolima,Suárez,0.183,Colombia,Ejc_Arc,Ponal
+Tolima,Valle de San Juan,0.605,Colombia,Ejc_Arc,Ponal
+Tolima,Venadillo,0.214,Colombia,Ejc_Arc,Ponal
+Tolima,Villahermosa,0.243,Colombia,Ejc_Arc,Ponal
+Tolima,Villarrica,0.911,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Alcalá,0.085,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Andalucía,0.34,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Ansermanuevo,0.912,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Argelia,0.035,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Bolívar,0.036,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Buenaventura,0.529,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Buga,0.374,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Bugalagrande,0.547,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Caicedonia,0.358,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Cali,0.855,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Calima,0.243,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Candelaria,0.491,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Cartago,0.611,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Dagua,0.115,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,El Cairo,0.384,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,El Cerrito,0.604,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,El Dovio,0.205,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,El Águila,0.539,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Florida,0.591,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Ginebra,0.336,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Guacarí,0.498,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Jamundí,0.537,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,La Cumbre,0.818,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,La Unión,0.159,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,La Victoria,0.074,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Obando,0.481,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Palmira,0.46,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Pradera,0.176,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Restrepo,0.335,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Riofrío,0.698,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Roldanillo,0.36,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,San Pedro,0.429,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Sevilla,0.301,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Toro,0.829,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Trujillo,0.425,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Tuluá,0.952,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Ulloa,0.86,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Versalles,0.045,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Vijes,0.323,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Yotoco,0.144,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Yumbo,0.391,Colombia,Ejc_Arc,Ponal
+Valle del Cauca,Zarzal,0.445,Colombia,Ejc_Arc,Ponal
+Vaupés,Carurú,0.541,Colombia,Ejc_Arc,Ponal
+Vaupés,Mitú,0.169,Colombia,Ejc_Arc,Ponal
+Vaupés,Taraira,0.335,Colombia,Ejc_Arc,Ponal
+Vichada,Cumaribo,0.697,Colombia,Ejc_Arc,Ponal
+Vichada,La Primavera,0.09,Colombia,Ejc_Arc,Ponal
+Vichada,Puerto Carreño,0.559,Colombia,Ejc_Arc,Ponal
+Vichada,Santa Rosalía,0.647,Colombia,Ejc_Arc,Ponal
+Alta Verapaz,Cobán,0.834,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Chahal,0.126,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Chisec,0.567,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Fray Bartolomé de Las Casas,0.350,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Panzós,0.930,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Raxruhá,0.832,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,San Agustín Lanquín,0.612,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,San Cristóbal Verapaz,0.867,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,San Juan Chamelco,0.815,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,San Miguel Tucurú,0.134,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,San Pedro Carchá,0.051,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Santa Catalina La Tinta,0.315,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Santa Cruz Verapaz,0.383,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Santa María Cahabón,0.641,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Senahú,0.392,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Tactic,0.095,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Tamahú,0.596,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,Salamá,0.452,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,Cubulco,0.603,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,Granados,0.224,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,Purulhá,0.818,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,Rabinal,0.605,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,San Jerónimo,0.537,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,San Miguel Chicaj,0.228,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,Santa Cruz El Chol,0.051,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Chimaltenango,0.759,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Acatenango,0.289,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,El Tejar,0.971,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Parramos,0.623,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Patzicía,0.446,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Patzún,0.836,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,San Andrés Itzapa,0.220,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,San José Poaquil,0.037,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,San Juan Comalapa,0.604,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,San Martín Jilotepeque,0.741,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,San Miguel Pochuta,0.058,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,San Pedro Yepocapa,0.336,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Santa Apolonia,0.918,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Santa Cruz Balanyá,0.695,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Tecpán Guatemala,0.656,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Zaragoza,0.179,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Chiquimula,0.104,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Camotán,0.756,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Concepción Las Minas,0.617,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Esquipulas,0.124,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Ipala,0.732,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Jocotán,0.261,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Olopa,0.211,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Quezaltepeque,0.943,Guatemala,Ejc_Arc,Ponal
+Chiquimula,San Jacinto,0.526,Guatemala,Ejc_Arc,Ponal
+Chiquimula,San José La Arada,0.371,Guatemala,Ejc_Arc,Ponal
+Chiquimula,San Juan Ermita,0.810,Guatemala,Ejc_Arc,Ponal
+El Progreso,Guastatoya,0.125,Guatemala,Ejc_Arc,Ponal
+El Progreso,El Jícaro,0.298,Guatemala,Ejc_Arc,Ponal
+El Progreso,Morazán,0.079,Guatemala,Ejc_Arc,Ponal
+El Progreso,San Agustín Acasaguastlan,0.520,Guatemala,Ejc_Arc,Ponal
+El Progreso,San Antonio La Paz,0.200,Guatemala,Ejc_Arc,Ponal
+El Progreso,San Cristóbal Acasaguastlan,0.785,Guatemala,Ejc_Arc,Ponal
+El Progreso,Sanarate,0.587,Guatemala,Ejc_Arc,Ponal
+El Progreso,Sansare,0.223,Guatemala,Ejc_Arc,Ponal
+Escuintla,Escuintla,0.780,Guatemala,Ejc_Arc,Ponal
+Escuintla,Guanagazapa,0.991,Guatemala,Ejc_Arc,Ponal
+Escuintla,Iztapa,0.692,Guatemala,Ejc_Arc,Ponal
+Escuintla,La Democracia,0.604,Guatemala,Ejc_Arc,Ponal
+Escuintla,La Gomera,0.123,Guatemala,Ejc_Arc,Ponal
+Escuintla,Masagua,0.468,Guatemala,Ejc_Arc,Ponal
+Escuintla,Nueva Concepción,0.266,Guatemala,Ejc_Arc,Ponal
+Escuintla,Palín,0.319,Guatemala,Ejc_Arc,Ponal
+Escuintla,San José,0.894,Guatemala,Ejc_Arc,Ponal
+Escuintla,San Vicente Pacaya,0.140,Guatemala,Ejc_Arc,Ponal
+Escuintla,Santa Lucía Cotzumalguapa,0.256,Guatemala,Ejc_Arc,Ponal
+Escuintla,Sipacate,0.000,Guatemala,Ejc_Arc,Ponal
+Escuintla,Siquinalá,0.927,Guatemala,Ejc_Arc,Ponal
+Escuintla,Tiquisate,0.195,Guatemala,Ejc_Arc,Ponal
+Guatemala,Guatemala,0.119,Guatemala,Ejc_Arc,Ponal
+Guatemala,Amatitlán,0.776,Guatemala,Ejc_Arc,Ponal
+Guatemala,Chinautla,0.269,Guatemala,Ejc_Arc,Ponal
+Guatemala,Chuarrancho,0.237,Guatemala,Ejc_Arc,Ponal
+Guatemala,Fraijanes,0.920,Guatemala,Ejc_Arc,Ponal
+Guatemala,Mixco,0.080,Guatemala,Ejc_Arc,Ponal
+Guatemala,Palencia,0.652,Guatemala,Ejc_Arc,Ponal
+Guatemala,San José del Golfo,0.088,Guatemala,Ejc_Arc,Ponal
+Guatemala,San José Pinula,0.120,Guatemala,Ejc_Arc,Ponal
+Guatemala,San Juan Sacatepéquez,0.478,Guatemala,Ejc_Arc,Ponal
+Guatemala,San Miguel Petapa,0.937,Guatemala,Ejc_Arc,Ponal
+Guatemala,San Pedro Ayampuc,0.441,Guatemala,Ejc_Arc,Ponal
+Guatemala,San Pedro Sacatepéquez,0.313,Guatemala,Ejc_Arc,Ponal
+Guatemala,San Raymundo,0.081,Guatemala,Ejc_Arc,Ponal
+Guatemala,Santa Catarina Pinula,0.965,Guatemala,Ejc_Arc,Ponal
+Guatemala,Villa Canales,0.352,Guatemala,Ejc_Arc,Ponal
+Guatemala,Villa Nueva,0.520,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Huehuetenango,0.174,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Aguacatán,0.649,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Chiantla,0.202,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Colotenango,0.566,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Concepción Huista,0.217,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Cuilco,0.306,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Jacaltenango,0.562,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,La Democracia,0.231,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,La Libertad,0.168,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Malacatancito,0.187,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Nentón,0.068,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Petatán,0.475,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Antonio Huista,0.066,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Gaspar Ixchil,0.661,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Ildefonso Ixtahuacán,0.936,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Juan Atitán,0.086,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Juan Ixcoy,0.492,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Mateo Ixtatán,0.557,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Miguel Acatán,0.307,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Pedro Necta,0.559,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Pedro Soloma,0.340,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Rafael La Independencia,0.564,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Rafael Petzal,0.857,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Sebastián Coatán,0.650,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Sebastián Huehuetenango,0.988,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Santa Ana Huista,0.128,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Santa Bárbara,0.089,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Santa Cruz Barillas,0.567,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Santa Eulalia,0.142,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Santiago Chimaltenango,0.967,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Tectitán,0.606,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Todos Santos Cuchumatán,0.905,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Unión Cantinil,0.242,Guatemala,Ejc_Arc,Ponal
+Izabal,Puerto Barrios,0.199,Guatemala,Ejc_Arc,Ponal
+Izabal,El Estor,0.113,Guatemala,Ejc_Arc,Ponal
+Izabal,Livingston,0.168,Guatemala,Ejc_Arc,Ponal
+Izabal,Los Amates,0.035,Guatemala,Ejc_Arc,Ponal
+Izabal,Morales,0.683,Guatemala,Ejc_Arc,Ponal
+Jalapa,Jalapa,0.087,Guatemala,Ejc_Arc,Ponal
+Jalapa,Mataquescuintla,0.978,Guatemala,Ejc_Arc,Ponal
+Jalapa,Monjas,0.443,Guatemala,Ejc_Arc,Ponal
+Jalapa,San Carlos Alzatate,0.519,Guatemala,Ejc_Arc,Ponal
+Jalapa,San Luis Jilotepeque,0.582,Guatemala,Ejc_Arc,Ponal
+Jalapa,San Manuel Chaparrón,0.385,Guatemala,Ejc_Arc,Ponal
+Jalapa,San Pedro Pinula,0.528,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Jutiapa,0.539,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Agua Blanca,0.674,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Asunción Mita,0.736,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Atescatempa,0.085,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Comapa,0.850,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Conguaco,0.978,Guatemala,Ejc_Arc,Ponal
+Jutiapa,El Adelanto,0.279,Guatemala,Ejc_Arc,Ponal
+Jutiapa,El Progreso,0.867,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Jalpatagua,0.869,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Jerez,0.183,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Moyuta,0.411,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Pasaco,0.645,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Quesada,0.522,Guatemala,Ejc_Arc,Ponal
+Jutiapa,San José Acatempa,0.410,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Santa Catarina Mita,0.004,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Yupiltepeque,0.913,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Zapotitlán,0.925,Guatemala,Ejc_Arc,Ponal
+Petén,Flores,0.513,Guatemala,Ejc_Arc,Ponal
+Petén,Dolores,0.659,Guatemala,Ejc_Arc,Ponal
+Petén,El Chal,0.193,Guatemala,Ejc_Arc,Ponal
+Petén,La Libertad,0.485,Guatemala,Ejc_Arc,Ponal
+Petén,Las Cruces,0.283,Guatemala,Ejc_Arc,Ponal
+Petén,Melchor de Mencos,0.373,Guatemala,Ejc_Arc,Ponal
+Petén,Poptún,0.523,Guatemala,Ejc_Arc,Ponal
+Petén,San Andrés,0.291,Guatemala,Ejc_Arc,Ponal
+Petén,San Benito,0.616,Guatemala,Ejc_Arc,Ponal
+Petén,San Francisco,0.009,Guatemala,Ejc_Arc,Ponal
+Petén,San José,0.866,Guatemala,Ejc_Arc,Ponal
+Petén,San Luis,0.763,Guatemala,Ejc_Arc,Ponal
+Petén,Santa Ana,0.866,Guatemala,Ejc_Arc,Ponal
+Petén,Sayaxché,0.192,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Quetzaltenango,0.163,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Almolonga,0.748,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Cabricán,0.026,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Cajolá,0.115,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Cantel,0.193,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Coatepeque,0.445,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Colomba Costa Cuca,0.034,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Concepción Chiquirichapa,0.421,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,El Palmar,0.552,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Flores Costa Cuca,0.855,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Génova,0.313,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Huitán,0.929,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,La Esperanza,0.277,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Palestina de Los Altos,0.991,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Salcajá,0.797,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Carlos Sija,0.797,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Francisco La Unión,0.576,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Juan Olintepeque,0.480,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Juan Ostuncalco,0.693,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Martín Sacatepéquez,0.155,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Mateo,0.388,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Miguel Sigüilá,0.689,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Sibilia,0.960,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Zunil,0.797,Guatemala,Ejc_Arc,Ponal
+Quiché,Santa Cruz del Quiché,0.744,Guatemala,Ejc_Arc,Ponal
+Quiché,Canillá,0.085,Guatemala,Ejc_Arc,Ponal
+Quiché,Chajul,0.629,Guatemala,Ejc_Arc,Ponal
+Quiché,Chicamán,0.973,Guatemala,Ejc_Arc,Ponal
+Quiché,Chiché,0.203,Guatemala,Ejc_Arc,Ponal
+Quiché,Chinique,0.038,Guatemala,Ejc_Arc,Ponal
+Quiché,Cunén,0.287,Guatemala,Ejc_Arc,Ponal
+Quiché,Joyabaj,0.931,Guatemala,Ejc_Arc,Ponal
+Quiché,Pachalum,0.111,Guatemala,Ejc_Arc,Ponal
+Quiché,Patzité,0.095,Guatemala,Ejc_Arc,Ponal
+Quiché,Playa Grande Ixcán,0.396,Guatemala,Ejc_Arc,Ponal
+Quiché,Sacapulas,0.396,Guatemala,Ejc_Arc,Ponal
+Quiché,San Andrés Sajcabajá,0.004,Guatemala,Ejc_Arc,Ponal
+Quiché,San Antonio Ilotenango,0.462,Guatemala,Ejc_Arc,Ponal
+Quiché,San Bartolomé Jocotenango,0.261,Guatemala,Ejc_Arc,Ponal
+Quiché,San Juan Cotzal,0.808,Guatemala,Ejc_Arc,Ponal
+Quiché,San Miguel Uspantán,0.873,Guatemala,Ejc_Arc,Ponal
+Quiché,San Pedró Jocopilas,0.999,Guatemala,Ejc_Arc,Ponal
+Quiché,Santa María Nebaj,0.783,Guatemala,Ejc_Arc,Ponal
+Quiché,Santo Tomás Chichicastenango,0.977,Guatemala,Ejc_Arc,Ponal
+Quiché,Zacualpa,0.379,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,Retalhuleu,0.961,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,Champerico,0.505,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,El Asintal,0.085,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,Nuevo San Carlos,0.159,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,San Andrés Villa Seca,0.711,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,San Felipe,0.567,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,San Martín Zapotitlán,0.838,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,San Sebastián,0.821,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,Santa Cruz Muluá,0.524,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Antigua Guatemala,0.436,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Ciudad Vieja,0.849,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Jocotenango,0.571,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Magdalena Milpas Altas,0.466,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Pastores,0.053,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,San Antonio Aguas Calientes,0.050,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,San Bartolomé Milpas Altas,0.884,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,San Juan Alotenango,0.564,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,San Lucas Sacatepéquez,0.906,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,San Miguel Dueñas,0.264,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Santa Catarina Barahona,0.809,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Santa Lucía Milpas Altas,0.664,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Santa María de Jesús,0.791,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Santiago Sacatepéquez,0.624,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Santo Domingo Xenacoj,0.051,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Sumpango,0.004,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Marcos,0.836,Guatemala,Ejc_Arc,Ponal
+San Marcos,Ayutla,0.468,Guatemala,Ejc_Arc,Ponal
+San Marcos,Catarina,0.230,Guatemala,Ejc_Arc,Ponal
+San Marcos,Comitancillo,0.871,Guatemala,Ejc_Arc,Ponal
+San Marcos,Concepción Tutuapa,0.497,Guatemala,Ejc_Arc,Ponal
+San Marcos,El Quetzal,0.858,Guatemala,Ejc_Arc,Ponal
+San Marcos,El Tumbador,0.064,Guatemala,Ejc_Arc,Ponal
+San Marcos,Esquipulas Palo Gordo,0.420,Guatemala,Ejc_Arc,Ponal
+San Marcos,Ixchiguán,0.842,Guatemala,Ejc_Arc,Ponal
+San Marcos,La Blanca,0.197,Guatemala,Ejc_Arc,Ponal
+San Marcos,La Reforma,0.158,Guatemala,Ejc_Arc,Ponal
+San Marcos,Malacatán,0.006,Guatemala,Ejc_Arc,Ponal
+San Marcos,Nuevo Progreso,0.522,Guatemala,Ejc_Arc,Ponal
+San Marcos,Ocós,0.606,Guatemala,Ejc_Arc,Ponal
+San Marcos,Pajapita,0.628,Guatemala,Ejc_Arc,Ponal
+San Marcos,Río Blanco,0.367,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Antonio Sacatepéquez,0.409,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Cristobal Cucho,0.112,Guatemala,Ejc_Arc,Ponal
+San Marcos,San José El Rodeo,0.342,Guatemala,Ejc_Arc,Ponal
+San Marcos,San José Ojetenam,0.467,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Lorenzo,0.485,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Miguel Ixtahuacán,0.955,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Pablo,0.482,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Pedro Sacatepéquez,0.512,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Rafael Pie de La Cuesta,0.790,Guatemala,Ejc_Arc,Ponal
+San Marcos,Sibinal,0.847,Guatemala,Ejc_Arc,Ponal
+San Marcos,Sipacapa,0.450,Guatemala,Ejc_Arc,Ponal
+San Marcos,Tacaná,0.569,Guatemala,Ejc_Arc,Ponal
+San Marcos,Tajumulco,0.235,Guatemala,Ejc_Arc,Ponal
+San Marcos,Tejutla,0.756,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Cuilapa,0.973,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Barberena,0.007,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Casillas,0.315,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Chiquimulilla,0.409,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Guazacapán,0.247,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Nueva Santa Rosa,0.455,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Oratorio,0.740,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Pueblo Nuevo Viñas,0.424,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,San Juan Tecuaco,0.179,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,San Rafael Las Flores,0.360,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Santa Cruz Naranjo,0.799,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Santa María Ixhuatán,0.129,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Santa Rosa de Lima,0.324,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Taxisco,0.155,Guatemala,Ejc_Arc,Ponal
+Sololá,Sololá,0.084,Guatemala,Ejc_Arc,Ponal
+Sololá,Concepción,0.916,Guatemala,Ejc_Arc,Ponal
+Sololá,Nahualá,0.902,Guatemala,Ejc_Arc,Ponal
+Sololá,Panajachel,0.226,Guatemala,Ejc_Arc,Ponal
+Sololá,San Andrés Semetabaj,0.040,Guatemala,Ejc_Arc,Ponal
+Sololá,San Antonio Palopó,0.453,Guatemala,Ejc_Arc,Ponal
+Sololá,San José Chacayá,0.977,Guatemala,Ejc_Arc,Ponal
+Sololá,San Juan La Laguna,0.650,Guatemala,Ejc_Arc,Ponal
+Sololá,San Lucas Tolimán,0.291,Guatemala,Ejc_Arc,Ponal
+Sololá,San Marcos La Laguna,0.594,Guatemala,Ejc_Arc,Ponal
+Sololá,San Pablo La Laguna,0.885,Guatemala,Ejc_Arc,Ponal
+Sololá,San Pedro La Laguna,0.030,Guatemala,Ejc_Arc,Ponal
+Sololá,Santa Catarina Ixtahuacán,0.808,Guatemala,Ejc_Arc,Ponal
+Sololá,Santa Catarina Palopó,0.409,Guatemala,Ejc_Arc,Ponal
+Sololá,Santa Clara La Laguna,0.905,Guatemala,Ejc_Arc,Ponal
+Sololá,Santa Cruz La Laguna,0.317,Guatemala,Ejc_Arc,Ponal
+Sololá,Santa Lucía Utatlán,0.829,Guatemala,Ejc_Arc,Ponal
+Sololá,Santa María Visitación,0.996,Guatemala,Ejc_Arc,Ponal
+Sololá,Santiago Atitlán,0.976,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Mazatenango,0.557,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Chicacao,0.015,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Cuyotenango,0.742,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Patulul,0.891,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Pueblo Nuevo,0.549,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Río Bravo,0.550,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Samayac,0.494,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Antonio Suchitepéquez,0.451,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Bernardino,0.637,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Francisco Zapotitlán,0.605,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Gabriel,0.144,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San José El Ídolo,0.903,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San José La Máquina,0.712,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Juan Bautista,0.801,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Lorenzo,0.050,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Miguel Panán,0.868,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Pablo Jocopilas,0.535,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Santa Bárbara,0.118,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Santo Domingo Suchitepéquez,0.925,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Santo Tomás La Unión,0.146,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Zunilito,0.050,Guatemala,Ejc_Arc,Ponal
+Totonicapán,Totonicapán,0.929,Guatemala,Ejc_Arc,Ponal
+Totonicapán,Momostenango,0.836,Guatemala,Ejc_Arc,Ponal
+Totonicapán,San Andrés Xecul,0.151,Guatemala,Ejc_Arc,Ponal
+Totonicapán,San Bartolo Aguas Calientes,0.629,Guatemala,Ejc_Arc,Ponal
+Totonicapán,San Cristóbal Totonicapán,0.265,Guatemala,Ejc_Arc,Ponal
+Totonicapán,San Francisco El Alto,0.203,Guatemala,Ejc_Arc,Ponal
+Totonicapán,Santa Lucía La Reforma,0.603,Guatemala,Ejc_Arc,Ponal
+Totonicapán,Santa María Chiquimula,0.189,Guatemala,Ejc_Arc,Ponal
+Zacapa,Zacapa,0.952,Guatemala,Ejc_Arc,Ponal
+Zacapa,Estanzuela,0.629,Guatemala,Ejc_Arc,Ponal
+Zacapa,Río Hondo,0.323,Guatemala,Ejc_Arc,Ponal
+Zacapa,Gualán,0.159,Guatemala,Ejc_Arc,Ponal
+Zacapa,Teculután,0.092,Guatemala,Ejc_Arc,Ponal
+Zacapa,Usumatlán,0.486,Guatemala,Ejc_Arc,Ponal
+Zacapa,Cabañas,0.453,Guatemala,Ejc_Arc,Ponal
+Zacapa,San Diego,0.013,Guatemala,Ejc_Arc,Ponal
+Zacapa,La Unión,0.341,Guatemala,Ejc_Arc,Ponal
+Zacapa,Huité,0.196,Guatemala,Ejc_Arc,Ponal
+Zacapa,San Jorge,0.290,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Cobán,0.353,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Chahal,0.192,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Chisec,0.643,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Fray Bartolomé de Las Casas,0.972,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Panzós,0.145,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Raxruhá,0.890,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,San Agustín Lanquín,0.920,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,San Cristóbal Verapaz,0.123,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,San Juan Chamelco,0.592,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,San Miguel Tucurú,0.113,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,San Pedro Carchá,0.078,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Santa Catalina La Tinta,0.652,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Santa Cruz Verapaz,0.170,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Santa María Cahabón,0.090,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Senahú,0.918,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Tactic,0.236,Guatemala,Ejc_Arc,Ponal
+Alta Verapaz,Tamahú,0.509,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,Salamá,0.384,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,Cubulco,0.450,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,Granados,0.417,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,Purulhá,0.706,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,Rabinal,0.570,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,San Jerónimo,0.124,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,San Miguel Chicaj,0.595,Guatemala,Ejc_Arc,Ponal
+Baja Verapaz,Santa Cruz El Chol,0.400,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Chimaltenango,0.950,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Acatenango,0.565,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,El Tejar,0.621,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Parramos,0.641,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Patzicía,0.724,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Patzún,0.144,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,San Andrés Itzapa,0.240,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,San José Poaquil,0.089,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,San Juan Comalapa,0.397,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,San Martín Jilotepeque,0.734,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,San Miguel Pochuta,0.872,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,San Pedro Yepocapa,0.304,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Santa Apolonia,0.555,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Santa Cruz Balanyá,0.311,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Tecpán Guatemala,0.174,Guatemala,Ejc_Arc,Ponal
+Chimaltenango,Zaragoza,0.291,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Chiquimula,0.744,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Camotán,0.826,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Concepción Las Minas,0.819,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Esquipulas,0.748,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Ipala,0.646,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Jocotán,0.093,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Olopa,0.303,Guatemala,Ejc_Arc,Ponal
+Chiquimula,Quezaltepeque,0.702,Guatemala,Ejc_Arc,Ponal
+Chiquimula,San Jacinto,0.867,Guatemala,Ejc_Arc,Ponal
+Chiquimula,San José La Arada,0.381,Guatemala,Ejc_Arc,Ponal
+Chiquimula,San Juan Ermita,0.506,Guatemala,Ejc_Arc,Ponal
+El Progreso,Guastatoya,0.847,Guatemala,Ejc_Arc,Ponal
+El Progreso,El Jícaro,0.708,Guatemala,Ejc_Arc,Ponal
+El Progreso,Morazán,0.508,Guatemala,Ejc_Arc,Ponal
+El Progreso,San Agustín Acasaguastlan,0.106,Guatemala,Ejc_Arc,Ponal
+El Progreso,San Antonio La Paz,0.632,Guatemala,Ejc_Arc,Ponal
+El Progreso,San Cristóbal Acasaguastlan,0.496,Guatemala,Ejc_Arc,Ponal
+El Progreso,Sanarate,0.159,Guatemala,Ejc_Arc,Ponal
+El Progreso,Sansare,0.485,Guatemala,Ejc_Arc,Ponal
+Escuintla,Escuintla,0.487,Guatemala,Ejc_Arc,Ponal
+Escuintla,Guanagazapa,0.013,Guatemala,Ejc_Arc,Ponal
+Escuintla,Iztapa,0.294,Guatemala,Ejc_Arc,Ponal
+Escuintla,La Democracia,0.546,Guatemala,Ejc_Arc,Ponal
+Escuintla,La Gomera,0.873,Guatemala,Ejc_Arc,Ponal
+Escuintla,Masagua,0.897,Guatemala,Ejc_Arc,Ponal
+Escuintla,Nueva Concepción,0.068,Guatemala,Ejc_Arc,Ponal
+Escuintla,Palín,0.619,Guatemala,Ejc_Arc,Ponal
+Escuintla,San José,0.464,Guatemala,Ejc_Arc,Ponal
+Escuintla,San Vicente Pacaya,0.477,Guatemala,Ejc_Arc,Ponal
+Escuintla,Santa Lucía Cotzumalguapa,0.979,Guatemala,Ejc_Arc,Ponal
+Escuintla,Sipacate,0.053,Guatemala,Ejc_Arc,Ponal
+Escuintla,Siquinalá,0.898,Guatemala,Ejc_Arc,Ponal
+Escuintla,Tiquisate,0.413,Guatemala,Ejc_Arc,Ponal
+Guatemala,Guatemala,0.445,Guatemala,Ejc_Arc,Ponal
+Guatemala,Amatitlán,0.003,Guatemala,Ejc_Arc,Ponal
+Guatemala,Chinautla,0.719,Guatemala,Ejc_Arc,Ponal
+Guatemala,Chuarrancho,0.780,Guatemala,Ejc_Arc,Ponal
+Guatemala,Fraijanes,0.718,Guatemala,Ejc_Arc,Ponal
+Guatemala,Mixco,0.158,Guatemala,Ejc_Arc,Ponal
+Guatemala,Palencia,0.980,Guatemala,Ejc_Arc,Ponal
+Guatemala,San José del Golfo,0.299,Guatemala,Ejc_Arc,Ponal
+Guatemala,San José Pinula,0.793,Guatemala,Ejc_Arc,Ponal
+Guatemala,San Juan Sacatepéquez,0.832,Guatemala,Ejc_Arc,Ponal
+Guatemala,San Miguel Petapa,0.333,Guatemala,Ejc_Arc,Ponal
+Guatemala,San Pedro Ayampuc,0.730,Guatemala,Ejc_Arc,Ponal
+Guatemala,San Pedro Sacatepéquez,0.661,Guatemala,Ejc_Arc,Ponal
+Guatemala,San Raymundo,0.148,Guatemala,Ejc_Arc,Ponal
+Guatemala,Santa Catarina Pinula,0.880,Guatemala,Ejc_Arc,Ponal
+Guatemala,Villa Canales,0.281,Guatemala,Ejc_Arc,Ponal
+Guatemala,Villa Nueva,0.846,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Huehuetenango,0.764,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Aguacatán,0.312,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Chiantla,0.440,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Colotenango,0.833,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Concepción Huista,0.263,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Cuilco,0.071,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Jacaltenango,0.940,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,La Democracia,0.455,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,La Libertad,0.880,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Malacatancito,0.721,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Nentón,0.652,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Petatán,0.319,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Antonio Huista,0.241,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Gaspar Ixchil,0.707,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Ildefonso Ixtahuacán,0.614,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Juan Atitán,0.488,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Juan Ixcoy,0.534,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Mateo Ixtatán,0.582,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Miguel Acatán,0.389,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Pedro Necta,0.676,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Pedro Soloma,0.894,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Rafael La Independencia,0.758,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Rafael Petzal,0.461,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Sebastián Coatán,0.780,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,San Sebastián Huehuetenango,0.364,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Santa Ana Huista,0.762,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Santa Bárbara,0.928,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Santa Cruz Barillas,0.982,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Santa Eulalia,0.596,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Santiago Chimaltenango,0.928,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Tectitán,0.128,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Todos Santos Cuchumatán,0.933,Guatemala,Ejc_Arc,Ponal
+Huehuetenango,Unión Cantinil,0.845,Guatemala,Ejc_Arc,Ponal
+Izabal,Puerto Barrios,0.247,Guatemala,Ejc_Arc,Ponal
+Izabal,El Estor,0.021,Guatemala,Ejc_Arc,Ponal
+Izabal,Livingston,0.535,Guatemala,Ejc_Arc,Ponal
+Izabal,Los Amates,0.067,Guatemala,Ejc_Arc,Ponal
+Izabal,Morales,0.248,Guatemala,Ejc_Arc,Ponal
+Jalapa,Jalapa,0.077,Guatemala,Ejc_Arc,Ponal
+Jalapa,Mataquescuintla,0.318,Guatemala,Ejc_Arc,Ponal
+Jalapa,Monjas,0.184,Guatemala,Ejc_Arc,Ponal
+Jalapa,San Carlos Alzatate,0.540,Guatemala,Ejc_Arc,Ponal
+Jalapa,San Luis Jilotepeque,0.395,Guatemala,Ejc_Arc,Ponal
+Jalapa,San Manuel Chaparrón,0.836,Guatemala,Ejc_Arc,Ponal
+Jalapa,San Pedro Pinula,0.243,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Jutiapa,0.160,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Agua Blanca,0.549,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Asunción Mita,0.046,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Atescatempa,0.497,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Comapa,0.149,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Conguaco,0.467,Guatemala,Ejc_Arc,Ponal
+Jutiapa,El Adelanto,0.708,Guatemala,Ejc_Arc,Ponal
+Jutiapa,El Progreso,0.833,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Jalpatagua,0.126,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Jerez,0.581,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Moyuta,0.448,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Pasaco,0.662,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Quesada,0.598,Guatemala,Ejc_Arc,Ponal
+Jutiapa,San José Acatempa,0.488,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Santa Catarina Mita,0.980,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Yupiltepeque,0.248,Guatemala,Ejc_Arc,Ponal
+Jutiapa,Zapotitlán,0.162,Guatemala,Ejc_Arc,Ponal
+Petén,Flores,0.949,Guatemala,Ejc_Arc,Ponal
+Petén,Dolores,0.607,Guatemala,Ejc_Arc,Ponal
+Petén,El Chal,0.065,Guatemala,Ejc_Arc,Ponal
+Petén,La Libertad,0.526,Guatemala,Ejc_Arc,Ponal
+Petén,Las Cruces,0.209,Guatemala,Ejc_Arc,Ponal
+Petén,Melchor de Mencos,0.847,Guatemala,Ejc_Arc,Ponal
+Petén,Poptún,0.646,Guatemala,Ejc_Arc,Ponal
+Petén,San Andrés,0.927,Guatemala,Ejc_Arc,Ponal
+Petén,San Benito,0.825,Guatemala,Ejc_Arc,Ponal
+Petén,San Francisco,0.432,Guatemala,Ejc_Arc,Ponal
+Petén,San José,0.842,Guatemala,Ejc_Arc,Ponal
+Petén,San Luis,0.109,Guatemala,Ejc_Arc,Ponal
+Petén,Santa Ana,0.085,Guatemala,Ejc_Arc,Ponal
+Petén,Sayaxché,0.645,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Quetzaltenango,0.495,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Almolonga,0.292,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Cabricán,0.898,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Cajolá,0.326,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Cantel,0.672,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Coatepeque,0.691,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Colomba Costa Cuca,0.868,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Concepción Chiquirichapa,0.290,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,El Palmar,0.536,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Flores Costa Cuca,0.117,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Génova,0.981,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Huitán,0.498,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,La Esperanza,0.785,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Palestina de Los Altos,0.132,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Salcajá,0.890,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Carlos Sija,0.512,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Francisco La Unión,0.236,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Juan Olintepeque,0.413,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Juan Ostuncalco,0.387,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Martín Sacatepéquez,0.742,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Mateo,0.439,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,San Miguel Sigüilá,0.149,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Sibilia,0.469,Guatemala,Ejc_Arc,Ponal
+Quetzaltenango,Zunil,0.579,Guatemala,Ejc_Arc,Ponal
+Quiché,Santa Cruz del Quiché,0.188,Guatemala,Ejc_Arc,Ponal
+Quiché,Canillá,0.292,Guatemala,Ejc_Arc,Ponal
+Quiché,Chajul,0.809,Guatemala,Ejc_Arc,Ponal
+Quiché,Chicamán,0.486,Guatemala,Ejc_Arc,Ponal
+Quiché,Chiché,0.315,Guatemala,Ejc_Arc,Ponal
+Quiché,Chinique,0.962,Guatemala,Ejc_Arc,Ponal
+Quiché,Cunén,0.797,Guatemala,Ejc_Arc,Ponal
+Quiché,Joyabaj,0.251,Guatemala,Ejc_Arc,Ponal
+Quiché,Pachalum,0.865,Guatemala,Ejc_Arc,Ponal
+Quiché,Patzité,0.495,Guatemala,Ejc_Arc,Ponal
+Quiché,Playa Grande Ixcán,0.924,Guatemala,Ejc_Arc,Ponal
+Quiché,Sacapulas,0.825,Guatemala,Ejc_Arc,Ponal
+Quiché,San Andrés Sajcabajá,0.180,Guatemala,Ejc_Arc,Ponal
+Quiché,San Antonio Ilotenango,0.252,Guatemala,Ejc_Arc,Ponal
+Quiché,San Bartolomé Jocotenango,0.121,Guatemala,Ejc_Arc,Ponal
+Quiché,San Juan Cotzal,0.422,Guatemala,Ejc_Arc,Ponal
+Quiché,San Miguel Uspantán,0.410,Guatemala,Ejc_Arc,Ponal
+Quiché,San Pedró Jocopilas,0.694,Guatemala,Ejc_Arc,Ponal
+Quiché,Santa María Nebaj,0.957,Guatemala,Ejc_Arc,Ponal
+Quiché,Santo Tomás Chichicastenango,0.167,Guatemala,Ejc_Arc,Ponal
+Quiché,Zacualpa,0.493,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,Retalhuleu,0.354,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,Champerico,0.845,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,El Asintal,0.582,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,Nuevo San Carlos,0.489,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,San Andrés Villa Seca,0.680,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,San Felipe,0.489,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,San Martín Zapotitlán,0.939,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,San Sebastián,0.832,Guatemala,Ejc_Arc,Ponal
+Retalhuleu,Santa Cruz Muluá,0.311,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Antigua Guatemala,0.301,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Ciudad Vieja,0.800,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Jocotenango,0.888,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Magdalena Milpas Altas,0.687,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Pastores,0.133,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,San Antonio Aguas Calientes,0.428,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,San Bartolomé Milpas Altas,0.947,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,San Juan Alotenango,0.454,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,San Lucas Sacatepéquez,0.123,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,San Miguel Dueñas,0.811,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Santa Catarina Barahona,0.426,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Santa Lucía Milpas Altas,0.884,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Santa María de Jesús,0.881,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Santiago Sacatepéquez,0.481,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Santo Domingo Xenacoj,0.999,Guatemala,Ejc_Arc,Ponal
+Sacatepéquez,Sumpango,0.786,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Marcos,0.730,Guatemala,Ejc_Arc,Ponal
+San Marcos,Ayutla,0.851,Guatemala,Ejc_Arc,Ponal
+San Marcos,Catarina,0.171,Guatemala,Ejc_Arc,Ponal
+San Marcos,Comitancillo,0.472,Guatemala,Ejc_Arc,Ponal
+San Marcos,Concepción Tutuapa,0.600,Guatemala,Ejc_Arc,Ponal
+San Marcos,El Quetzal,0.030,Guatemala,Ejc_Arc,Ponal
+San Marcos,El Tumbador,0.017,Guatemala,Ejc_Arc,Ponal
+San Marcos,Esquipulas Palo Gordo,0.423,Guatemala,Ejc_Arc,Ponal
+San Marcos,Ixchiguán,0.128,Guatemala,Ejc_Arc,Ponal
+San Marcos,La Blanca,0.205,Guatemala,Ejc_Arc,Ponal
+San Marcos,La Reforma,0.905,Guatemala,Ejc_Arc,Ponal
+San Marcos,Malacatán,0.248,Guatemala,Ejc_Arc,Ponal
+San Marcos,Nuevo Progreso,0.296,Guatemala,Ejc_Arc,Ponal
+San Marcos,Ocós,0.433,Guatemala,Ejc_Arc,Ponal
+San Marcos,Pajapita,0.871,Guatemala,Ejc_Arc,Ponal
+San Marcos,Río Blanco,0.708,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Antonio Sacatepéquez,0.109,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Cristobal Cucho,0.178,Guatemala,Ejc_Arc,Ponal
+San Marcos,San José El Rodeo,0.820,Guatemala,Ejc_Arc,Ponal
+San Marcos,San José Ojetenam,0.883,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Lorenzo,0.442,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Miguel Ixtahuacán,0.301,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Pablo,0.773,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Pedro Sacatepéquez,0.673,Guatemala,Ejc_Arc,Ponal
+San Marcos,San Rafael Pie de La Cuesta,0.258,Guatemala,Ejc_Arc,Ponal
+San Marcos,Sibinal,0.003,Guatemala,Ejc_Arc,Ponal
+San Marcos,Sipacapa,0.403,Guatemala,Ejc_Arc,Ponal
+San Marcos,Tacaná,0.217,Guatemala,Ejc_Arc,Ponal
+San Marcos,Tajumulco,0.411,Guatemala,Ejc_Arc,Ponal
+San Marcos,Tejutla,0.334,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Cuilapa,0.206,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Barberena,0.466,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Casillas,0.340,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Chiquimulilla,0.963,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Guazacapán,0.016,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Nueva Santa Rosa,0.225,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Oratorio,0.341,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Pueblo Nuevo Viñas,0.712,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,San Juan Tecuaco,0.866,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,San Rafael Las Flores,0.597,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Santa Cruz Naranjo,0.145,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Santa María Ixhuatán,0.109,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Santa Rosa de Lima,0.001,Guatemala,Ejc_Arc,Ponal
+Santa Rosa,Taxisco,0.409,Guatemala,Ejc_Arc,Ponal
+Sololá,Sololá,0.808,Guatemala,Ejc_Arc,Ponal
+Sololá,Concepción,0.883,Guatemala,Ejc_Arc,Ponal
+Sololá,Nahualá,0.039,Guatemala,Ejc_Arc,Ponal
+Sololá,Panajachel,0.133,Guatemala,Ejc_Arc,Ponal
+Sololá,San Andrés Semetabaj,0.265,Guatemala,Ejc_Arc,Ponal
+Sololá,San Antonio Palopó,0.856,Guatemala,Ejc_Arc,Ponal
+Sololá,San José Chacayá,0.254,Guatemala,Ejc_Arc,Ponal
+Sololá,San Juan La Laguna,0.518,Guatemala,Ejc_Arc,Ponal
+Sololá,San Lucas Tolimán,0.918,Guatemala,Ejc_Arc,Ponal
+Sololá,San Marcos La Laguna,0.863,Guatemala,Ejc_Arc,Ponal
+Sololá,San Pablo La Laguna,0.397,Guatemala,Ejc_Arc,Ponal
+Sololá,San Pedro La Laguna,0.947,Guatemala,Ejc_Arc,Ponal
+Sololá,Santa Catarina Ixtahuacán,0.104,Guatemala,Ejc_Arc,Ponal
+Sololá,Santa Catarina Palopó,0.013,Guatemala,Ejc_Arc,Ponal
+Sololá,Santa Clara La Laguna,0.533,Guatemala,Ejc_Arc,Ponal
+Sololá,Santa Cruz La Laguna,0.952,Guatemala,Ejc_Arc,Ponal
+Sololá,Santa Lucía Utatlán,0.283,Guatemala,Ejc_Arc,Ponal
+Sololá,Santa María Visitación,0.719,Guatemala,Ejc_Arc,Ponal
+Sololá,Santiago Atitlán,0.161,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Mazatenango,0.585,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Chicacao,0.075,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Cuyotenango,0.077,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Patulul,0.744,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Pueblo Nuevo,0.682,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Río Bravo,0.071,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Samayac,0.869,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Antonio Suchitepéquez,0.671,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Bernardino,0.907,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Francisco Zapotitlán,0.700,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Gabriel,0.547,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San José El Ídolo,0.828,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San José La Máquina,0.129,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Juan Bautista,0.049,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Lorenzo,0.725,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Miguel Panán,0.474,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,San Pablo Jocopilas,0.789,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Santa Bárbara,0.683,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Santo Domingo Suchitepéquez,0.452,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Santo Tomás La Unión,0.156,Guatemala,Ejc_Arc,Ponal
+Suchitepéquez,Zunilito,0.803,Guatemala,Ejc_Arc,Ponal
+Totonicapán,Totonicapán,0.104,Guatemala,Ejc_Arc,Ponal
+Totonicapán,Momostenango,0.588,Guatemala,Ejc_Arc,Ponal
+Totonicapán,San Andrés Xecul,0.692,Guatemala,Ejc_Arc,Ponal
+Totonicapán,San Bartolo Aguas Calientes,0.391,Guatemala,Ejc_Arc,Ponal
+Totonicapán,San Cristóbal Totonicapán,0.336,Guatemala,Ejc_Arc,Ponal
+Totonicapán,San Francisco El Alto,0.966,Guatemala,Ejc_Arc,Ponal
+Totonicapán,Santa Lucía La Reforma,0.193,Guatemala,Ejc_Arc,Ponal
+Totonicapán,Santa María Chiquimula,0.111,Guatemala,Ejc_Arc,Ponal
+Zacapa,Zacapa,0.660,Guatemala,Ejc_Arc,Ponal
+Zacapa,Estanzuela,0.781,Guatemala,Ejc_Arc,Ponal
+Zacapa,Río Hondo,0.930,Guatemala,Ejc_Arc,Ponal
+Zacapa,Gualán,0.963,Guatemala,Ejc_Arc,Ponal
+Zacapa,Teculután,0.097,Guatemala,Ejc_Arc,Ponal
+Zacapa,Usumatlán,0.117,Guatemala,Ejc_Arc,Ponal
+Zacapa,Cabañas,0.094,Guatemala,Ejc_Arc,Ponal
+Zacapa,San Diego,0.496,Guatemala,Ejc_Arc,Ponal
+Zacapa,La Unión,0.539,Guatemala,Ejc_Arc,Ponal
+Zacapa,Huité,0.842,Guatemala,Ejc_Arc,Ponal
+Zacapa,San Jorge,0.572,Guatemala,Ejc_Arc,Ponal

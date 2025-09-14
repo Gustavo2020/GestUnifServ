@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-09-13T21:31:55.475634",
+  "date": "2025-09-10",
+  "ruta_id": "RUTA-DEMO-2025-09-10",
+  "executed_by": {
+    "user_id": "flow_user",
+    "platform": "MS Teams"
+  },
+  "evaluated_by": "demo",
+  "user": {
+    "user_id": "flow_user"
+  },
+  "segments": [
+    {
+      "segment_index": 1,
+      "origin_municipio": "Bogotá",
+      "dest_municipio": "Bogotá"
+    }
+  ],
+  "cities": [
+    {
+      "name": "Bogotá",
+      "risk_score": 0.3,
+      "risk_level": "Low",
+      "Jurisdiccion_fuerza_militar": "Brigada 13",
+      "Jurisdiccion_policia": "MEBOG"
+    }
+  ],
+  "summary": {
+    "total_risk": 0.3,
+    "average_risk": 0.3
+  },
+  "overall_level": "Low",
+  "status": "PendingValidation"
+}

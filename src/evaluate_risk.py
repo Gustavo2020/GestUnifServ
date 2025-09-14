@@ -1,6 +1,6 @@
 import csv
 import os
-from typing import List, Dict
+from typing import List, Dict, Tuple
 
 # ─────────────────────────────────────────────────────────────
 # Function: load_cities_from_csv
@@ -12,9 +12,22 @@ from typing import List, Dict
 # ─────────────────────────────────────────────────────────────
 def load_cities_from_csv(path: str) -> List[str]:
     with open(path, newline='', encoding='utf-8') as f:
-        reader = csv.reader(f)
-        next(reader)  # Skip header row
-        return [row[0].strip() for row in reader if row and row[0].strip()]
+        reader = csv.DictReader(f)
+        # Support headers: Departamento,Municipio and legacy 'Ciudad'
+        col_city = None
+        headers = [h.strip() for h in (reader.fieldnames or [])]
+        for h in headers:
+            if h.lower() in ("municipio", "ciudad"):
+                col_city = h
+                break
+
+        cities: List[str] = []
+        if col_city:
+            for row in reader:
+                name = (row.get(col_city) or "").strip()
+                if name:
+                    cities.append(name)
+        return cities
 
 
 # ─────────────────────────────────────────────────────────────
@@ -39,17 +52,25 @@ def validate_city_risk_map(path: str) -> Dict[str, float]:
     seen = set()   # Set to track duplicate city names
 
     with open(path, newline='', encoding='utf-8') as f:
-        reader = csv.reader(f)
-        next(reader, None)  # Skip header row if present
+        reader = csv.DictReader(f)
+
+        # Accept new columns Departamento,Municipio,Riesgo and legacy Ciudad,Riesgo
+        col_city = None
+        col_risk = None
+        headers = [h.strip() for h in (reader.fieldnames or [])]
+        for h in headers:
+            h_low = h.lower()
+            if h_low in ("municipio", "ciudad"):
+                col_city = h
+            if h_low in ("riesgo", "risk"):
+                col_risk = h
 
         for row_num, row in enumerate(reader, start=2):
-            # Check for missing columns or empty cells
-            if len(row) < 2 or not row[0].strip() or not row[1].strip():
+            city = (row.get(col_city) or "").strip() if col_city else ""
+            risk_str = (row.get(col_risk) or "").strip() if col_risk else ""
+            if not city or not risk_str:
                 print(f"[Warning] Incomplete row at line {row_num}")
                 continue
-
-            city = row[0].strip()
-            risk_str = row[1].strip()
 
             # Detect and skip duplicate city entries
             if city in seen:
@@ -77,6 +98,59 @@ def validate_city_risk_map(path: str) -> Dict[str, float]:
     return risk_map
 
 
+# -------------------------------------------------------------
+# Function: load_city_meta_map
+# Purpose: Loads an enriched map for each city with risk and jurisdictions
+# Returns: Dict[city_name, { 'risk': float,
+#                           'Jurisdiccion_fuerza_militar': str,
+#                           'Jurisdiccion_policia': str }]
+# Notes:
+# - Tolerates extra columns and different header cases.
+# -------------------------------------------------------------
+def load_city_meta_map(path: str) -> Dict[str, Dict[str, object]]:
+    if not os.path.exists(path):
+        raise FileNotFoundError(f"File not found: {path}")
+
+    meta_map: Dict[str, Dict[str, object]] = {}
+    with open(path, newline='', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        headers = [h.strip() for h in (reader.fieldnames or [])]
+        # Map columns ignoring case/diacritics basic
+        col_city = None
+        col_risk = None
+        col_jfm = None
+        col_jpol = None
+        for h in headers:
+            low = h.lower()
+            if low in ("municipio", "ciudad"):
+                col_city = h
+            elif low in ("riesgo", "risk"):
+                col_risk = h
+            elif low == "jurisdiccion_fuerza_militar":
+                col_jfm = h
+            elif low == "jurisdiccion_policia":
+                col_jpol = h
+
+        for row in reader:
+            city = (row.get(col_city) or "").strip() if col_city else ""
+            r = (row.get(col_risk) or "").strip() if col_risk else ""
+            if not city or not r:
+                continue
+            try:
+                risk = float(r)
+            except ValueError:
+                continue
+            meta_map[city] = {
+                'risk': risk,
+                'Jurisdiccion_fuerza_militar': (row.get(col_jfm) or "").strip() if col_jfm else "",
+                'Jurisdiccion_policia': (row.get(col_jpol) or "").strip() if col_jpol else "",
+            }
+
+    if not meta_map:
+        raise ValueError("No valid entries in riesgos.csv")
+    return meta_map
+
+
 # ─────────────────────────────────────────────────────────────
 # Function: validate_route_csv
 # Purpose: Validates the contents of ruta.csv before risk evaluation
@@ -95,15 +169,19 @@ def validate_route_csv(path: str, city_risk_map: Dict[str, float]) -> List[str]:
     seen = set()
 
     with open(path, newline='', encoding='utf-8') as f:
-        reader = csv.reader(f)
-        next(reader, None)  # Skip header row if present
+        reader = csv.DictReader(f)
+        # Support Departamento,Municipio and legacy single 'ciudad'
+        col_city = None
+        headers = [h.strip() for h in (reader.fieldnames or [])]
+        for h in headers:
+            if h.lower() in ("municipio", "ciudad"):
+                col_city = h
 
         for row_num, row in enumerate(reader, start=2):
-            if not row or not row[0].strip():
+            city = (row.get(col_city) or "").strip() if col_city else ""
+            if not city:
                 print(f"[Warning] Empty row at line {row_num}")
                 continue
-
-            city = row[0].strip()
 
             if city in seen:
                 print(f"[Warning] Duplicate city: {city} at line {row_num}")
@@ -130,12 +208,13 @@ def validate_route_csv(path: str, city_risk_map: Dict[str, float]) -> List[str]:
 # - Total and average risk
 # - Overall risk classification
 # ─────────────────────────────────────────────────────────────
-def evaluate_risk(cities: List[str], city_risk_map: Dict[str, float]) -> Dict:
+def evaluate_risk(cities: List[str], city_meta_map: Dict[str, Dict[str, object]]) -> Dict:
     city_risks = {}
 
     # Assign risk score and classification to each city
     for city in cities:
-        risk_score = city_risk_map.get(city, 0.0)
+        risk_score = (city_meta_map.get(city, {}).get('risk', 0.0)  # type: ignore
+                      if city_meta_map else 0.0)
         if risk_score >= 0.7:
             level = "High"
         elif risk_score >= 0.4:
@@ -144,7 +223,9 @@ def evaluate_risk(cities: List[str], city_risk_map: Dict[str, float]) -> Dict:
             level = "Low"
         city_risks[city] = {
             "score": risk_score,
-            "level": level
+            "level": level,
+            "Jurisdiccion_fuerza_militar": city_meta_map.get(city, {}).get('Jurisdiccion_fuerza_militar', ""),
+            "Jurisdiccion_policia": city_meta_map.get(city, {}).get('Jurisdiccion_policia', ""),
         }
 
     # Aggregate total and average risk
@@ -173,9 +254,12 @@ if __name__ == "__main__":
     ruta_path = "D:/Github/GestUnifServ/data/ruta.csv"
     riesgos_path = "D:/Github/GestUnifServ/data/riesgos.csv"
 
-    city_risk_map = validate_city_risk_map(riesgos_path)
+    # Build meta map (risk + jurisdictions) from riesgos.csv
+    city_meta_map = load_city_meta_map(riesgos_path)
+    # For validation, just pass risk view
+    city_risk_map = {k: v['risk'] for k, v in city_meta_map.items()}
     cities = validate_route_csv(ruta_path, city_risk_map)
-    result = evaluate_risk(cities, city_risk_map)
+    result = evaluate_risk(cities, city_meta_map)
     print(result)
 # ─────────────────────────────────────────────────────────────
 # Post-Evaluation Export Block
@@ -204,7 +288,9 @@ output = {
         {
             "name": city,
             "risk_score": result["city_risks"][city]["score"],
-            "risk_level": result["city_risks"][city]["level"]
+            "risk_level": result["city_risks"][city]["level"],
+            "Jurisdiccion_fuerza_militar": result["city_risks"][city]["Jurisdiccion_fuerza_militar"],
+            "Jurisdiccion_policia": result["city_risks"][city]["Jurisdiccion_policia"],
         }
         for city in cities
     ],

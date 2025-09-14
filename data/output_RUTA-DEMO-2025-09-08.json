@@ -1,0 +1,35 @@
+{
+  "timestamp": "2025-09-13T21:31:55.467222",
+  "date": "2025-09-08",
+  "ruta_id": "RUTA-DEMO-2025-09-08",
+  "executed_by": {
+    "user_id": "flow_user",
+    "platform": "MS Teams"
+  },
+  "evaluated_by": "demo",
+  "user": {
+    "user_id": "flow_user"
+  },
+  "segments": [
+    {
+      "segment_index": 1,
+      "origin_municipio": "Medellín",
+      "dest_municipio": "Medellín"
+    }
+  ],
+  "cities": [
+    {
+      "name": "Medellín",
+      "risk_score": 0.5,
+      "risk_level": "Medium",
+      "Jurisdiccion_fuerza_militar": "IV Brigada",
+      "Jurisdiccion_policia": "MEVAL"
+    }
+  ],
+  "summary": {
+    "total_risk": 0.5,
+    "average_risk": 0.5
+  },
+  "overall_level": "Medium",
+  "status": "PendingValidation"
+}

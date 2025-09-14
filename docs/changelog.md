@@ -4,6 +4,28 @@ Todos los cambios notables de este proyecto se documentarán en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),  
 y este proyecto sigue [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+### Added
+- Catálogo de conductores: endpoints opcionales `POST /drivers` y `PUT /drivers` controlados por `ENABLE_DRIVERS_WRITE`; persisten en `DRIVERS_CSV_PATH` y actualizan caché en memoria con bloqueo `asyncio.Lock`.
+- Resumen semanal: `GET /summary/week?user_id=...&week_start=YYYY-MM-DD&source=json|db`.
+  - `json`: agrega desde respaldos `data/output_*.json` y entrega `records` completos por día (incluye `user`, `segments`, `cities`, `summary`).
+  - `db`: agrega desde PostgreSQL y enriquece con JSON si existe.
+- Auditoría ligera: archivo `data/audit_log.csv` (NDCSV) con `timestamp,action,user_id,result,json_id,request_id` para acciones `evaluate`, `evaluate_day`, `summary_week`.
+- Plantillas → CSV: `rutas.csv` ahora incluye columnas `Jurisdiccion_fuerza_militar` y `Jurisdiccion_policia` por segmento (tomadas desde el municipio destino).
+- Scripts de soporte:
+  - `scripts/demo_week_summary.py` (genera 5 outputs demo y un `summary_json_*.json`).
+  - `scripts/run_full_flow.py` (plantilla→`ruta.csv`→evaluaciones→resúmenes `json|db`).
+
+### Changed
+- `POST /evaluate_day`: consolidado a una sola implementación en `src/risk_api.py` (se elimina duplicado).
+- `GET /summary/week`: agrega a nivel top‑level por `record` las claves `Jurisdiccion_fuerza_militar` y `Jurisdiccion_policia` (agregadas desde `cities`).
+
+### Fixed
+- `load_activos_entries`: detección de delimitador robusta (evita uso de `reader.dialect` sobre una instancia inválida).
+
+### Database
+- Nueva columna `planned_date` en `evaluations` (se guarda desde `/evaluate_day`).
+  - Inicialización intenta añadirla de forma best‑effort; en SQLite se omite `IF NOT EXISTS` (se registra warning si no aplica) sin bloquear el arranque.
+
 ---
 
 ## [Unreleased]
@@ -72,3 +94,5 @@ y este proyecto sigue [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 ## Formato de versión
 - **0.x.y**: Etapas iniciales, desarrollo rápido y cambios frecuentes.  
 - **1.0.0**: Primera versión estable en producción.  
+
+

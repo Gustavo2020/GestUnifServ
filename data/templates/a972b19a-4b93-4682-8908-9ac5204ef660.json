@@ -1,0 +1,63 @@
+{
+  "template_id": "a972b19a-4b93-4682-8908-9ac5204ef660",
+  "user_id": "user_123",
+  "name": "Ruta Semanal Demo",
+  "description": "Plantilla de ejemplo (Bogotá → Cartagena / Bogotá → Soacha)",
+  "days": [
+    {
+      "day_of_week": "Mon",
+      "segments": [
+        {
+          "segment_index": 1,
+          "origin_departamento": "Cundinamarca",
+          "origin_municipio": "Bogotá",
+          "dest_tipo": "municipio",
+          "dest_id": null,
+          "dest_departamento": "Bolívar",
+          "dest_municipio": "Cartagena de Indias",
+          "companions_count": 1,
+          "companions_json": [
+            {
+              "id_number": "10203040",
+              "first_name": "Ana",
+              "last_name": "Pérez"
+            }
+          ],
+          "activity_type": "Visita de Inspección",
+          "vehicle_type": "SUV",
+          "vehicle_plate": "ABC123",
+          "driver_national_id": "80223344",
+          "driver_first_name": "Carlos",
+          "driver_last_name": "Ramírez",
+          "driver_phone": "+573118765432",
+          "notes": "demo lunes"
+        }
+      ]
+    },
+    {
+      "day_of_week": "Tue",
+      "segments": [
+        {
+          "segment_index": 1,
+          "origin_departamento": "Cundinamarca",
+          "origin_municipio": "Bogotá",
+          "dest_tipo": "municipio",
+          "dest_id": null,
+          "dest_departamento": "Cundinamarca",
+          "dest_municipio": "Soacha",
+          "companions_count": 0,
+          "companions_json": [],
+          "activity_type": "Visita de Mantenimiento",
+          "vehicle_type": "Automóvil",
+          "vehicle_plate": "DEF45",
+          "driver_national_id": "80223344",
+          "driver_first_name": "Carlos",
+          "driver_last_name": "Ramírez",
+          "driver_phone": "+573118765432",
+          "notes": "demo martes"
+        }
+      ]
+    }
+  ],
+  "created_at": "2025-09-13T19:43:50.011580"
+}

@@ -1,5 +1,8 @@
-ciudad
-Bogotá
-Cali
-Villavicencio
-Medellín
+date;user_id;user_national_id;user_first_name;user_last_name;user_phone;filial;segment_index;origin_departamento;origin_municipio;dest_tipo;dest_id;dest_departamento;dest_municipio;companions_count;companions_json;activity_type;vehicle_type;vehicle_plate;driver_national_id;driver_first_name;driver_last_name;driver_phone;notes;Jurisdiccion_fuerza_militar;Jurisdiccion_policia
+2025-09-22;user_123;1078901234;María;Gómez;+573001234567;ENLAZA;1;Cundinamarca;Bogotá;municipio;;Bolívar;Cartagena de Indias;1;"[{""id_number"": ""10203040"", ""first_name"": ""Ana"", ""last_name"": ""Pérez""}]";Visita de Inspección;SUV;ABC123;80223344;Carlos;Ramírez;+573118765432;demo lunes;;
+2025-09-23;user_123;1078901234;María;Gómez;+573001234567;ENLAZA;1;Cundinamarca;Bogotá;municipio;;Cundinamarca;Soacha;0;[];Visita de Mantenimiento;Automóvil;DEF45;80223344;Carlos;Ramírez;+573118765432;demo martes;;
+2025-09-08;flow_user;;;;;;1;;Leticia;municipio;;;Leticia;0;[];Visita de Mantenimiento;SUV;ABC123;1234567890;Juan;Pérez;3000000000;;Ejc_Arc;Ponal
+2025-09-09;flow_user;;;;;;1;;Puerto Nariño;municipio;;;Puerto Nariño;0;[];Visita de Mantenimiento;SUV;ABC123;1234567890;Juan;Pérez;3000000000;;Ejc_Arc;Ponal
+2025-09-10;flow_user;;;;;;1;;Abejorral;municipio;;;Abejorral;0;[];Visita de Mantenimiento;SUV;ABC123;1234567890;Juan;Pérez;3000000000;;Ejc_Arc;Ponal
+2025-09-11;flow_user;;;;;;1;;Leticia;municipio;;;Leticia;0;[];Visita de Mantenimiento;SUV;ABC123;1234567890;Juan;Pérez;3000000000;;Ejc_Arc;Ponal
+2025-09-12;flow_user;;;;;;1;;Puerto Nariño;municipio;;;Puerto Nariño;0;[];Visita de Mantenimiento;SUV;ABC123;1234567890;Juan;Pérez;3000000000;;Ejc_Arc;Ponal
