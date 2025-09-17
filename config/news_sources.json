@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Example Feed",
+    "url": "https://example.com/news.json",
+    "type": "json",
+    "list_path": ["articles"],
+    "fields": {
+      "title": ["title"],
+      "url": ["url"],
+      "published_at": ["published_at"],
+      "content": ["summary"]
+    },
+    "date_format": "%Y-%m-%dT%H:%M:%S"
+  }
+]

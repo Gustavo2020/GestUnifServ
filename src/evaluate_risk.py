@@ -1,6 +1,9 @@
 import csv
+import json
 import os
-from typing import List, Dict, Tuple
+from datetime import datetime
+from pathlib import Path
+from typing import Dict, List, Tuple
 
 # ─────────────────────────────────────────────────────────────
 # Function: load_cities_from_csv
@@ -250,59 +253,56 @@ def evaluate_risk(cities: List[str], city_meta_map: Dict[str, Dict[str, object]]
 # Main Execution Block
 # Purpose: Loads data, validates input, evaluates risk, and prints result
 # ─────────────────────────────────────────────────────────────
-if __name__ == "__main__":
-    ruta_path = "D:/Github/GestUnifServ/data/ruta.csv"
-    riesgos_path = "D:/Github/GestUnifServ/data/riesgos.csv"
+def _build_output(cities: List[str], result: Dict[str, object]) -> Dict[str, object]:
+    """Structure the evaluation result with metadata."""
+    now = datetime.now()
+    timestamp = now.isoformat()
+    ruta_id = f"RUTA-{now.strftime('%Y%m%d-%H%M')}"
+    executed_by = {
+        "user_id": "gustavo.martinez@yourdomain.com",
+        "platform": "MS Teams",
+    }
+    return {
+        "timestamp": timestamp,
+        "ruta_id": ruta_id,
+        "executed_by": executed_by,
+        "evaluated_by": "evaluate_risk.py",
+        "cities": [
+            {
+                "name": city,
+                "risk_score": result["city_risks"][city]["score"],
+                "risk_level": result["city_risks"][city]["level"],
+                "Jurisdiccion_fuerza_militar": result["city_risks"][city]["Jurisdiccion_fuerza_militar"],
+                "Jurisdiccion_policia": result["city_risks"][city]["Jurisdiccion_policia"],
+            }
+            for city in cities
+        ],
+        "summary": {
+            "total_risk": result["total_risk"],
+            "average_risk": result["average_risk"],
+            "overall_level": result["overall_level"],
+        },
+        "status": "PendingValidation",
+    }
 
-    # Build meta map (risk + jurisdictions) from riesgos.csv
-    city_meta_map = load_city_meta_map(riesgos_path)
-    # For validation, just pass risk view
+
+def main() -> None:
+    """Entry point used when running the module as a script."""
+    base_dir = Path(__file__).resolve().parents[1]
+    ruta_path = base_dir / 'data' / 'ruta.csv'
+    riesgos_path = base_dir / 'data' / 'riesgos.csv'
+
+    city_meta_map = load_city_meta_map(str(riesgos_path))
     city_risk_map = {k: v['risk'] for k, v in city_meta_map.items()}
-    cities = validate_route_csv(ruta_path, city_risk_map)
+    cities = validate_route_csv(str(ruta_path), city_risk_map)
     result = evaluate_risk(cities, city_meta_map)
     print(result)
-# ─────────────────────────────────────────────────────────────
-# Post-Evaluation Export Block
-# Purpose: Structure and persist the risk evaluation result
-# Output: JSON file with metadata, city-level scores, and summary
-# ─────────────────────────────────────────────────────────────
-import json
-from datetime import datetime
-# Capture current timestamp and generate a unique route ID
-now = datetime.now()
-timestamp = now.isoformat()  # ISO 8601 format for traceability
-ruta_id = f"RUTA-{now.strftime('%Y%m%d-%H%M')}"  # e.g., RUTA-20250909-1810
-# Simulated user identity; in production, this should be dynamically retrieved
-executed_by = {
-    "user_id": "gustavo.martinez@yourdomain.com",  # Replace with actual MS Teams user ID
-    "platform": "MS Teams"  # Execution platform identifier
-}
-# Construct the structured output object
-output = {
-    "timestamp": timestamp,               # When the evaluation was performed
-    "ruta_id": ruta_id,                   # Unique identifier for this route evaluation
-    "executed_by": executed_by,          # Who executed the evaluation and from where
-    "evaluated_by": "evaluate_risk.py",  # Source module responsible for the analysis
-    # List of cities with individual risk scores and classifications
-    "cities": [
-        {
-            "name": city,
-            "risk_score": result["city_risks"][city]["score"],
-            "risk_level": result["city_risks"][city]["level"],
-            "Jurisdiccion_fuerza_militar": result["city_risks"][city]["Jurisdiccion_fuerza_militar"],
-            "Jurisdiccion_policia": result["city_risks"][city]["Jurisdiccion_policia"],
-        }
-        for city in cities
-    ],
-    # Aggregated summary metrics for the entire route
-    "summary": {
-        "total_risk": result["total_risk"],
-        "average_risk": result["average_risk"],
-        "overall_level": result["overall_level"]
-    },
-    # Initial status of the evaluation; to be updated by the analyst
-    "status": "PendingValidation"
-}
-# Persist the structured result to disk as a JSON file
-with open("D:/Github/GestUnifServ/data/output_risk.json", "w", encoding="utf-8") as f:
-    json.dump(output, f, indent=4, ensure_ascii=False)
+
+    output = _build_output(cities, result)
+    output_path = base_dir / 'data' / 'output_risk.json'
+    with output_path.open('w', encoding='utf-8') as f:
+        json.dump(output, f, indent=4, ensure_ascii=False)
+
+
+if __name__ == '__main__':
+    main()

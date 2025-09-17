@@ -156,3 +156,4 @@ Cada fase puede dividirse en \*issues\* dentro de GitHub para mejor trazabilidad
 
 
 
+- [ ] Integración opcional con SIV (INVÍAS) para capas de accidentalidad (20-21) y estado vial (22-28).

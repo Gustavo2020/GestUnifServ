@@ -20,6 +20,7 @@ from datetime import datetime
 from sqlalchemy import Column, String, Float, ForeignKey, DateTime, Date, text
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import declarative_base, relationship, sessionmaker
+from sqlalchemy.pool import NullPool
 
 # ─────────────────────────────────────────────────────────────
 # Módulos internos del proyecto
@@ -43,7 +44,7 @@ DATABASE_URL = os.getenv(
 )
 
 # Motor async para PostgreSQL
-engine = create_async_engine(DATABASE_URL, echo=False, future=True)
+engine = create_async_engine(DATABASE_URL, echo=False, future=True, poolclass=NullPool)
 
 # Fábrica de sesiones async
 AsyncSessionLocal = sessionmaker(
@@ -105,11 +106,17 @@ async def init_db():
     try:
         async with engine.begin() as conn:
             await conn.run_sync(Base.metadata.create_all)
-            # Ensure new columns exist when upgrading without migrations
+            backend = engine.url.get_backend_name()
             try:
-                await conn.execute(text("ALTER TABLE evaluations ADD COLUMN IF NOT EXISTS planned_date DATE"))
+                if backend == 'sqlite':
+                    result = await conn.execute(text("PRAGMA table_info('evaluations')"))
+                    columns = {row[1] for row in result.all()}
+                    if 'planned_date' not in columns:
+                        await conn.execute(text("ALTER TABLE evaluations ADD COLUMN planned_date DATE"))
+                else:
+                    await conn.execute(text("ALTER TABLE evaluations ADD COLUMN IF NOT EXISTS planned_date DATE"))
             except Exception:
-                logger.warning("Could not ensure planned_date column (may already exist)", exc_info=True)
+                logger.warning("Could not ensure planned_date column exists", exc_info=True)
         logger.info("Tablas creadas/verificadas correctamente en la base de datos.")
     except Exception:
         logger.error("Error inicializando la base de datos.", exc_info=True)

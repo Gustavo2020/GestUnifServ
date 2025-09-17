@@ -6,6 +6,7 @@ GestUnifServ/
 │   ├── risk_api.py          # FastAPI: evaluación, sugerencias, plantillas, resumen semanal
 │   ├── db_handler.py        # Conexión a BD (SQLAlchemy async), JSON backups
 │   ├── evaluate_risk.py     # Lógica auxiliar de evaluación de riesgo
+│   ├── news_collector.py   # Busqueda de noticias de riesgo semanal
 │   ├── log_config.py        # Configuración de logging centralizado (formato JSON)
 │   ├── risk_api_view.py     # Variante/experimentos de vistas (no principal)
 │   └── __init__.py          # Marca la carpeta como paquete Python importable

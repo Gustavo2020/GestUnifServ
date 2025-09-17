@@ -644,17 +644,7 @@ async def evaluate_risk(request: EvaluationRequest, req: Request):
         try:
             await append_audit_entry(
                 action="evaluate_day",
-                user_id=request.user.user_id or "",
-                result="OK",
-                json_id=ruta_id,
-                request_id=None,
-            )
-        except Exception:
-            pass
-        try:
-            await append_audit_entry(
-                action="evaluate_day",
-                user_id=request.user.user_id,
+                user_id=request.user_id,
                 result="OK",
                 json_id=ruta_id,
                 request_id=None,

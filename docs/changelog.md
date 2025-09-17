@@ -4,6 +4,27 @@ Todos los cambios notables de este proyecto se documentarán en este archivo.
 El formato está basado en [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),  
 y este proyecto sigue [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [2025-09-16]
+### Added
+- Se definió y documentó el **modelo de salida oficial para `/summary/week`**:
+  - Incluye datos globales de periodo y resumen.
+  - Cache de noticias únicas por ciudad (`cities_news`).
+  - Información detallada de usuarios:
+    - Identificación, nombre, celular y origen de la solicitud (MS Teams).
+    - Conductor (nombre, identificación, celular, vehículo: tipo y placa).
+    - Acompañantes (nombre e identificación).
+    - Evaluaciones por ciudad con riesgo y jurisdicciones (Policía, Fuerza Militar).
+    - Noticias personalizadas por usuario (referencia a `cities_news`).
+- Se actualizó el **roadmap.md** en `Docs/` con la nueva sección *“Modelo de salida esperado — /summary/week”*.
+
+### Changed
+- Roadmap reorganizado para dejar claro que la integración de `news_collector.py` se prevé en `/summary/week`.
+
+### Notes
+- Esta salida JSON será la base para implementar los modelos Pydantic en `risk_api.py` y alimentar la reportería PDF en fases posteriores.
+
+---
+
 ### Added
 - Catálogo de conductores: endpoints opcionales `POST /drivers` y `PUT /drivers` controlados por `ENABLE_DRIVERS_WRITE`; persisten en `DRIVERS_CSV_PATH` y actualizan caché en memoria con bloqueo `asyncio.Lock`.
 - Resumen semanal: `GET /summary/week?user_id=...&week_start=YYYY-MM-DD&source=json|db`.
@@ -17,14 +38,14 @@ y este proyecto sigue [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 
 ### Changed
 - `POST /evaluate_day`: consolidado a una sola implementación en `src/risk_api.py` (se elimina duplicado).
-- `GET /summary/week`: agrega a nivel top‑level por `record` las claves `Jurisdiccion_fuerza_militar` y `Jurisdiccion_policia` (agregadas desde `cities`).
+- `GET /summary/week`: agrega a nivel top-level por `record` las claves `Jurisdiccion_fuerza_militar` y `Jurisdiccion_policia` (agregadas desde `cities`).
 
 ### Fixed
 - `load_activos_entries`: detección de delimitador robusta (evita uso de `reader.dialect` sobre una instancia inválida).
 
 ### Database
 - Nueva columna `planned_date` en `evaluations` (se guarda desde `/evaluate_day`).
-  - Inicialización intenta añadirla de forma best‑effort; en SQLite se omite `IF NOT EXISTS` (se registra warning si no aplica) sin bloquear el arranque.
+  - Inicialización intenta añadirla de forma best-effort; en SQLite se omite `IF NOT EXISTS` (se registra warning si no aplica) sin bloquear el arranque.
 
 ---
 
@@ -94,5 +115,3 @@ y este proyecto sigue [Semantic Versioning](https://semver.org/spec/v2.0.0.html)
 ## Formato de versión
 - **0.x.y**: Etapas iniciales, desarrollo rápido y cambios frecuentes.  
 - **1.0.0**: Primera versión estable en producción.  
-
-
