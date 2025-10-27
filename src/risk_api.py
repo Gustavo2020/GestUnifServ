@@ -1243,7 +1243,7 @@ class WeeklySummaryResponse(BaseModel):
     records: List[Dict[str, object]]
 
 @app.get("/summary/week", response_model=WeeklySummaryResponse)
-async def summary_week(user_id: Optional[str] = None, week_start: str = "", req: Request = None, source: str = "json"):
+async def summary_week(user_id: str, week_start: str = "", req: Optional[Request] = None, source: str = "json"):
     try:
         dates = _week_dates(week_start)
     except Exception:
