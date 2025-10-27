@@ -1282,8 +1282,8 @@ async def summary_week(user_id: str, week_start: str = "", req: Optional[Request
             ids = [e.id for e in evs]
             city_rows = (
                 await session.execute(
-                    select(CityResult.evaluation_id, CityResult.name).where( # ty: ignore [possibly-unbound-attribute]
-                        CityResult.evaluation_id.in_(ids) # ty: ignore [possibly-unbound-attribute]
+                    select(CityResult.evaluation_id, CityResult.name).where(
+                        CityResult.evaluation_id.in_(ids)
                     )
                 )
             ).all()
