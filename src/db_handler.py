@@ -15,7 +15,7 @@ import os
 import json
 import uuid
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 
 from sqlalchemy import Column, String, Float, ForeignKey, DateTime, Date, text
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
@@ -66,7 +66,7 @@ class Evaluation(Base):
     __tablename__ = "evaluations"
 
     id = Column(String, primary_key=True, index=True)  # UUID string (ruta_id)
-    timestamp = Column(DateTime, default=datetime.utcnow)
+    timestamp = Column(DateTime, default=datetime.now(timezone.utc))
     planned_date = Column(Date, nullable=True)
     user_id = Column(String, nullable=False)
     platform = Column(String, nullable=False)
