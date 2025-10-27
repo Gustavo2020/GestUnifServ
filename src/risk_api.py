@@ -880,61 +880,6 @@ async def update_driver(driver: DriverRecord):
 
         return DriverRecord(**DRIVERS_ENTRIES[idx])
 
-# ======== V2: evaluar día con segmentos y devolver datos completos ========
-class EvaluateDayRequest(BaseModel):
-    date: str
-    user: 'UserInfo'
-    segments: List['ItinerarySegment']
-
-class UserInfo(BaseModel):
-    user_id: str
-    user_national_id: Optional[str] = None
-    user_first_name: Optional[str] = None
-    user_last_name: Optional[str] = None
-    user_phone: Optional[str] = None
-    filial: Optional[str] = None
-
-class EvaluateDayResponse(BaseModel):
-    timestamp: str
-    date: str
-    ruta_id: str
-    executed_by: Dict[str, str]
-    evaluated_by: str
-    user: UserInfo
-    segments: List['ItinerarySegment']
-    cities: List[CityResultExt]
-    summary: Dict[str, float]
-    overall_level: str
-    status: str
-
-class ItinerarySegment(BaseModel):
-    segment_index: int
-    origin_departamento: str
-    origin_municipio: str
-    dest_tipo: str
-    dest_id: Optional[str] = None
-    dest_departamento: str
-    dest_municipio: str
-    companions_count: int = 0
-    companions_json: List[Dict[str, str]] = Field(default_factory=list)
-    activity_type: str
-    vehicle_type: str
-    vehicle_plate: str
-    driver_national_id: str
-    driver_first_name: Optional[str] = None
-    driver_last_name: Optional[str] = None
-    driver_phone: Optional[str] = None
-    notes: Optional[str] = None
-
-def _cities_from_segments(segments: List[ItinerarySegment]) -> List[str]:
-    ordered: List[str] = []
-    seen = set()
-    for seg in sorted(segments, key=lambda s: s.segment_index):
-        for nm in (seg.origin_municipio, seg.dest_municipio):
-            if nm and nm not in seen:
-                ordered.append(nm)
-                seen.add(nm)
-    return ordered
 
 # ===== Templates (personal routes) minimal CRUD + apply-to-week =====
 TEMPLATES_DIR = Path("data/templates")
