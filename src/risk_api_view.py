@@ -31,6 +31,8 @@ import os
 import csv
 import logging
 
+from risk_api import EvaluationResponse, EvaluationRequest
+
 # ─────────────────────────────────────────────────────────────
 # Módulos internos del proyecto
 # - db_handler: persistencia en PostgreSQL + respaldo JSON
@@ -169,29 +171,29 @@ CITY_RISK_MAP = load_city_risk_map_compat(RISK_CSV_PATH)
 # - CityRisk.risk_score es opcional para tolerar payloads incompletos.
 #   De todos modos, el servicio utilizará SIEMPRE el valor oficial del CSV.
 # ─────────────────────────────────────────────────────────────
-class CityRisk(BaseModel):
-    name: str
-    risk_score: Optional[float] = None  # Ignorado. Se usa puntaje oficial del CSV.
+# class CityRisk(BaseModel):
+#     name: str
+#     risk_score: Optional[float] = None  # Ignorado. Se usa puntaje oficial del CSV.
+#
+# class EvaluationRequest(BaseModel):
+#     user_id: str
+#     platform: str
+#     cities: List[CityRisk]
+#
+# class CityResult(BaseModel):
+#     name: str
+#     risk_score: float
+#     risk_level: str
 
-class EvaluationRequest(BaseModel):
-    user_id: str
-    platform: str
-    cities: List[CityRisk]
-
-class CityResult(BaseModel):
-    name: str
-    risk_score: float
-    risk_level: str
-
-class EvaluationResponse(BaseModel):
-    timestamp: str
-    ruta_id: str
-    executed_by: Dict[str, str]
-    evaluated_by: str
-    cities: List[CityResult]
-    summary: Dict[str, float]
-    overall_level: str
-    status: str
+# class EvaluationResponse(BaseModel):
+#     timestamp: str
+#     ruta_id: str
+#     executed_by: Dict[str, str]
+#     evaluated_by: str
+#     cities: List[CityResult]
+#     summary: Dict[str, float]
+#     overall_level: str
+#     status: str
 
 # ─────────────────────────────────────────────────────────────
 # Clasificación de riesgo
