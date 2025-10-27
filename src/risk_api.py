@@ -23,7 +23,7 @@
 
 from fastapi import FastAPI, HTTPException, Request
 from pydantic import BaseModel, Field
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, cast
 from enum import Enum
 from datetime import datetime, timedelta
 from pathlib import Path
@@ -1119,7 +1119,8 @@ async def evaluate_day(request: EvaluateDayRequest):
             if nm not in CITY_META_MAP:
                 raise HTTPException(status_code=400, detail=f"City '{nm}' not found in official risk map.")
 
-    day_cities = _cities_from_segments(request.segments)
+    valid_segments = cast(list[ItinerarySegment], request.segments)
+    day_cities = _cities_from_segments(valid_segments)
 
     city_results: List[CityResultExt] = []
     total = 0.0
