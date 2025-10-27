@@ -3,6 +3,8 @@ import json
 import asyncio
 from datetime import datetime, timedelta
 
+from risk_api import DestTipo, ActivityType, VehicleType
+
 # Configure DB to SQLite before importing app modules
 os.environ.setdefault("DATABASE_URL", "sqlite+aiosqlite:///./riskdb.sqlite3")
 
@@ -39,14 +41,14 @@ async def main():
             segment_index=1,
             origin_departamento="",
             origin_municipio=c,
-            dest_tipo="municipio",
+            dest_tipo=DestTipo("municipio"),
             dest_id=None,
             dest_departamento="",
             dest_municipio=c,
             companions_count=0,
             companions_json=[],
-            activity_type="Visita de Mantenimiento",
-            vehicle_type="SUV",
+            activity_type=ActivityType("Visita de Mantenimiento"),
+            vehicle_type=VehicleType("SUV"),
             vehicle_plate="ABC123",
             driver_national_id="1234567890",
             driver_first_name="Juan",
