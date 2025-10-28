@@ -31,7 +31,7 @@ import os
 import csv
 import logging
 
-from risk_api import EvaluationResponse, EvaluationRequest
+from risk_api import EvaluationResponse, EvaluationRequest, load_city_risk_map_compat
 
 # ─────────────────────────────────────────────────────────────
 # Módulos internos del proyecto
@@ -41,61 +41,6 @@ from risk_api import EvaluationResponse, EvaluationRequest
 from src.db_handler import save_evaluation_to_db_and_json, init_db
 from src.log_config import setup_logging
 
-# Compat loader that supports both legacy and new CSV headers
-def load_city_risk_map_compat(filepath: str) -> Dict[str, float]:
-    city_risks: Dict[str, float] = {}
-    try:
-        with open(filepath, newline="", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            headers = [h.strip() for h in (reader.fieldnames or [])]
-            col_city = None
-            col_risk = None
-            for h in headers:
-                h_low = h.lower()
-                if h_low in ("municipio", "ciudad"):
-                    col_city = h
-                if h_low in ("riesgo", "risk"):
-                    col_risk = h
-
-            for row in reader:
-                try:
-                    city = (row.get(col_city) or "").strip()
-                    score_str = (row.get(col_risk) or "").strip()
-                    if not city or not score_str:
-                        raise ValueError("missing values")
-                    score = float(score_str)
-                    city_risks[city] = score
-                except (KeyError, AttributeError, ValueError) as row_err:
-                    logger.warning(
-                        "Fila inválida en CSV de riesgos; fila ignorada | detalle=%s | fila=%s",
-                        row_err,
-                        row,
-                    )
-                    continue
-    except FileNotFoundError as fnf:
-        logger.error(
-            "No se encontró el archivo de riesgos en la ruta indicada | path=%s",
-            filepath,
-            exc_info=True,
-        )
-        raise RuntimeError(f"Failed to load risk map (file not found): {fnf}") from fnf
-    except Exception as e:
-        logger.error("Error cargando el mapa de riesgos | path=%s", filepath, exc_info=True)
-        raise RuntimeError(f"Failed to load risk map: {e}") from e
-
-    if not city_risks:
-        logger.error(
-            "El CSV de riesgos fue leído pero no contiene entradas válidas | path=%s",
-            filepath,
-        )
-        raise RuntimeError("Risk map is empty or invalid.")
-
-    logger.info(
-        "Mapa de riesgos cargado correctamente | path=%s | ciudades=%d",
-        filepath,
-        len(city_risks),
-    )
-    return city_risks
 
 # ─────────────────────────────────────────────────────────────
 # Configuración global de logging
@@ -104,59 +49,6 @@ def load_city_risk_map_compat(filepath: str) -> Dict[str, float]:
 # ─────────────────────────────────────────────────────────────
 setup_logging()
 logger = logging.getLogger("risk_api")
-
-# ─────────────────────────────────────────────────────────────
-# Carga del mapa oficial de riesgos desde CSV
-# - Se espera un archivo con columnas: Ciudad,Riesgo
-# - Devuelve un diccionario { "Bogotá": 0.5, "Medellín": 0.3, ... }
-# - Incluye robustez frente a filas inválidas (se ignoran con warning)
-# ─────────────────────────────────────────────────────────────
-def load_city_risk_map(filepath: str) -> Dict[str, float]:
-    city_risks: Dict[str, float] = {}
-    try:
-        with open(filepath, newline="", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
-            for row in reader:
-                try:
-                    city = row["Ciudad"].strip()
-                    score = float(row["Riesgo"])
-                    city_risks[city] = score
-                except (KeyError, AttributeError, ValueError) as row_err:
-                    # Si la fila carece de columnas esperadas o el valor no es convertible a float,
-                    # se ignora la fila pero se deja constancia en el log para auditoría.
-                    logger.warning(
-                        "Fila inválida en CSV de riesgos; fila ignorada | detalle=%s | fila=%s",
-                        row_err,
-                        row,
-                    )
-                    continue
-    except FileNotFoundError as fnf:
-        # Error crítico: no existe el archivo. Se propaga para detener el arranque.
-        logger.error(
-            "No se encontró el archivo de riesgos en la ruta indicada | path=%s",
-            filepath,
-            exc_info=True,
-        )
-        raise RuntimeError(f"Failed to load risk map (file not found): {fnf}") from fnf
-    except Exception as e:
-        # Cualquier otro error de E/S u otros se consideran críticos en el arranque.
-        logger.error("Error cargando el mapa de riesgos | path=%s", filepath, exc_info=True)
-        raise RuntimeError(f"Failed to load risk map: {e}") from e
-
-    if not city_risks:
-        # Si tras la lectura no hubo entradas válidas, es una situación anómala.
-        logger.error(
-            "El CSV de riesgos fue leído pero no contiene entradas válidas | path=%s",
-            filepath,
-        )
-        raise RuntimeError("Risk map is empty or invalid.")
-
-    logger.info(
-        "Mapa de riesgos cargado correctamente | path=%s | ciudades=%d",
-        filepath,
-        len(city_risks),
-    )
-    return city_risks
 
 # ─────────────────────────────────────────────────────────────
 # Ruta del CSV configurable por entorno (RISK_CSV_PATH)
